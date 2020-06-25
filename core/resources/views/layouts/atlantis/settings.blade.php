@@ -1,10 +1,10 @@
 <!-- Custom template | don't include it in your project! -->
 		<div class="custom-template">
-			<div class="title">Settings</div>
+			<div class="title"> {{ __('layouts.Settings') }}</div>
 			<div class="custom-content">
 				<div class="switcher">
 					<div class="switch-block">
-						<h4>Logo Header</h4>
+						<h4>{{ __('layouts.Logo_Header') }}</h4>
 						<div class="btnSwitch">
 							<button type="button" class="changeLogoHeaderColor" data-color="dark"></button>
 							<button type="button" class="selected changeLogoHeaderColor" data-color="blue"></button>
@@ -25,7 +25,7 @@
 						</div>
 					</div>
 					<div class="switch-block">
-						<h4>Navbar Header</h4>
+						<h4>{{ __('layouts.Navbar_Header') }}</h4>
 						<div class="btnSwitch">
 							<button type="button" class="changeTopBarColor" data-color="dark"></button>
 							<button type="button" class="changeTopBarColor" data-color="blue"></button>
@@ -46,7 +46,7 @@
 						</div>
 					</div>
 					<div class="switch-block">
-						<h4>Sidebar</h4>
+						<h4>{{ __('layouts.Sidebar') }}</h4>
 						<div class="btnSwitch">
 							<button type="button" class="selected changeSideBarColor" data-color="white"></button>
 							<button type="button" class="changeSideBarColor" data-color="dark"></button>
@@ -54,7 +54,7 @@
 						</div>
 					</div>
 					<div class="switch-block">
-						<h4>Background</h4>
+						<h4>{{ __('layouts.Background') }}</h4>
 						<div class="btnSwitch">
 							<button type="button" class="changeBackgroundColor" data-color="bg2"></button>
 							<button type="button" class="changeBackgroundColor selected" data-color="bg1"></button>

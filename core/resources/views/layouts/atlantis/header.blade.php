@@ -96,7 +96,7 @@
                                         @endif
                                     @endforeach
 									
-								</i> <span class="text-white">Notifications </span><i class="fa fa-chevron-down text-white"></i>
+								</i> <span class="text-white">{{ __('layouts.Notifications') }} </span><i class="fa fa-chevron-down text-white"></i>
 							</a>
 							<ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">	
 								<li>
@@ -136,7 +136,7 @@
 									</div>
 									<div class="dropdown-divider"></div>
 									<div align="center">
-										<a href="/notifications"> &nbsp;View all</a>
+										<a href="/notifications"> &nbsp;{{ __('layouts.View_all') }}</a>
 										<br><br>
 									</div>
 								</li>
@@ -176,14 +176,14 @@
 									</li>
 									<li>
 										<div class="dropdown-divider"></div>										
-										<a class="dropdown-item" href="/{{$user->username}}/dashboard"><span class="fa fa-desktop"></span> &nbsp;Dashboard</a>
-										<a class="dropdown-item" href="/{{$user->username}}/wallet"><span class="fa fa-folder"></span>&nbsp; Deposit</a>
-										<a class="dropdown-item" href="/{{$user->username}}/send_money"><span class="fa fa-paper-plane"></span>&nbsp; Transfer Fund</a>
-										<a class="dropdown-item" href="/{{$user->username}}/investments"><span class="fa fa-wallet"></span>&nbsp; My Investments</a>
-										<a class="dropdown-item" href="/{{$user->username}}/withdrawal"><span class="fa fa-download"></span>&nbsp; Withdrawal</a>
-										<a class="dropdown-item" href="/{{$user->username}}/downlines"><span class="fa fa-users"></span>&nbsp; Downlines</a>
+										<a class="dropdown-item" href="/{{$user->username}}/dashboard"><span class="fa fa-desktop"></span> &nbsp;{{ __('layouts.Dashboard') }}</a>
+										<a class="dropdown-item" href="/{{$user->username}}/wallet"><span class="fa fa-folder"></span>&nbsp; {{ __('layouts.Deposit') }}</a>
+										<a class="dropdown-item" href="/{{$user->username}}/send_money"><span class="fa fa-paper-plane"></span>&nbsp; {{ __('layouts.Transfer_Fund') }}</a>
+										<a class="dropdown-item" href="/{{$user->username}}/investments"><span class="fa fa-wallet"></span>&nbsp; {{ __('layouts.My_Investments') }}</a>
+										<a class="dropdown-item" href="/{{$user->username}}/withdrawal"><span class="fa fa-download"></span>&nbsp; {{ __('layouts.Withdrawal') }}</a>
+										<a class="dropdown-item" href="/{{$user->username}}/downlines"><span class="fa fa-users"></span>&nbsp; {{ __('layouts.Downlines') }}</a>
 										<a class="dropdown-item" href="{{route('ticket.index')}}">
-											<span class="fab fa-teamspeak"></span>&nbsp; Contact Support
+											<span class="fab fa-teamspeak"></span>&nbsp; {{ __('layouts.Contact_Support') }}
 											<?php                                  
 				                                $msgs = App\ticket::With('comments')->orderby('id', 'desc')->get();
 				                                $rd = 0;
@@ -201,7 +201,7 @@
 										</a>
 										
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="/logout"><span class="fa fa-arrow-right"></span> &nbsp;Logout</a>
+										<a class="dropdown-item" href="/logout"><span class="fa fa-arrow-right"></span> &nbsp;{{ __('layouts.Logout') }}</a>
 
 									</li>
 								</div>
@@ -240,50 +240,50 @@
 						<li class="nav-item">
 							<a href="/{{$user->username}}/dashboard">
 								<i class="fas fa-layer-group"></i>
-								<p>Dashboard</p>								
+								<p>{{ __('layouts.Dashboard') }}</p>
 							</a>							
 						</li>
 						<li class="nav-item">
 							<a href="/{{$user->username}}/profile">
 								<i class="fas fa-user"></i>
-								<p>My Profile</p>								
+								<p>{{ __('layouts.My_Profile') }}</p>
 							</a>							
 						</li>
 						<li class="nav-item">
 							<a  href="/{{$user->username}}/wallet">
 								<i class="fas fa-wallet"></i>
-								<p>Wallet Deposit</p>
+								<p>{{ __('layouts.Wallet_Deposit') }}</p>
 							</a>							
 						</li>
 						<li class="nav-item">
 							<a href="/{{$user->username}}/send_money">
 								<i class="fas fa-paper-plane"></i>
-								<p>Transfer Fund</p>
+								<p>{{ __('layouts.Transfer_Fund') }}</p>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a href="/{{$user->username}}/investments">
 								<i class="fas fa-folder"></i>
-								<p>My Investments</p>
+								<p>{{ __('layouts.My_Investments') }}</p>
 							</a>							
 						</li>
 						
 						<li class="nav-item">
 							<a href="/{{$user->username}}/withdrawal">
 								<i class="fas fa-download"></i>
-								<p>Withdrawal</p>
+								<p>{{ __('layouts.Withdrawal') }}</p>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a href="/{{$user->username}}/downlines">
 								<i class="fas fa-users"></i>
-								<p>Downlines</p>
+								<p>{{ __('layouts.Downlines') }}</p>
 							</a>							
 						</li>
 						<li class="nav-item">
 							<a href="{{route('ticket.index')}}">
 								<i class="fab fa-teamspeak"></i>
-								<p>Contact Support</p>
+								<p>{{ __('layouts.Contact_Support') }}</p>
 								<?php                                  
 	                                $msgs = App\ticket::With('comments')->where('user_id', $user->id)->get();
 	                                $rd = 0;
@@ -305,7 +305,7 @@
 						<li class="nav-item">
 							<a href="/logout">
 								<i class="fas fa-arrow-right"></i>
-								<p>Logout</p>
+								<p>{{ __('layouts.Logout') }}</p>
 							</a>							
 						</li>
 
