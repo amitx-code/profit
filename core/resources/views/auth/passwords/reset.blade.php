@@ -1,5 +1,5 @@
 @extends('inc.auth_layout')
-<title>Password Reset - </title>
+<title>{{ __('auth.Password_Reset') }}- </title>
 @section('content')
 
 <body>
@@ -15,7 +15,7 @@
                             <div align="center">
                                 <img src="/img/{{$settings->site_logo}}" alt="{{$settings->site_title}}" class="login_logo"> 
                                 <br>
-                                {{ __('Reset Password') }}
+                                {{ __('auth.Reset_Password') }}
                                 <hr>
                             </div>
                         
@@ -49,7 +49,7 @@
                                     @csrf                                    
                                     <div class="form-group row">
                                             <div class="col-md-12">
-                                            <label for="password" class=" col-form-label text-md-right">{{ __('New Password') }}</label>
+                                            <label for="password" class=" col-form-label text-md-right">{{ __('auth.New_Password') }}</label>
                                             <input id="password" type="password" class="regTxtBox @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
     
                                             @error('password')
@@ -62,7 +62,7 @@
     
                                     <div class="form-group row">
                                         <div class="col-md-12">
-                                            <label for="password-confirm" class=" col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                            <label for="password-confirm" class=" col-form-label text-md-right">{{ __('auth.Confirm_Password') }}</label>
                                             <input id="password-confirm" type="password" class="regTxtBox" name="c_pwd" required autocomplete="new-password">
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@
                                     <div class="form-group row mb-0">
                                         <div class="col-md-12" align="center">
                                             <button type="submit" class="btn btn-primary collc">
-                                                {{ __('Reset Password') }}
+                                                {{ __('auth.Reset_Password') }}
                                             </button>
                                         </div>
                                         <br><br>
@@ -81,7 +81,7 @@
                                 <div class="form-group row mb-0">
                                     <div class="col-md-12" align="center">
                                         <a href="/login">
-                                            <i class="fa fa-arrow-left"></i> {{ __('Back to Login') }}
+                                            <i class="fa fa-arrow-left"></i> {{ __('auth.Back_to_Login') }}
                                         </a>
                                     </div>
                                     <br><br>

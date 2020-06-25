@@ -25,7 +25,7 @@
                                             <div align="center">
                                                 <img src="/img/{{$settings->site_logo}}" alt="{{$settings->site_title}}" class="login_logo">
                                                 <br>
-                                                <h3 class="colhd"><i class="fa fa-key"></i>{{ __('User Login') }}</h3>
+                                                <h3 class="colhd"><i class="fa fa-key"></i>{{ __('auth.User_Login') }}</h3>
                                                 <ul class="navbar-nav ml-auto">
                                                     ...
                                                     <li class="nav-item">
@@ -57,7 +57,7 @@
                                                 @endif                                                
                                                 
                                                 <div class="form-group row" > 
-                                                        <label for="email">{{ __('E-Mail Address') }}</label>
+                                                        <label for="email">{{ __('mess.E-Mail_Address') }}</label>
                                                         <input id="email" type="email" class=" @error('email') is-invalid @enderror regTxtBox" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="E-Mail Address">
 
                                                         @error('email')
@@ -68,7 +68,7 @@
                                                   
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="password">{{ __('Password') }}</label>
+                                                    <label for="password">{{ __('mess.Password') }}</label>
                                                         <input id="password" type="password" class=" @error('password') is-invalid @enderror regTxtBox" name="password" required autocomplete="current-password" placeholder="Password">
 
                                                         @error('password')
@@ -84,7 +84,7 @@
                                                     <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                                     &nbsp;
                                                     <label class="" for="remember">
-                                                        {{ __('Remember Me') }}
+                                                        {{ __('auth.Remember_Me') }}
                                                     </label>
                                                                                                             
                                                 </div>
@@ -92,13 +92,13 @@
                                                 <div class="">
                                                     <div class="" align="center">
                                                         <button type="submit" class="collc btn btn-primary">
-                                                            {{ __('Login') }}
+                                                            {{ __('mess.Login') }}
                                                         </button>                               
                                                     </div>
                                                     <div class="" align="center" >                                
                                                         @if (Route::has('password.request'))
                                                             <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                                {{ __('Forgot Your Password?') }}
+                                                                {{ __('auth.Forgot_Your_Password?') }}
                                                             </a>
                                                         @endif
                                                     </div>
@@ -107,8 +107,8 @@
                                                 <div class="">
                                                     <div class="" align="center">
                                                        <p>
-                                                           <strong>{{ __("Don't have an account?") }} <a href="/register">{{ __('Register') }}</a></strong>
-                                                       </p>                            
+                                                           <strong>{{ __("auth.Don_t_have_an_account") }}? <a href="/register">{{ __('Register') }}</a></strong>
+                                                       </p>
                                                     </div>                                                   
                                                     
                                                 </div>

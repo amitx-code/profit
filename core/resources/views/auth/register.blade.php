@@ -25,7 +25,7 @@
                                             <div align="center">
                                                 <img src="/img/{{$settings->site_logo}}" alt="{{$settings->site_title}}" class="login_logo">
                                                 <br>
-                                                <h3 class="colhd"><i class="fa fa-user"></i> Join and start your investiment</h3>
+                                                <h3 class="colhd"><i class="fa fa-user"></i> {{ __('auth.Join_and_start_your_investiment') }}</h3>
                                                 <hr>
                                             </div>
                                         </div>
@@ -35,7 +35,7 @@
                                                 <input id="csrf" type="hidden"  name="_token" value="{{ csrf_token() }}" >
                                                 <div class="form-group row">                                                    
                                                     <div class="col-sm-6">
-                                                        <label for="Fname" class=" col-form-label text-md-right">{{ __('First Name') }}</label>
+                                                        <label for="Fname" class=" col-form-label text-md-right">{{ __('mess.First_Name') }}</label>
                                                         <input id="Fname" type="text" class="form-control @error('Fname') is-invalid @enderror regTxtBox" name="Fname" value="{{ old('Fname') }}" required autocomplete="Fname" autofocus placeholder="First name">
 
                                                         @error('Fname')
@@ -45,7 +45,7 @@
                                                         @enderror
                                                     </div>
                                                      <div class="col-sm-6">
-                                                        <label for="Lname" class=" col-form-label text-md-right">{{ __('Last Name') }}</label>
+                                                        <label for="Lname" class=" col-form-label text-md-right">{{ __('mess.Last_Name') }}</label>
                                                         <input id="Lname" type="text" class="form-control @error('Lname') is-invalid @enderror regTxtBox" name="Lname" value="{{ old('Lname') }}" required autocomplete="Lname" autofocus placeholder="Last name">
 
                                                         @error('Lname')
@@ -60,7 +60,7 @@
                                                 <div class="form-group row"> 
                                                     
                                                     <div class="col-sm-12">
-                                                        <label for="email" class=" col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                                        <label for="email" class=" col-form-label text-md-right">{{ __('mess.E-Mail_Address') }}</label>
                                                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror regTxtBox" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
 
                                                         @error('email')
@@ -74,7 +74,7 @@
                                                 <div class="form-group row">
 
                                                     <div class="col-sm-12">
-                                                        <label for="username" class=" col-form-label text-md-right">{{ __('Username') }}</label>
+                                                        <label for="username" class=" col-form-label text-md-right">{{ __('mess.Username') }}</label>
                                                         <input id="username" type="username" class="form-control @error('username') is-invalid @enderror regTxtBox" name="username" value="{{ old('username') }}" required autocomplete="username" placeholder="Username">
 
                                                         @error('username')
@@ -87,7 +87,7 @@
 
                                                 <div class="form-group row">
                                                     <div class="col-sm-6">
-                                                        <label for="password" class=" col-form-label text-md-right">{{ __('Password') }}</label>
+                                                        <label for="password" class=" col-form-label text-md-right">{{ __('mess.Password') }}</label>
                                                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror regTxtBox" name="password" required autocomplete="new-password" placeholder="Password">
 
                                                         @error('password')
@@ -97,7 +97,7 @@
                                                         @enderror
                                                     </div>
                                                     <div class="col-sm-6">
-                                                        <label for="password-confirm" class=" col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                                        <label for="password-confirm" class=" col-form-label text-md-right">{{ __('mess.Confirm_Password') }}</label>
                                                         <input id="password-confirm" type="password" class="form-control regTxtBox" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm password" >
                                                     </div>
 
@@ -119,10 +119,10 @@
                                                         <br><br>
                                                         @if($settings->user_reg == 1)
                                                             <button type="submit" class="collc btn btn-primary">
-                                                                {{ __('Register') }}
+                                                                {{ __('auth.Register') }}
                                                             </button>
                                                         @else
-                                                            <div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Registration disabled by admin.</div>
+                                                            <div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> {{ __('auth.Registration_disabled_by_admin') }}.</div>
                                                         @endif
                                                         <br><br>
                                                     </div>
@@ -131,7 +131,7 @@
                                                 <div class="">
                                                     <div class="" align="center">
                                                        <p>
-                                                          <strong>Already have an account? <a href="/login">Login</a></strong>
+                                                          <strong>Already have an account? <a href="/login">{{ __('mess.Login') }}</a></strong>
                                                        </p>                            
                                                     </div>
                                                 </div>                                      

@@ -12,7 +12,7 @@
                     <div class="card-header" align="center">
                         <img src="/img/{{$settings->site_logo}}" alt="{{$settings->site_title}}" class="login_logo"> 
                         <br>
-                        <h3><i class="fa fa-key"></i> Password Recovery</h3>
+                        <h3><i class="fa fa-key"></i> {{ __('auth.Password_Recovery') }}</h3>
                     </div>
                     <div class="card-body">
                         <div class="">                    
@@ -50,13 +50,13 @@
                                     <div class="form-group row mb-0">
                                         <div class=" " align="center">
                                             <button type="submit" class="collcc btn btn-primary">
-                                                {{ __('Reset Password') }}
+                                                {{ __('auth.Reset_Password') }}
                                         </div>
                                         <br><br>                                     
                                     </div>
                                     <div class="form-group row mb-0">                                      
                                         <a href="/login">
-                                            <i class="fa fa-arrow-left"></i> {{ __('Back to Login') }}
+                                            <i class="fa fa-arrow-left"></i> {{ __('auth.Back_to_Login') }}
                                         </a>                                    
                                         <br><br>                                     
                                     </div>

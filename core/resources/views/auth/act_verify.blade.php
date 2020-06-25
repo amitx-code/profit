@@ -1,5 +1,5 @@
 @extends('inc.auth_layout')
-<title>Verify Account - {{env('APP_NAME')}}</title>
+<title>{{ __('auth.Verify_Account') }}  - {{env('APP_NAME')}}</title>
 @section('content')
 <body>
     <div class="verify_form_cont">
