@@ -26,6 +26,15 @@
                                                 <img src="/img/{{$settings->site_logo}}" alt="{{$settings->site_title}}" class="login_logo">
                                                 <br>
                                                 <h3 class="colhd"><i class="fa fa-key"></i>{{ __('User Login') }}</h3>
+                                                <ul class="navbar-nav ml-auto">
+                                                    ...
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ route('locale', ['locale' => 'en']) }}">EN</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ route('locale', ['locale' => 'ru']) }}">RU</a>
+                                                    </li>
+                                                </ul>
                                                 <hr>
                                             </div>
                                         </div>

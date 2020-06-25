@@ -13,7 +13,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title">{{ __('Withdrawal History') }}</div>
+                                        <div class="card-title">{{ __('mess.Withdrawal_History') }}</div>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -21,11 +21,11 @@
                                         <table id="basic-datatables" class="display table table-striped table-hover" >
                                             <thead>
                                                 <tr>                                                   
-                                                    <th>{{ __('Date') }}</th> 
-                                                    <th>{{ __('Package') }}</th>
-                                                    <th>{{ __('Account') }}</th>
-                                                    <th>{{ __('Amount') }}</th>                                                   
-                                                    <th>{{ __('Status') }}</th>                                  
+                                                    <th>{{ __('mess.Date') }}</th>
+                                                    <th>{{ __('mess.Package') }}</th>
+                                                    <th>{{ __('mess.Account') }}</th>
+                                                    <th>{{ __('mess.Amount') }}</th>
+                                                    <th>{{ __('mess.Status') }}</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

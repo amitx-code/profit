@@ -3,7 +3,7 @@
       <div class="col-md-4">&emps;</div>
       <div class="col-md-4 popmsg-mobile pop_msg_col" align="Center">
         <div class="panel-heading">
-          <h3>{{ __('Message') }}</h3>               
+          <h3> {{ __('mess.Message') }}</h3>
           <hr>
         </div>
         <div class="pop_msg_contnt">                
@@ -16,7 +16,7 @@
 
         <div>
           <span style="">            
-            <a id="succ_close" href="javascript:void(0)" class="btn btn-success">{{ __('Okay') }}</a>        
+            <a id="succ_close" href="javascript:void(0)" class="btn btn-success"> {{ __('mess.Okay') }}</a>
           </span>
           <br><br><br><br>
         </div>
@@ -37,7 +37,7 @@
       <div class="col-md-4">&emps;</div>
       <div class="col-md-4 popmsg-mobile pop_msg_col"  align="Center">
         <div class="panel-heading" style="">
-          <h3>{{ __('Message') }}</h3>               
+          <h3> {{ __('mess.Message') }}</h3>
           <hr>
         </div>
         <div class="pop_msg_contnt">                
@@ -50,7 +50,7 @@
 
         <div>
           <span style="">            
-            <a id="errr_close" href="javascript:void(0)" class="btn btn-danger">{{ __('Okay') }}</a>        
+            <a id="errr_close" href="javascript:void(0)" class="btn btn-danger"> {{ __('mess.Okay') }}</a>
           </span>
           <br><br><br><br>
         </div>
@@ -71,12 +71,12 @@
       <div class="col-md-4">&emps;</div>
       <div class="col-md-4 popmsg-mobile pop_read_msg"  align="Center">
             <span class="">            
-                <a id="readmsg_close" href="javascript:void(0)" class="btn btn-danger">{{ __('X') }}</a>        
+                <a id="readmsg_close" href="javascript:void(0)" class="btn btn-danger"> {{ __('mess.X') }}</a>
             </span>   
           <div class="sparkline8-list shadow-reset mg-tb-30" >
               <div class="sparkline8-hd" >
                   <div class="main-sparkline8-hd">
-                      <h1>{{ __('Read Messages') }}</h1>
+                      <h1> {{ __('mess.Read_Messages') }}</h1>
                   </div>
               </div>
               <div class="">

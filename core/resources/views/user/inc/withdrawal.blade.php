@@ -3,8 +3,8 @@
       <div class="col-md-4">&emps;</div>
       <div class="col-md-4 card popmsg-mobile pop_invest_col" align="Center">        
         <div class="card-header" style="">
-          <h3> {{ __('Withdrawal') }} </h3>
-          <h5>{{ __('Total Earning:') }} {{$settings->currency}} <span id="earned"></span></h5>  
+          <h3> {{ __('mess.Withdrawal') }} </h3>
+          <h5>{{ __('mess.Total_Earning') }}: {{$settings->currency}} <span id="earned"></span></h5>
           <small>Days: <span id="days" class="text-danger" ></span></small>     
         </div>
         <div class="card-body pt-0" >                
@@ -16,7 +16,7 @@
                   <input id="ended" type="hidden" class="form-control" name="ended" value="">
               </div>
               <div align="left">
-                <label>{{ __('Withdrawable Amount') }} </label>
+                <label>{{ __('mess.Withdrawable_Amount') }} </label>
               </div>
               <div class="input-group">                
                 <div class="input-group-prepend " >
@@ -26,9 +26,9 @@
               </div>
               <div class="form-group">
                 <br><br>
-                  <button class="btn btn-info"> {{ __('Withdraw') }} </button>
+                  <button class="btn btn-info"> {{ __('mess.Withdraw') }} </button>
                   <span style="">            
-                    <a id="div_withdrawal_close" href="javascript:void(0)" class="btn btn-danger"> {{ __('Cancel') }} </a>        
+                    <a id="div_withdrawal_close" href="javascript:void(0)" class="btn btn-danger"> {{ __('mess.Cancel') }} </a>
                   </span>
                   <br>
               </div>

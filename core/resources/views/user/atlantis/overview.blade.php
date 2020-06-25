@@ -43,20 +43,20 @@
 	<div class="col-md-6">
 		<div class="card full-height">
 			<div class="card-body">
-				<div class="card-title">{{ __('Overall statistics') }}</div>
+				<div class="card-title"> {{ __('mess.Overall_statistics') }}</div>
 				<div class="card-category"></div>
 				<div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
 					<div class="px-2 pb-2 pb-md-0 text-center">
 						<div id="circles-1"></div>
-						<h6 class="fw-bold mt-3 mb-0">{{ __('Investments') }}</h6>
+						<h6 class="fw-bold mt-3 mb-0"> {{ __('mess.Investments') }}</h6>
 					</div>
 					<div class="px-2 pb-2 pb-md-0 text-center">
 						<div id="circles-2"></div>
-						<h6 class="fw-bold mt-3 mb-0">{{ __('Withdrawals') }}</h6>
+						<h6 class="fw-bold mt-3 mb-0"> {{ __('mess.Withdrawals') }}</h6>
 					</div>
 					<div class="px-2 pb-2 pb-md-0 text-center">
 						<div id="circles-3"></div>
-						<h6 class="fw-bold mt-3 mb-0">{{ __('Downlines') }}</h6>
+						<h6 class="fw-bold mt-3 mb-0"> {{ __('mess.Downlines') }}</h6>
 					</div>
 				</div>
 			</div>
@@ -66,23 +66,23 @@
 	<div class="col-md-6">
 		<div class="card full-height">
 			<div class="card-body">
-				<div class="card-title"><h2>{{ __('Balances') }}</h2></div>
+				<div class="card-title"><h2> {{ __('mess.Balances') }}</h2></div>
 				<div class="row py-3">
 					<div class="col-md-6 d-flex flex-column justify-content-around">
 						<a id="wd_bal" title="Click to withdraw" href="javascript:void(0)" >
 							<div class="border_btm">							
-								<h4 class="fw-bold text-uppercase text-success op-8">{{ __('Wallet') }}</h4>
+								<h4 class="fw-bold text-uppercase text-success op-8"> {{ __('mess.Wallet') }}</h4>
 								<h3 class="fw-bold">{{$settings->currency}} {{ round($user->wallet, 4) }}</h3>
-								<div class="colhd margin_n10">{{ __('Click to Withdraw Fund') }}</div>	
+								<div class="colhd margin_n10"> {{ __('mess.Click_to_Withdraw_Fund') }}</div>
 								<br>						
 							</div>
 						</a>
 						<div class="clearfix"><br></div>
 						<a id="wd_ref_bal" title="Click to withdraw" href="javascript:void(0)">
 							<div>							
-								<h4 class="fw-bold text-uppercase text-success op-8">{{ __('Referral Bonus') }}</h4>
+								<h4 class="fw-bold text-uppercase text-success op-8"> {{ __('mess.Referral_Bonus') }}</h4>
 								<h3 class="fw-bold">{{$settings->currency}} {{ round($user->ref_bal, 4) }}</h3>
-								<div class="colhd margin_n10" >{{ __('Click to Withdraw Fund') }}</div>	
+								<div class="colhd margin_n10" > {{ __('mess.Click_to_Withdraw_Fund') }}</div>
 								<br>									
 							</div>
 						</a>
@@ -91,7 +91,7 @@
 					<div class="col-md-6">
             <a href="#">
   						<div class="border_btm">
-  							<h4 class="fw-bold text-uppercase text-success op-8">{{ __('Earning') }}</h4>
+  							<h4 class="fw-bold text-uppercase text-success op-8"> {{ __('mess.Earning') }}</h4>
   							<h3 class="fw-bold">{{$settings->currency}} {{$currentEarning}}</h3>
   							<div class="colhd margin_n10" >&emsp;</div>	
   							<br>	
@@ -110,12 +110,12 @@
       <div class="col-md-4 popmsg-mobile card" align="Center">        
         <div class="card-title">
           <br>
-          <h3><b>{{ __('Wallet Withdrawal') }}</b></h3>
-          <h5 class="text-danger"><b>{{ __('Available Balance:') }}</b> {{$settings->currency.' '.$user->wallet}}</h5>         
+          <h3><b> {{ __('mess.Wallet_Withdrawal') }}</b></h3>
+          <h5 class="text-danger"><b> {{ __('mess.Available_Balance') }}:</b> {{$settings->currency.' '.$user->wallet}}</h5>
           <hr>
         </div>
         <div class="card-body">
-            {{ __('Enter amount and select bank/wallet below') }}
+             {{ __('mess.Enter_amount_and_select_bank/wallet_below') }}
             <form id="wd_formssss" action="/user/wallet/wd" method="post">
                 <div class="form-group" align="left">                       
                     <input type="hidden" class="form-control" name="_token" value="{{csrf_token()}}">
@@ -148,9 +148,9 @@
                 </div>
                 <div class="form-group">
                   <br><br>
-                    <button class="collb btn btn-info">{{ __('Withdraw') }}</button>
+                    <button class="collb btn btn-info"> {{ __('mess.Withdraw') }}</button>
                     <span style="">            
-                      <a id="wallet_wd_close" href="javascript:void(0)" class="collcc btn btn-danger">{{ __('Cancel') }}</a>        
+                      <a id="wallet_wd_close" href="javascript:void(0)" class="collcc btn btn-danger"> {{ __('mess.Cancel') }}</a>
                     </span>
                     <br>
                 </div>
@@ -174,12 +174,12 @@
       <div class="col-md-4 popmsg-mobile card" align="Center">        
         <div class="panel-heading" style="">
           <br>
-          <h3><b>{{ __('Referral Withdrawal') }}</b></h3>
-          <h5 class="text-danger"><b>{{ __('Total Earning:') }}</b> {{$settings->currency.' '.$user->ref_bal}}</h5>         
+          <h3><b> {{ __('mess.Referral_Withdrawal') }}</b></h3>
+          <h5 class="text-danger"><b> {{ __('mess.Total_Earning') }}:</b> {{$settings->currency.' '.$user->ref_bal}}</h5>
           <hr>
         </div>
         <div id="" >
-              {{ __('Enter amount to withdraw and select bank below') }}
+               {{ __('mess.Enter_amount_to_withdraw_and_select_bank_below') }}
              <form id="wd_formssss" action="/user/ref/wd" method="post">
                 <div class="form-group" align="left">                       
                     <input type="hidden" class="form-control" name="_token" value="{{csrf_token()}}">
@@ -212,9 +212,9 @@
                 </div>
                 <div class="form-group">
                   <br><br>
-                    <button class="collb btn btn-info">{{ __('Withdraw') }}</button>
+                    <button class="collb btn btn-info"> {{ __('mess.Withdraw') }}</button>
                     <span style="">            
-                      <a id="ref_wd_close" href="javascript:void(0)" class="collcc btn btn-danger">{{ __('Cancel') }}</a>        
+                      <a id="ref_wd_close" href="javascript:void(0)" class="collcc btn btn-danger"> {{ __('mess.Cancel') }}</a>
                     </span>
                     <br>
                 </div>

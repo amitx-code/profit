@@ -1,7 +1,8 @@
 			<footer class="foot" style="background-color: <?php echo e($settings->footer_color); ?>">
 				<div class="container-fluid">					
 					<div class="copyright" align="center">
-					    Copyright &#169; of <a href="/"><?php echo e($settings->site_title); ?></a> <?php echo e(date("Y")); ?>. All Rights Reserved.
+					    Copyright &#169; of <a href="/"><?php echo e($settings->site_title); ?></a> <?php echo e(date("Y")); ?>. <?php echo e(__('mess.All_Rights_Reserved.')); ?>
+
 					</div>				
 				</div>
 			</footer>
@@ -462,7 +463,17 @@
             $('#suc').show().animate({ width: "30%" }, "1000").delay(10000).fadeOut(100);
 		</script>
 	<?php endif; ?>
-
+	<!-- Smartsupp Live Chat script -->
+	<!-- <script type="text/javascript">
+		var _smartsupp = _smartsupp || {};
+		_smartsupp.key = '5e18443d9f2d6dd3019cbc471af9c5f56565a552';
+		window.smartsupp||(function(d) {
+		  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+		  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+		  c.type='text/javascript';c.charset='utf-8';c.async=true;
+		  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+		})(document);
+	</script> -->
 </body>
 
 </html><?php /**PATH C:\wamp\www\soft.local\core\resources\views/layouts/atlantis/footer.blade.php ENDPATH**/ ?>

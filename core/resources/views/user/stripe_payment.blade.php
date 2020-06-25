@@ -12,7 +12,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title">{{ __('Deposit Using Stripe') }}</div>
+                                        <div class="card-title">{{ __('mess.Deposit_Using_Stripe') }}</div>
                                         <div class="card-tools">                                            
                                         </div>
                                     </div>
@@ -31,7 +31,7 @@
                                                 {{ csrf_field() }}
 
                                                 <div class="form-group {{ $errors->has('amount') ? ' has-error' : '' }}">
-                                                    <label for="amount" class="control-label">{{ __('Enter Amount') }}</label>                            
+                                                    <label for="amount" class="control-label">{{ __('mess.Enter_Amount') }}</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text"><b>{{$settings->currency}}</b></span>
@@ -40,7 +40,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">                                                                                                             
-                                                    <button type="submit" class="btn btn-primary">{{ __('Proceed to Payment') }}</button>  
+                                                    <button type="submit" class="btn btn-primary">{{ __('mess.Proceed_to_Payment') }}</button>
                                                 </div>
                                             </form>
                                             @endif

@@ -14,7 +14,7 @@
               <div class="card">
 
                 <div class="card-header">
-                  <div class="card-title"> Fund Transfer </div>
+                  <div class="card-title"> <?php echo e(__('mess.Fund_Transfer')); ?> </div>
                 </div>
 
                 <div class="card-body pb-0">
@@ -37,18 +37,18 @@
                             <div class="input-group-prepend" >
                               <span class="input-group-text "><i class="fa fa-user"></i></span>
                             </div>                        
-                            <input type="text" class="form-control" name="usn"  required placeholder="Username" >
+                            <input type="text" class="form-control" name="usn"  required placeholder="<?php echo e(__('mess.Username')); ?>" >
                           </div>
                           <div class="input-group pad_top10">
                             <div class="input-group-prepend" >
                               <span class=" input-group-text "><?php echo e($settings->currency); ?></span>
                             </div>                                                     
-                            <input type="text" class="form-control" name="s_amt"  required placeholder="Enter amount you want to send" >
+                            <input type="text" class="form-control" name="s_amt"  required placeholder="<?php echo e(__('mess.Enter_amount_you_want_to_send')); ?>" >
                           </div>
                                         
                           <div class="form-group" align="">
                             <br><br>
-                              <button class="btn btn_blue"><?php echo e(__('Send')); ?></button>
+                              <button class="btn btn_blue"><?php echo e(__('mess.Send')); ?></button>
                               <br>
                           </div>                          
                         </form>  
@@ -61,7 +61,7 @@
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header">
-                  <div class="card-title">Transfer History </div>
+                  <div class="card-title"><?php echo e(__('mess.Transfer_History')); ?> </div>
                 </div>
                 <div class="card-body">
                     <?php echo $__env->make('user.inc.transfer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

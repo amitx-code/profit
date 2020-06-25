@@ -13,21 +13,21 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title">{{ __('Deposit into your wallet') }}</div>                                        
+                                        <div class="card-title">{{ __('mess.Deposit_into_your_wallet') }}</div>
                                     </div>
                                 </div>
                                 <div class="card-body"> 
                                         @if($user->status == 2 || $user->status == 'Blocked')
                                             <div class="alert alert-warning">
                                                 <p>
-                                                   {{ __('Account Blocked or restricted! Please contact support for assistance. We apologize for any inconveniency.') }} 
+                                                   {{ __('mess.Account_Blocked or restricted! Please contact support for assistance. We apologize for any inconveniency.') }}
                                                 </p>
                                             </div>
                                         @elseif(empty($user->currency))
                                             <div class="alert alert-warning">
                                                 <p>
                                                     <a href="/{{$user->username}}/profile#userdet">
-                                                        {{ __('Please, update your profile before you proceed') }}
+                                                        {{ __('mess.Please_update your profile before you proceed') }}
                                                     </a>
                                                 </p>
                                             </div>
@@ -41,10 +41,10 @@
                                                                 <i class="fab fa-cc-paypal fa-4x text-info"></i> <br>
                                                             </p>
                                                             <p>
-                                                                {{ __('Pay using Paypal payment gateway') }}
+                                                                {{ __('mess.Pay_using_Paypal_payment_gateway') }}
                                                             </p>
                                                             <div align="">
-                                                                <a href="{{ route('addmoney.paywithpaypal') }}" class="btn btn_blue" >{{ __('Pay with Paypal') }}</a>
+                                                                <a href="{{ route('addmoney.paywithpaypal') }}" class="btn btn_blue" >{{ __('mess.Pay_with_Paypal') }}</a>
                                                             </div>
                                                         </div> 
                                                     </div>
@@ -56,12 +56,12 @@
                                                                 <i class="fab fa-cc-stripe fa-4x text-info"></i> <br>
                                                             </p>
                                                             <p>
-                                                                {{ __('Pay using Stripe payment gateway') }}
+                                                                {{ __('mess.Pay_using_Stripe_payment_gateway') }}
                                                             </p> 
                                                            
                                                             <div align="">
                                                                 <a href="{{ route('stripe.amount') }}" class="btn btn_blue" >
-                                                                    {{ __('Pay with Stripe') }}
+                                                                    {{ __('mess.Pay_with_Stripe') }}
                                                                 </a>
                                                             </div>                                      
                                                         </div>                                                       
@@ -74,12 +74,12 @@
                                                                 <i class="fab fa-bitcoin fa-4x text-info"></i> <br>
                                                             </p>
                                                             <p>
-                                                                {{ __('Pay using Bitcoin payment system') }}
+                                                                {{ __('mess.Pay_using_Bitcoin_payment_system') }}
                                                             </p> 
                                                            
                                                             <div align="">
                                                                 <a href="{{ route('btc.index') }}" class="btn btn_blue" >
-                                                                    {{ __('Pay with BTC') }}
+                                                                    {{ __('mess.Pay_with_BTC') }}
                                                                 </a>
                                                             </div>                                      
                                                         </div>                                                       
@@ -92,12 +92,12 @@
                                                                 <i class="far fa-building fa-4x text-info"></i> <br>
                                                             </p>
                                                             <p>
-                                                                {{ __('Pay using Bank Deposit/Transfer') }}
+                                                                {{ __('mess.Pay_using_Bank_Deposit/Transfer') }}
                                                             </p> 
                                                            
                                                             <div align="">
                                                                 <a id="pay_with_bank_dep" href="javascript:void(0)" class="btn btn_blue" >
-                                                                    {{ __('Deposit with Bank') }}
+                                                                    {{ __('mess.Deposit_with_Bank') }}
                                                                 </a>
                                                             </div> 
                                                             <div id="bank_dets" align="" class="cont_display_none">
@@ -113,14 +113,14 @@
                                                                 <div class="row">              
                                                                     <div class="col-sm-12">
                                                                         <p class="text-danger">
-                                                                           {{ __('Make payment to the above bank account information and click continue below.') }} 
+                                                                           {{ __('mess.Make_payment') }}
                                                                         </p>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">              
                                                                     <div class="col-sm-12">
                                                                         <a id="bank_deposit_cont" href="javascript:void(0)" class="btn btn_blue" >
-                                                                            {{ __('Continue') }}
+                                                                            {{ __('mess.Continue') }}
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -136,12 +136,12 @@
                                                                 <img src="https://website-v3-assets.s3.amazonaws.com/assets/img/hero/Paystack-mark-white-twitter.png" height="50px"></img> <br>
                                                             </p>
                                                             <p>
-                                                                {{ __('Pay using paystack') }}
+                                                                {{ __('mess.Pay using paystack') }}
                                                             </p> 
                                                            
                                                             <div align="">
                                                                 <a href="{{ route('paystack.index') }}" class="btn btn_blue" >
-                                                                    {{ __('Pay with Paystack') }}
+                                                                    {{ __('mess.Pay_with_Paystack') }}
                                                                 </a>
                                                             </div>                                      
                                                         </div>                                                       
@@ -153,7 +153,7 @@
                                                     <div class="col-lg-12">                                                                       
                                                         <div class="payment_method">
                                                             <p align="Center">
-                                                               <i class="fa fa-alert"></i> {{ __('Deposit is disabbled') }} 
+                                                               <i class="fa fa-alert"></i> {{ __('mess.Deposit_is_disabbled') }}
                                                             </p>                              
                                                         </div>                                                       
                                                     </div>
@@ -173,7 +173,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">{{ __('Deposit History') }}</div>
+                                    <div class="card-title">{{ __('mess.Deposit_History') }}</div>
                                 </div>
                                 <div class="card-body pb-0">
                                     <?php
@@ -184,13 +184,13 @@
                                         <table id="basic-datatables" class="display table table-striped table-hover" >
                                         <thead>
                                             <tr>  
-                                                <th>{{ __('Amount') }}</th>        
-                                                <th>{{ __('Method') }}</th>
-                                                <th>{{ __('Account') }}</th>
-                                                <th>{{ __('Name') }}</th>
-                                                <th>{{ __('Date') }}</th>
-                                                <th>{{ __('Status') }}</th>
-                                                <th>{{ __('Url') }}</th>                                                                        
+                                                <th>{{ __('mess.Amount') }}</th>
+                                                <th>{{ __('mess.Method') }}</th>
+                                                <th>{{ __('mess.Account') }}</th>
+                                                <th>{{ __('mess.Name') }}</th>
+                                                <th>{{ __('mess.Date') }}</th>
+                                                <th>{{ __('mess.Status') }}</th>
+                                                <th>{{ __('mess.Url') }}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -218,14 +218,14 @@
                                                         </td> 
                                                         <td>
                                                             @if($dep->bank == 'BTC')
-                                                                <a href="{{$dep->url}}" target="_blank" class="btn btn-info">Confirmation</a>
+                                                                <a href="{{$dep->url}}" target="_blank" class="btn btn-info">{{ __('mess.Confirmation') }}</a>
                                                             @endif
                                                         </td>                                                                       
                                                     </tr>
                                                 @endforeach
                                             @else
                                                 <tr>                                                            
-                                                    <td colspan="6">{{ __('No data') }}</td>                                        
+                                                    <td colspan="6">{{ __('mess.No_data') }}</td>
                                                 </tr>
                                             @endif
                                         </tbody>
@@ -245,7 +245,7 @@
                     <div class="col-md-4 pop_cont" align="Center">   
                         <div class="">                        
                                 <span>            
-                                  <a id="dep_pop_close" href="javascript:void(0)" class="btn btn-danger">{{ __('Cancel') }}</a>        
+                                  <a id="dep_pop_close" href="javascript:void(0)" class="btn btn-danger">{{ __('mess.Cancel') }}</a>
                                 </span>
                                 <br>
                             </div>
@@ -270,7 +270,7 @@
                   <div class="col-md-4">&emps;</div>
                   <div class="col-md-4 popmsg-mobile card" align="Center">        
                     <div class="mt-2">
-                      <h3><b>{{ __('Deposit Details') }}</b></h3>                              
+                      <h3><b>{{ __('mess.Deposit_Details') }}</b></h3>
                       <hr>
                     </div>
                     <div class="">                        
@@ -283,7 +283,7 @@
                                 <div class="input-group-prepend " >
                                   <span class="input-group-text span_bg">{{$settings->currency}}</span>
                                 </div>                        
-                                <input type="number" class="form-control" name="amt"  required placeholder="Enter Amount deposited" >
+                                <input type="number" class="form-control" name="amt"  required placeholder="{{ __('mess.Enter_Amount_deposited') }}" >
                               </div>
                             </div>
                             <div class="form-group">
@@ -291,7 +291,7 @@
                                 <div class="input-group-prepend " >
                                   <span class="input-group-text span_bg"><i class="fa fa-user" ></i></span>
                                 </div>
-                                <input type="text" class="form-control" name="account_name"  required placeholder="Account name sent from" >
+                                <input type="text" class="form-control" name="account_name"  required placeholder="{{ __('mess.Account_name_sent_from') }}" >
                               </div>
                             </div>
                             <div class="form-group">
@@ -299,7 +299,7 @@
                                 <div class="input-group-prepend " >
                                   <span class="input-group-text span_bg"><i class="fa fa-home" ></i></span>
                                 </div>
-                                <input type="text" class="form-control" name="account_no"  required placeholder="Account number sent from" >
+                                <input type="text" class="form-control" name="account_no"  required placeholder="{{ __('mess.Account_number_sent_froml') }}" >
                               </div>
                             </div>
                             <div class="form-group">
@@ -307,14 +307,14 @@
                                 <div class="input-group-prepend" >
                                   <span class="input-group-text span_bg"><i class="fa fa-home" ></i></span>
                                 </div>
-                                <input type="text" class="form-control" name="bank_name"  required placeholder="Bank name sent from" >
+                                <input type="text" class="form-control" name="bank_name"  required placeholder="{{ __('mess.Bank_name_sent_from') }}" >
                               </div>
                             </div>
                             <div class="form-group">
                               <br>
-                                <button class="collb btn btn-info">{{ __('Proceed') }}</button>
+                                <button class="collb btn btn-info">{{ __('mess.Proceed') }}</button>
                                 <span style="">            
-                                  <a id="bank_deposit_cont_dets_close" href="javascript:void(0)" class="collcc btn btn-danger">{{ __('Cancel') }}</a>        
+                                  <a id="bank_deposit_cont_dets_close" href="javascript:void(0)" class="collcc btn btn-danger">{{ __('mess.Cancel') }}</a>
                                 </span>
                                 <br>
                             </div>

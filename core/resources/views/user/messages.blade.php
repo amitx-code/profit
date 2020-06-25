@@ -13,7 +13,7 @@
 							<div class="card margin_btm_0">
 								<div class="card-header">
 									<div class="card-head-row">
-										<div class="card-title headtext_blue"><i class="fa fa-bell fa-1x"></i>{{ __('Notifications') }}</div>
+										<div class="card-title headtext_blue"><i class="fa fa-bell fa-1x"></i>{{ __('mess.Notifications') }}</div>
 									</div>
 								</div>
 								<div class="card-body msg_nf">									

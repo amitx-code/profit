@@ -13,7 +13,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title">{{ __('My Investment') }}</div>                                       
+                                        <div class="card-title">{{ __('mess.My_Investment') }}</div>
                                     </div>
                                 </div>
                                 <div class="card-body ">  
@@ -21,14 +21,14 @@
                                         <table id="basic-datatables" class="display table table-hover" >
                                             <thead>
                                                 <tr>
-                                                    <th>{{ __('Package') }}</th>
-                                                    <th>{{ __('Capital') }}</th>
-                                                    <th>{{ __('Date Invested') }}</th> 
-                                                    <th>{{ __('Elapse') }}</th>  
-                                                    <th>{{ __('Days Spent') }}</th> 
-                                                    <th>{{ __('Status') }}</th>
-                                                    <th>{{ __('Earning') }}</th>  
-                                                    <th>{{ __('Action') }}</th> 
+                                                    <th>{{ __('mess.Package') }}</th>
+                                                    <th>{{ __('mess.Capital') }}</th>
+                                                    <th>{{ __('mess.Date_Invested') }}</th>
+                                                    <th>{{ __('mess.Elapse') }}</th>
+                                                    <th>{{ __('mess.Days_Spent') }}</th>
+                                                    <th>{{ __('mess.Status') }}</th>
+                                                    <th>{{ __('mess.Earning') }}</th>
+                                                    <th>{{ __('mess.Action') }}</th>
                                                 </tr>
                                             </thead>
                                             <tbody class="web-table">                                                
@@ -140,7 +140,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"> Available Packages</div>
+                                    <div class="card-title"> {{ __('mess.Available_Packages') }}</div>
                                 </div>
                                 <div class="card-body pb-0">
                                     @include('user.inc.packages')

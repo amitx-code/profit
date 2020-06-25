@@ -73,7 +73,7 @@
 							</a>
 						</li>
 						<li class="nav-item dropdown hidden-caret">
-							<a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a class=" dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<?php                                  
 	                                $msgs = App\msg::orderby('id', 'desc')->take(5)->get();
 	                            ?>								
@@ -81,16 +81,18 @@
 									<?php $__currentLoopData = $msgs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $msg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
                                         <?php 
                                             $rd = 0;
-                                            $str = explode(';', $msg->readers);                                           
-                                            if(!in_array($user->id, $str))
+                                            $str = explode(';', $msg->readers);   
+                                            $receiver = explode(';', $msg->users);                                         
+                                            if( in_array($user->username, $receiver) || empty($msg->users) )
                                             {
-                                                $rd = 1;
+                                            	if(!in_array($user->id, $str))
+                                            	{
+                                                	$rd = 1;
+                                            	}
                                             }                                            
                                         ?>
                                         <?php if($rd == 1): ?>   
                                         	<i class="fa fa-circle new_not"></i>
-                                        <?php else: ?>
-
                                         <?php endif; ?>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 									
@@ -100,21 +102,21 @@
 								<li>
 									<div class="message-notif-scroll scrollbar-outer">
 										<div class="notif-center">											
-                                            <?php $__currentLoopData = $msgs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $msg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
+                                            <?php $__currentLoopData = $msgs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $msg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                                            	
                                                 <?php 
                                                     $rd = 0;
-                                                    $str = explode(';', $msg->readers);                                           
-                                                    if(in_array($user->id, $str))
-                                                    {
-                                                        $rd = 1;
-                                                    }
-                                                    
+		                                            $str = explode(';', $msg->readers);   
+		                                            $receiver = explode(';', $msg->users);                                         
+		                                            if( in_array($user->username, $receiver) || empty($msg->users) )
+		                                            {
+		                                            	if(!in_array($user->id, $str))
+		                                            	{
+		                                                	$rd = 1;
+		                                            	}
+		                                            }                                                   
                                                 ?>
-                                                <?php if($rd == 1): ?>   
-                                                
-                                                <?php else: ?>
-                                                    
-                                                    <a id="<?php echo e($msg->id); ?>" href="/notification/<?php echo e($msg->id); ?>" >
+                                                <?php if($rd == 1): ?> 
+                                                	<a id="<?php echo e($msg->id); ?>" href="/notification/<?php echo e($msg->id); ?>" >
 														<div class="notif-img"> 
 															<i class="fa fa-bell fa-2x"></i>
 														</div>
@@ -127,6 +129,7 @@
 															<span class="time"><?php echo e($msg->created_at); ?> ...</span> 
 														</div>
 													</a>
+													<?php ($rd = 0); ?> 
                                                 <?php endif; ?>
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 											
@@ -175,13 +178,28 @@
 									<li>
 										<div class="dropdown-divider"></div>										
 										<a class="dropdown-item" href="/<?php echo e($user->username); ?>/dashboard"><span class="fa fa-desktop"></span> &nbsp;Dashboard</a>
-										<a class="dropdown-item" href="/<?php echo e($user->username); ?>/wallet"><span class="fa fa-folder"></span>&nbsp; My Wallet</a>
+										<a class="dropdown-item" href="/<?php echo e($user->username); ?>/wallet"><span class="fa fa-folder"></span>&nbsp; Deposit</a>
 										<a class="dropdown-item" href="/<?php echo e($user->username); ?>/send_money"><span class="fa fa-paper-plane"></span>&nbsp; Transfer Fund</a>
 										<a class="dropdown-item" href="/<?php echo e($user->username); ?>/investments"><span class="fa fa-wallet"></span>&nbsp; My Investments</a>
-										<!-- <a class="dropdown-item" href="/<?php echo e($user->username); ?>/xpack"><span class="fa fa-file"></span>&nbsp; Xmas Pack <span class="indicator-right-menu mini-dn"><i style="color:#FF9800; font-size:9px;"><b>closed</b></i></span></a> -->
 										<a class="dropdown-item" href="/<?php echo e($user->username); ?>/withdrawal"><span class="fa fa-download"></span>&nbsp; Withdrawal</a>
 										<a class="dropdown-item" href="/<?php echo e($user->username); ?>/downlines"><span class="fa fa-users"></span>&nbsp; Downlines</a>
-										
+										<a class="dropdown-item" href="<?php echo e(route('ticket.index')); ?>">
+											<span class="fab fa-teamspeak"></span>&nbsp; Contact Support
+											<?php                                  
+				                                $msgs = App\ticket::With('comments')->orderby('id', 'desc')->get();
+				                                $rd = 0;
+				                            ?>
+											<?php $__currentLoopData = $msgs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $msg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                                     
+			                                    <?php $__currentLoopData = $msg->comments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $comment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+			                                    	<?php if($comment->state == 1 && $comment->sender == 'support'): ?>
+			                                    		<?php ($rd = 1); ?>
+			                                    	<?php endif; ?>
+			                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>                                   
+			                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			                                <?php if($rd == 1): ?>   
+			                                	<i class="fa fa-circle new_not text-danger"></i>
+			                                <?php endif; ?>
+										</a>
 										
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="/logout"><span class="fa fa-arrow-right"></span> &nbsp;Logout</a>
@@ -236,7 +254,7 @@
 						<li class="nav-item">
 							<a  href="/<?php echo e($user->username); ?>/wallet">
 								<i class="fas fa-wallet"></i>
-								<p>Wallet</p>
+								<p>Wallet Deposit</p>
 							</a>							
 						</li>
 						<li class="nav-item">
@@ -265,11 +283,34 @@
 							</a>							
 						</li>
 						<li class="nav-item">
+							<a href="<?php echo e(route('ticket.index')); ?>">
+								<i class="fab fa-teamspeak"></i>
+								<p>Contact Support</p>
+								<?php                                  
+	                                $msgs = App\ticket::With('comments')->where('user_id', $user->id)->get();
+	                                $rd = 0;
+	                            ?>
+								<?php $__currentLoopData = $msgs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $msg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                                     
+                                    <?php $__currentLoopData = $msg->comments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $comment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    	<?php if($comment->state == 1 && $comment->sender == 'support'): ?>
+                                    		<?php ($rd = 1); ?>
+                                    	<?php endif; ?>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>                                   
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php if($rd == 1): ?>   
+                                	<i class="fa fa-circle new_not text-danger"></i>
+                                <?php endif; ?>	
+
+							</a>							
+						</li>
+
+						<li class="nav-item">
 							<a href="/logout">
 								<i class="fas fa-arrow-right"></i>
 								<p>Logout</p>
 							</a>							
 						</li>
+
 						
 					</ul>
 				</div>

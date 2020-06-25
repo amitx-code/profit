@@ -12,7 +12,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title col-sm-12"  >{{ __('Open Ticket') }} 
+                                        <div class="card-title col-sm-12"  >{{ __('mess.Open_Ticket') }}
                                             <span class="float-right"><a data-target="#open_ticket" data-toggle="modal" href="javascript:void(0)" class="btn btn_blue text-white"><i class="fas fa-plus-circle "></i>New Ticket</a></span>
                                         </div>
                                     </div>
@@ -23,11 +23,11 @@
                                         <table  class=" display table table-striped table-hover" >
                                             <thead>
                                                 <tr>                                                   
-                                                    <th>{{ __('Ticket ID') }}</th> 
-                                                    <th>{{ __('Title') }}</th>
-                                                    <th>{{ __('status') }}</th>
-                                                    <th>{{ __('Action') }}</th>                                                   
-                                                    <!-- <th>{{ __('Status') }}</th>                                   -->
+                                                    <th>{{ __('mess.Ticket_ID') }}</th>
+                                                    <th>{{ __('mess.Title') }}</th>
+                                                    <th>{{ __('mess.status') }}</th>
+                                                    <th>{{ __('mess.Action') }}</th>
+                                                    <!-- <th>{{ __('mess.Status') }}</th>                                   -->
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -39,9 +39,9 @@
                                                             <td>{{$ticket->title}}</td>
                                                             <td>
                                                                 @if($ticket->status == 0)
-                                                                    {{__('Closed')}}
+                                                                    {{ __('mess.Closed')}}
                                                                 @elseif($ticket->status == 1)
-                                                                    {{__('Open')}}
+                                                                    {{ __('mess.Open')}}
                                                                 @endif
                                                             </td>
                                                             <td>
@@ -91,7 +91,7 @@
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Open a new ticket</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{ __('mess.Open_a_new_ticket')}}t</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true" class="text-danger">&times;</span>
                     </button>
@@ -100,7 +100,7 @@
                     <form class="form-horizontal" method="POST" role="form" action="{{ route('ticket.create') }}" >
                         @csrf
                         <div class="form-group {{ $errors->has('amount') ? ' has-error' : '' }}">
-                            <label class="control-label">{{ __('Title') }}</label>                            
+                            <label class="control-label">{{ __('mess.mess.Title') }}</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-pen-alt"></i></span>
@@ -109,13 +109,13 @@
                             </div>
                         </div>
                         <div class="form-group ">
-                            <label class="control-label">{{ __('Message') }}</label>                            
+                            <label class="control-label">{{ __('mess.Message') }}</label>
                             <div class="input-group">                               
                                 <textarea name="msg" class="form-control" required></textarea>                                                   
                             </div>
                         </div>
                         <div class="form-group">                                                                                                           
-                            <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>  
+                            <button type="submit" class="btn btn-primary">{{ __('mess.Submit') }}</button>
                         </div>
                     </form>
                   </div>

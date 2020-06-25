@@ -14,11 +14,11 @@
         <form id="userpackinv" action="/user/invest/packages" method="post">
             <div class="form-group" align="left">
               <div class="pop_form_min_max" align="center">
-                <b><?php echo e(__('Min. Capital:')); ?> <?php echo e($settings->currency); ?><span id="min"></span></b> | 
-                <b><?php echo e(__('Max. Capital:')); ?> <?php echo e($settings->currency); ?><span id="max"></span></b>                      
+                <b><?php echo e(__('Min. Capital:')); ?> <?php echo e($settings->currency); ?> <span id="min"></span></b> | 
+                <b><?php echo e(__('Max. Capital:')); ?> <?php echo e($settings->currency); ?> <span id="max"></span></b>                      
               </div> 
               <br>                   
-              <label><?php echo e(__('Enter amount to invest')); ?></label>
+              <label><?php echo e(__('Enter Amount to Invest')); ?></label>
               <input type="hidden" class="form-control" name="_token" value="<?php echo e(csrf_token()); ?>">
               <input id="p_id" type="hidden" class="form-control" name="p_id" value="">
               <input type="text" class="form-control" name="capital" placeholder="Enter capital to invest" required>

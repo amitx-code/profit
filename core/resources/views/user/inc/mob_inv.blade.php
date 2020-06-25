@@ -8,7 +8,7 @@
     </div> 
     <div class="row color_blue_9">
         <div class="col-xs-6">
-            {{ __('Capital:') }}
+             {{ __('mess.Capital') }}:
         </div>
         <div class="col-xs-6">
             {{($settings->currency)}} {{$in->capital}}
@@ -16,7 +16,7 @@
     </div> 
     <div class="row" style="">
         <div class="col-xs-6">
-            {{ __('Return:') }}
+             {{ __('mess.Return') }}:
         </div>
         <div class="col-xs-6">
             {{($settings->currency)}} {{$in->i_return}}
@@ -24,7 +24,7 @@
     </div>  
     <div class="row" style="">
         <div class="col-xs-6">
-            {{ __('Started:') }}
+             {{ __('mess.Started') }}:
         </div>
         <div class="col-xs-6">
             {{$in->date_invested}}
@@ -32,7 +32,7 @@
     </div> 
     <div class="row" style="">
         <div class="col-xs-6">
-            {{ __('Ending:') }}
+             {{ __('mess.Ending') }}:
         </div>
         <div class="col-xs-6">
             {{$in->end_date}}
@@ -40,7 +40,7 @@
     </div>
     <div class="row" style="">
         <div class="col-xs-6">
-            {{ __('Days:') }}
+             {{ __('mess.Days') }}:
         </div>
         <div class="col-xs-6">
             {{$totalDays}}
@@ -48,7 +48,7 @@
     </div>
     <div class="row" style="">
         <div class="col-xs-6">
-           {{ __('Withdrawn:') }} 
+            {{ __('mess.Withdrawn') }} :
         </div>
         <div class="col-xs-6">
             {{($settings->currency)}} {{$in->w_amt}}
@@ -56,7 +56,7 @@
     </div> 
     <div class="row" style="">
         <div class="col-xs-6">
-            {{ __('Status:') }}
+             {{ __('mess.Status') }}:
         </div>
         <div class="col-xs-6">
             {{$in->status}}
@@ -69,7 +69,7 @@
                 {{$settings->currency}} {{$ern}}
             </a>
         </div>
-        {{ __('Click to withdraw') }}
+         {{ __('mess.Click_to_withdraw') }}
     </div>                                                                     
 </div>
         

@@ -1,7 +1,7 @@
 			<footer class="foot" style="background-color: {{$settings->footer_color}}">
 				<div class="container-fluid">					
 					<div class="copyright" align="center">
-					    Copyright &#169; of <a href="/">{{$settings->site_title}}</a> {{ date("Y") }}. All Rights Reserved.
+					    Copyright &#169; of <a href="/">{{$settings->site_title}}</a> {{ date("Y") }}. {{ __('mess.All_Rights_Reserved.') }}
 					</div>				
 				</div>
 			</footer>

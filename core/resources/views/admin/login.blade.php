@@ -11,7 +11,16 @@
                         <img src="/img/{{$settings->site_logo}}" alt="{{$settings->site_title}}" class="login_logo">
                         <h1>{{$settings->site_title}}</h1> 
                         <p>                                                       
-                            <h4> {{ __('Login to manage website') }} </h4>
+                            <h4> {{ __('mess.Login_to_manage_website') }} </h4>
+                        <ul class="navbar-nav ml-auto">
+                            ...
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('locale', ['locale' => 'en']) }}">EN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('locale', ['locale' => 'ru']) }}">RU</a>
+                            </li>
+                        </ul>
                         </p>
                     </div>                    
                 </div>
@@ -23,7 +32,7 @@
                                     <div class="panel" align="center">
                                         <img src="/img/{{$settings->site_logo}}" alt="{{$settings->site_title}}" class="login_logo">
                                         <br><br>
-                                        <h4 align="center"> {{ __('Admin Login') }} </h4> 
+                                        <h4 align="center"> {{ __('mess.Admin_Login') }} </h4>
                                         <div id="errMsg" class="card-header alert alert-danger cont_display_none" align="center">         
                                         </div>
 
@@ -57,7 +66,7 @@
                                                 </div>
 
                                                 <div class="form-group row">
-                                                    <label for="password" class=" col-form-label text-md-right">{{ __('Admin Password') }}</label>
+                                                    <label for="password" class=" col-form-label text-md-right">{{ __('mess.Admin_Password') }}</label>
 
                                                     <div class="input-group">
                                                         <div class="input-group-prepend bg_ash">
@@ -75,7 +84,7 @@
                                                 <div class="form-group row mb-0">
                                                     <div class="" align="center">
                                                         <button type="submit" class="btn btn-primary">
-                                                            {{ __('Login') }}
+                                                            {{ __('mess.Login') }}
                                                         </button>                               
                                                     </div>                            
                                                 </div>

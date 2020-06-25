@@ -14,7 +14,7 @@
                                 <div class="card-header">
                                     <div class="card-head-row">
                                         <div class="card-title">                                            
-                                            {{ __('Referral link:') }}
+                                            {{ __('mess.Referral_link') }}:
                                             <a href="/register/{{$user->username}}" class="text-danger" id="reflnk" >
                                                 <small>{{env('APP_URL').__('/register/').$user->username}}</small>
                                             </a>                                            
@@ -30,7 +30,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">{{ __('My Downlines') }}</div>
+                                    <div class="card-title">{{ __('mess.My_Downlines') }}</div>
                                 </div>
                                 <div class="card-body pb-0">
                                     <div class="table-responsive">                                        
@@ -38,10 +38,10 @@
                                             <thead>
                                                 <tr>
                                                     <!-- <th data-field="state" data-checkbox="true"></th> -->
-                                                    <th>{{ __('Name') }}</th>
-                                                    <th>{{ __('Username') }}</th>
-                                                    <th>{{ __('Investment') }}</th>
-                                                    <th>{{ __('Date Registered') }}</th>   
+                                                    <th>{{ __('mess.Name') }}</th>
+                                                    <th>{{ __('mess.Username') }}</th>
+                                                    <th>{{ __('mess.Investment') }}</th>
+                                                    <th>{{ __('mess.Date_Registered') }}</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -79,17 +79,17 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"> {{ __('Earning from downlines') }} </div>
+                                    <div class="card-title"> {{ __('mess.Earning_from_downlines') }} </div>
                                 </div>
                                 <div class="card-body pb-0">
                                     <div class="table-responsive">                                        
                                         <table id="" class="table table-hover" >
                                             <thead>
                                                 <tr>                                                    
-                                                    <th>{{ __('Date') }}</th>
-                                                    <th>{{ __('Username') }}</th>
-                                                    <th>{{ __('Name') }}</th>
-                                                    <th>{{ __('Amount') }}</th>
+                                                    <th>{{ __('mess.Date') }}</th>
+                                                    <th>{{ __('mess.Username') }}</th>
+                                                    <th>{{ __('mess.Name') }}</th>
+                                                    <th>{{ __('mess.Amount') }}</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

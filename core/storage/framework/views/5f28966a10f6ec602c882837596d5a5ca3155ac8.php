@@ -42,10 +42,16 @@
                                 
                                 <span align="center">..............................</span>
                                 <div class="" align="center">
-                                    <h4 class="txt_transform">
-                                        Daily Interest: <?php echo e($inv->daily_interest*100); ?>%
-                                    </h4>
-                                    <h4 class="txt_transform"><?php echo e(__('Withdrawal Fee:')); ?> <?php echo e($inv->withdrwal_fee*100); ?>%</h4>
+                                    <h4 class="u_case">
+                                        <strong>Daily Interest</strong>
+                                    </h4>         
+                                     <span class="pk_num"><?php echo e($inv->daily_interest*100); ?>%</span>
+                                </div>
+                                 <div class="" align="center">
+                                    <h4 class="u_case">
+                                       <strong> Withdrawal Interval</strong>
+                                    </h4> 
+                                    <span class="pk_num"><?php echo e($inv->days_interval); ?> Days</span>
                                 </div>
                                 <div class="" align="center">
                                     <p><?php echo e(__('Capital accessible after investment elaspses.')); ?></p>

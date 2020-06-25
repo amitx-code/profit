@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{$settings->site_title}} - Stripe Payment</title>
+    <title>{{$settings->site_title}} - {{ __('mess.Stripe_Payment') }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/atlantis/style.css">
@@ -15,7 +15,7 @@
                 <div class="panel panel-default credit-card-box">
                     <div class="panel-heading display-table" >
                         <div class="row display-tr" >
-                            <h3 class="panel-title display-td">{{ __('Payment Details') }}</h3>
+                            <h3 class="panel-title display-td">{{ __('mess.Payment_Details') }}</h3>
                             <div class="display-td" >             
                                 <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
                             </div>
@@ -32,41 +32,41 @@
                             @csrf
                             <div class='form-row row'>
                                 <div class='col-xs-12 form-group required'>
-                                    <label class='control-label'>{{ __('Name on Card') }}</label> 
+                                    <label class='control-label'>{{ __('mess.Name_on_Card') }}</label>
                                     <input class='form-control' size='4' type='text'>
                                     <input class='form-control' value="{{$amt}}" size='4' name="amt" type='hidden'>
                                 </div>
                             </div>
                             <div class='form-row row'>
                                 <div class='col-xs-12 form-group card required'>
-                                    <label class='control-label'>{{ __('Card Number') }}</label> 
+                                    <label class='control-label'>{{ __('mess.Card_Number') }}</label>
                                     <input autocomplete='off' class='form-control card-number' size='20' type='text'>
                                 </div>
                             </div> 
                             <div class='form-row row'>
                                 <div class='col-xs-12 col-md-4 form-group cvc required'>
-                                    <label class='control-label'>{{ __('CVC') }}</label>
+                                    <label class='control-label'>{{ __('mess.CVC') }}</label>
                                     <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text'>
                                 </div>
                                 <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                    <label class='control-label'>{{ __('Exp. Month') }}</label> 
+                                    <label class='control-label'>{{ __('mess.Exp._Month') }}</label>
                                     <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
                                 </div>
 
                                 <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                    <label class='control-label'>{{ __('Exp. Year') }}</label>
+                                    <label class='control-label'>{{ __('mess.Exp._Year') }}</label>
                                     <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
                                 </div>
 
                             </div>
                             <div class='form-row row'>
                                 <div class='col-md-12 error form-group hide'>
-                                    <div class='alert-danger alert'>{{ __('Please correct the errors and try again.') }}</div>
+                                    <div class='alert-danger alert'>{{ __('mess.Please_correct_the_errors_and_try_again.') }}</div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button class="btn btn-primary btn-lg btn-block" type="submit">{{ __('Pay Now $'). $amt}}</button>
+                                    <button class="btn btn-primary btn-lg btn-block" type="submit">{{ __('mess.Pay_Now_$'). $amt}}</button>
                                 </div>
                             </div>
                         </form>

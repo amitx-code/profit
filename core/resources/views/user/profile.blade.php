@@ -13,7 +13,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title text-center">{{ __('Avatar') }}</div>
+                                        <div class="card-title text-center">{{ __('mess.Avatar') }}</div>
                                         <div class="card-tools">                                            
                                         </div>
                                     </div>
@@ -49,7 +49,7 @@
                                             ?>
 
                                             <div align="center" style="">
-                                                <b>Referral link:</b><br>
+                                                <b>{{ __('mess.Referral_link') }}:</b><br>
                                                 <div style="color: #c60; font-size: 13px; word-wrap: break-word;">
                                                     {{env('APP_URL').__('/register/').$user->username}}
                                                 </div>
@@ -63,7 +63,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title">{{ __('Change Password') }}</div>
+                                        <div class="card-title">{{ __('mess.Change_Password') }}</div>
                                         <div class="card-tools">                                            
                                         </div>
                                     </div>
@@ -72,19 +72,19 @@
                                     <form class="" method="post" action="/user/change/pwd">
                                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                                         <div class="form-group">
-                                            <label>{{ __('Old Password') }}</label>
-                                            <input type="password" class="form-control" name="oldpwd" placeholder="Your current password" required>
+                                            <label>{{ __('mess.Old_Password') }}</label>
+                                            <input type="password" class="form-control" name="oldpwd" placeholder="{{ __('mess.Old_Password') }}" required>
                                         </div>
                                         <div class="form-group">
-                                            <label>{{ __('New Password') }}</label>
-                                            <input type="password" class="form-control" name="newpwd" placeholder="New Password" required>
+                                            <label>{{ __('mess.New_Password') }}</label>
+                                            <input type="password" class="form-control" name="newpwd" placeholder="{{ __('mess.New_Password') }}" required>
                                         </div>
                                         <div class="form-group">
-                                            <label>{{ __('Confirm Password') }}</label>
-                                            <input type="password" class="form-control" name="cpwd" placeholder="Confirm Password" required>
+                                            <label>{{ __('mess.Confirm_Password') }}</label>
+                                            <input type="password" class="form-control" name="cpwd" placeholder="{{ __('mess.Confirm_Password') }}" required>
                                         </div>
                                         <div class="form-group" align="">
-                                           <button class="collcc btn btn-info">{{ __('Update') }}</button>
+                                           <button class="collcc btn btn-info">{{ __('mess.Update') }}</button>
                                         </div>
                                     </form>                                    
                                 </div>
@@ -94,7 +94,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title">{{ __('Profile Settings') }}</div>
+                                        <div class="card-title">{{ __('mess.Profile_Settings') }}</div>
                                         <div class="card-tools">                                            
                                         </div>
                                     </div>
@@ -102,18 +102,19 @@
                                 <div class="card-body pb-0">
                                     <div class="datatable-dashv1-list custom-datatable-overright dashtwo-project-list-data">
                                         <p class="text-danger">
-                                            Please note: Updating your country for the first time will permanently set currency for your profile.
+                                            {{ __('mess.Please_note') }}
+
                                         </p>
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label>{{ __('First Name') }}</label>
+                                                    <label>{{ __('mess.First_Name') }}</label>
                                                     <input id="adr" type="text" value="{{ucfirst($user->firstname)}}" class="form-control" name="fname" readonly>
                                                 </div>
                                             </div>  
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label>{{ __('Last Name') }}</label>
+                                                    <label>{{ __('mess.Last_Name') }}</label>
                                                     <input id="adr" type="text" value="{{ucfirst($user->lastname)}}" class="form-control" name="lname" readonly>
                                                 </div>
                                             </div>                               
@@ -123,7 +124,7 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label>{{ __('Email Address') }}</label>
+                                                    <label>{{ __('mess.Email_Address') }}</label>
                                                     <div class="input-group">                                                       
                                                         <input id="email" type="email" value="{{$user->email}}" class="form-control" name="email" readonly>
                                                     </div>
@@ -133,7 +134,7 @@
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label>{{ __('Username') }}</label>
+                                                    <label>{{ __('mess.Username') }}</label>
                                                     <div class="input-group">                                                       
                                                         <input id="usn" type="text" value="{{$user->username}}" class="form-control" name="usn" readonly>
                                                     </div>
@@ -149,8 +150,8 @@
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                                        <label>{{ __('Country') }}</label>
-                                                        <select id="country" class="form-control" name="country" >
+                                                        <label>{{ __('mess.Country') }}</label>
+                                                        <select id="country" class="form-control" name="{{ __('mess.Country') }}" >
                                                             <?php 
                                                                 $country = App\country::orderby('name', 'asc')->get();
                                                                 $phn_code = "";
@@ -166,7 +167,7 @@
                                                                     @endif
                                                             @endforeach
                                                             @if(!isset($cs))
-                                                                    <option selected disabled>{{ __('Select Country') }}</option>
+                                                                    <option selected disabled>{{ __('mess.Select_Country') }}</option>
                                                             @endif
 
                                                         </select>
@@ -174,7 +175,7 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                      <div class="form-group">
-                                                        <label>{{ __('State/Province') }}</label>
+                                                        <label>{{ __('mess.State/Province') }}</label>
                                                         <select  id="states" class="form-control" name="state" required>
                                                             @if(isset($cs))
                                                                  <?php 
@@ -183,11 +184,11 @@
                                                                 @if(count($st) > 0)
                                                                     <option selected value="{{$st[0]->id}}">{{$st[0]->name}}</option>
                                                                 @else
-                                                                    <option selected disabled>{{ __('Select State') }}</option>
+                                                                    <option selected disabled>{{ __('mess.Select_State') }}</option>
                                                                 @endif
                                                                 
                                                             @else
-                                                               <option selected disabled>{{ __('Select State') }}</option>
+                                                               <option selected disabled>{{ __('mess.Select_State') }}</option>
                                                             @endif                                                           
                                                         </select>                                                        
                                                     </div>
@@ -197,14 +198,14 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label>{{ __('Address') }}</label>
+                                                        <label>{{ __('mess.Address') }}</label>
                                                         <input id="adr" type="text" class="form-control" value="{{$user->address}}" name="adr" required>
                                                     </div>
                                                 </div>  
 
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label>{{ __('Phone') }}</label>
+                                                        <label>{{ __('mess.Phone') }}</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
                                                                 <span id="countryCode" class="input-group-text">
@@ -225,7 +226,7 @@
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <div class="form-group">
-                                                        <button class="collcc btn btn-info">{{ __('Update Profile') }}</button>
+                                                        <button class="collcc btn btn-info">{{ __('mess.Update_Profile') }}</button>
                                                     </div>
                                                 </div>                                                
                                                 
@@ -237,22 +238,22 @@
                             <!-- ////////////////////////  Add bank ////////////////////// -->
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">{{ __('Add Bank Details') }}</div>
+                                    <div class="card-title">{{ __('mess.Add_Bank_Details') }}</div>
                                 </div>
                                 <div class="card-body">
                                     <form class="" method="post" action="/user/add/bank">
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label>{{ __('Bank Name') }}</label>
+                                                    <label>{{ __('mess.Bank_Name') }}</label>
                                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                                    <input type="text" class="form-control" name="bname" required placeholder="Bank name">
+                                                    <input type="text" class="form-control" name="bname" required placeholder="{{ __('mess.Bank_Name') }}">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label>{{ __('Account Number') }}</label>
-                                                    <input type="text" class="form-control" name="actNo"  required placeholder="Account number">
+                                                    <label>{{ __('mess.Account_Number') }}</label>
+                                                    <input type="text" class="form-control" name="actNo"  required placeholder="{{ __('mess.Account_Number') }}">
                                                 </div>
                                             </div>
 
@@ -260,8 +261,8 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <label>{{ __('Account Name') }}</label>
-                                                    <input type="text" class="form-control" name="act_name" required placeholder="Account Name">
+                                                    <label>{{ __('mess.Account_Name') }}</label>
+                                                    <input type="text" class="form-control" name="act_name" required placeholder="{{ __('mess.Account_Name') }}">
                                                 </div>
                                             </div>                                             
                                             
@@ -270,7 +271,7 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <button class="collcc btn btn-info">{{ __('Add Bank') }}</button>
+                                                    <button class="collcc btn btn-info">{{ __('mess.Add_Bank') }}</button>
                                                 </div>
                                             </div>                                                
                                             
@@ -284,27 +285,27 @@
                     <div class="row">
                         <div class="card col-md-12">
                             <div class="card-header">
-                                <div class="card-title">{{ __('Add BTC Wallet') }}</div>
+                                <div class="card-title">{{ __('mess.Add_BTC_Wallet') }}</div>
                             </div>
                             <div class="card-body">
                                 <form class="" method="post" action="/user/add/btc_wallet">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label>{{ __('Coin Host') }}</label>
+                                                <label>{{ __('mess.Coin Host') }}</label>
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <input type="text" class="form-control" name="coin_host" required placeholder="Exp. Blockchain, Paxful">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label>{{ __('Wallet') }}</label>
-                                                <input type="text" class="form-control" name="coin_wallet"  required placeholder="Wallet address">
+                                                <label>{{ __('mess.Wallet') }}</label>
+                                                <input type="text" class="form-control" name="coin_wallet"  required placeholder="{{ __('mess.Wallet_Address') }}">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <button class="collcc btn btn-info">{{ __('Add Bank') }}</button>
+                                                <button class="collcc btn btn-info">{{ __('mess.Add_Bank') }}</button>
                                             </div>
                                         </div>
                                     </div>
@@ -317,15 +318,15 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">{{ __('My Bank Details') }}</div>
+                                    <div class="card-title">{{ __('mess.My_Bank_Details') }}</div>
                                 </div>
                                 <div class="card-body pb-0 table-responsive" >
                                    <table id="basic-datatables" class="display table table-striped table-hover" >
                                         <thead>
                                             <tr>                                                
-                                                <th data-field="status" data-editable="true">{{ __('Bank Name') }}</th>
-                                                <th data-field="phone" data-editable="true">{{ __('Acount Name') }}</th>
-                                                <th data-field="date" data-editable="true">{{ __('Acount Number') }}</th>
+                                                <th data-field="status" data-editable="true">{{ __('mess.Bank_Name') }}</th>
+                                                <th data-field="phone" data-editable="true">{{ __('mess.Acount_Name') }}</th>
+                                                <th data-field="date" data-editable="true">{{ __('mess.Acount_Number') }}</th>
                                                 <th data-field="company" >Actions</th>
                                             </tr>
                                         </thead>
@@ -356,15 +357,15 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">{{ __('My Wallet Addresses') }}</div>
+                                    <div class="card-title">{{ __('mess.My_Wallet_Addresses') }}</div>
                                 </div>
                                 <div class="card-body pb-0 table-responsive" >
                                    <table id="basic-datatables" class="display table table-striped table-hover" >
                                         <thead>
                                             <tr>                                                
-                                                <th>{{ __('Coin') }}</th>
-                                                <th>{{ __('Coin Host') }}</th>
-                                                <th>{{ __('Wallet Address') }}</th>
+                                                <th>{{ __('mess.Coin') }}</th>
+                                                <th>{{ __('mess.Coin_Host') }}</th>
+                                                <th>{{ __('mess.Wallet_Address') }}</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>

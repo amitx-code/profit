@@ -15,7 +15,7 @@
                                 <div align="center">
                                      <img src="/img/{{$settings->site_logo}}" alt="{{$settings->site_title}}" class="login_logo">                 
                                     <br>
-                                    <h3 class="colhd"><i class="fa fa-key"></i>{{ __('User Verification') }} </h3>
+                                    <h3 class="colhd"><i class="fa fa-key"></i>{{ __('mess.User_Verification') }} </h3>
                                     <hr>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@
                                 
                                     <div class="alert alert-danger">
                                        <p>
-                                           {{ __('Invalid access to this page.') }}
+                                           {{ __('mess.Invalid_access_to_this_page.') }}
                                        </p>
                                     </div>
                                      
@@ -48,7 +48,7 @@
                                 <div class="form-group row mb-0">
                                     <div class="" align="center">
                                        <p>
-                                           <strong><a href="/login" class="collcc btn btn-warning">{{ __('Back to Login') }}</a></strong>
+                                           <strong><a href="/login" class="collcc btn btn-warning">{{ __('mess.Back_to_Login') }}</a></strong>
                                        </p>                            
                                     </div>
                                 </div>

@@ -6,7 +6,7 @@
             {{ csrf_field() }}
 
             <div class="form-group{{ $errors->has('amount') ? ' has-error' : '' }}">
-                <label for="amount" class="col-md-4 control-label">{{ __('Enter Amount') }}</label>
+                <label for="amount" class="col-md-4 control-label">{{ __('mess.Enter_Amount') }}</label>
                 <div class="col-md-12">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -25,7 +25,7 @@
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
                     <button type="submit" class="btn btn-primary">
-                        {{ __('Pay Now') }}
+                        {{ __('mess.Pay_Now') }}
                     </button>
                 </div>
             </div>

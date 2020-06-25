@@ -25,6 +25,15 @@
                                                 <img src="/img/<?php echo e($settings->site_logo); ?>" alt="<?php echo e($settings->site_title); ?>" class="login_logo">
                                                 <br>
                                                 <h3 class="colhd"><i class="fa fa-key"></i><?php echo e(__('User Login')); ?></h3>
+                                                <ul class="navbar-nav ml-auto">
+                                                    ...
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="<?php echo e(route('locale', ['locale' => 'en'])); ?>">EN</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="<?php echo e(route('locale', ['locale' => 'ru'])); ?>">RU</a>
+                                                    </li>
+                                                </ul>
                                                 <hr>
                                             </div>
                                         </div>

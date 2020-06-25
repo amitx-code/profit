@@ -23,6 +23,11 @@ Route::get('/', function () {
 	}
 })->name('login');
 
+Route::get('locale/{locale}', function ($locale) {
+    Session::put('locale', $locale);
+
+    return redirect()->back();
+})->name('locale');
 // ///////////////////   user routes  ///////////////////////
 
 Auth::routes();

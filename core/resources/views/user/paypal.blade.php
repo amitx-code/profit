@@ -12,7 +12,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title">{{ __('Deposit Using Paypal') }}</div>
+                                        <div class="card-title">{{ __('mess.Deposit_Using_Paypal') }}</div>
                                         <div class="card-tools">                                            
                                         </div>
                                     </div>

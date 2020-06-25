@@ -4,10 +4,10 @@
 <div class="table-responsive"><table id="basic-datatables" class="display table table-striped table-hover" >
         <thead>
             <tr>                
-                <th>Sender</th>
-                <th>Receiver</th>
-                <th>Amount</th>
-                <th>Date</th>                                                    
+                <th> {{ __('mess.Sender') }}</th>
+                <th> {{ __('mess.Receiver') }}</th>
+                <th> {{ __('mess.Amount') }}</th>
+                <th> {{ __('mess.Date') }}</th>
             </tr>
         </thead>
         <tbody>

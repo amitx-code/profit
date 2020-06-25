@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>{{$settings->site_title}} Stripe Payment Gateway</h1>
+    <h1>{{$settings->site_title}} {{ __('mess.Stripe_Payment_Gateway') }} </h1>
     <div class="row">
 
         <div class="col-md-6 col-md-offset-3">
@@ -10,7 +10,7 @@
 
                     <div class="row display-tr" >
 
-                        <h3 class="panel-title display-td" >Payment Details</h3>
+                        <h3 class="panel-title display-td" > {{ __('mess.Payment_Details') }}</h3>
 
                         <div class="display-td" >                            
 
@@ -47,7 +47,7 @@
 
                             <div class='col-xs-12 form-group required'>
 
-                                <label class='control-label'>Name on Card</label> <input
+                                <label class='control-label'>{{ __('mess.Name_on_Card') }}</label> <input
 
                                     class='form-control' size='4' type='text'>
 
@@ -61,7 +61,7 @@
 
                             <div class='col-xs-12 form-group card required'>
 
-                                <label class='control-label'>Card Number</label> <input
+                                <label class='control-label'> {{ __('mess.Card_Number') }}</label> <input
 
                                     autocomplete='off' class='form-control card-number' size='20'
 
@@ -87,7 +87,7 @@
 
                             <div class='col-xs-12 col-md-4 form-group expiration required'>
 
-                                <label class='control-label'>Expiration Month</label> <input
+                                <label class='control-label'> {{ __('mess.Expiration_Month') }}</label> <input
 
                                     class='form-control card-expiry-month' placeholder='MM' size='2'
 
@@ -97,7 +97,7 @@
 
                             <div class='col-xs-12 col-md-4 form-group expiration required'>
 
-                                <label class='control-label'>Expiration Year</label> <input
+                                <label class='control-label'> {{ __('mess.Expiration_Year') }}</label> <input
 
                                     class='form-control card-expiry-year' placeholder='YYYY' size='4'
 
@@ -113,9 +113,7 @@
 
                             <div class='col-md-12 error form-group hide'>
 
-                                <div class='alert-danger alert'>Please correct the errors and try
-
-                                    again.</div>
+                                <div class='alert-danger alert'> {{ __('mess.Please_correct_the_errors_and_try_again') }}Please correct the errors and try again.</div>
 
                             </div>
 
@@ -127,7 +125,7 @@
 
                             <div class="col-xs-12">
 
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ($100)</button>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit"> {{ __('mess.Date') }}Pay Now ($100)</button>
 
                             </div>
 

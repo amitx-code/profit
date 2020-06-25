@@ -1,42 +1,42 @@
 <?php
-    $totalEarning = 0;    
-    $currentEarning = 0;
-    $workingDays = 0;
-       
-    foreach($actInv as $inv)
+  $totalEarning = 0;    
+  $currentEarning = 0;
+  $workingDays = 0;
+     
+  foreach($actInv as $inv)
+  {
+    $totalElapse = getDays(date('y-m-d'), $inv->end_date);
+    if($totalElapse == 0)
     {
-        $totalElapse = getDays(date('y-m-d'), $inv->end_date);
-        if($totalElapse == 0)
-        {
-            $lastWD = $inv->last_wd;
-            $enddate = ($inv->end_date);
-            if($inv->package_id >= 5 && $inv->package_id <= 10)
-            {
-                $getDays = getDays($lastWD, $enddate);
-                $currentEarning += $getDays*$inv->interest*$inv->capital;
-            }
-            else
-            {
-                $workingDays = getWorkingDays($lastWD, $enddate);
-                $currentEarning += $workingDays*$inv->interest*$inv->capital;
-            }
-        }
-        else
-        {
-            $sd = $inv->last_wd;
-            $ed = date('Y-m-d');            
-            if($inv->package_id >= 5 && $inv->package_id <= 10)
-            {
-                $getDays = getDays($sd, $ed);
-                $currentEarning += $getDays*$inv->interest*$inv->capital;
-            }
-            else
-            {
-                $workingDays = getWorkingDays($sd, $ed);
-                $currentEarning += $workingDays*$inv->interest*$inv->capital;
-            }
-        }
+      $lastWD = $inv->last_wd;
+      $enddate = ($inv->end_date);
+      if($inv->package_id >= 5 && $inv->package_id <= 10)
+      {
+          $getDays = getDays($lastWD, $enddate);
+          $currentEarning += $getDays*$inv->interest*$inv->capital;
+      }
+      else
+      {
+          $workingDays = getWorkingDays($lastWD, $enddate);
+          $currentEarning += $workingDays*$inv->interest*$inv->capital;
+      }
     }
+    else
+    {
+      $sd = $inv->last_wd;
+      $ed = date('Y-m-d');            
+      if($inv->package_id >= 5 && $inv->package_id <= 10)
+      {
+          $getDays = getDays($sd, $ed);
+          $currentEarning += $getDays*$inv->interest*$inv->capital;
+      }
+      else
+      {
+          $workingDays = getWorkingDays($sd, $ed);
+          $currentEarning += $workingDays*$inv->interest*$inv->capital;
+      }
+    }
+  }
 ?>
 
 <div class="row mt--2">
@@ -72,7 +72,7 @@
 						<a id="wd_bal" title="Click to withdraw" href="javascript:void(0)" >
 							<div class="border_btm">							
 								<h4 class="fw-bold text-uppercase text-success op-8"><?php echo e(__('Wallet')); ?></h4>
-								<h3 class="fw-bold"><?php echo e($settings->currency); ?> <?php echo e($user->wallet); ?></h3>
+								<h3 class="fw-bold"><?php echo e($settings->currency); ?> <?php echo e(round($user->wallet, 4)); ?></h3>
 								<div class="colhd margin_n10"><?php echo e(__('Click to Withdraw Fund')); ?></div>	
 								<br>						
 							</div>
@@ -81,7 +81,7 @@
 						<a id="wd_ref_bal" title="Click to withdraw" href="javascript:void(0)">
 							<div>							
 								<h4 class="fw-bold text-uppercase text-success op-8"><?php echo e(__('Referral Bonus')); ?></h4>
-								<h3 class="fw-bold"><?php echo e($settings->currency); ?> <?php echo e($user->ref_bal); ?></h3>
+								<h3 class="fw-bold"><?php echo e($settings->currency); ?> <?php echo e(round($user->ref_bal, 4)); ?></h3>
 								<div class="colhd margin_n10" ><?php echo e(__('Click to Withdraw Fund')); ?></div>	
 								<br>									
 							</div>
@@ -115,7 +115,7 @@
           <hr>
         </div>
         <div class="card-body">
-            <?php echo e(__('Enter amount to withdraw and select bank below')); ?>
+            <?php echo e(__('Enter amount and select bank/wallet below')); ?>
 
             <form id="wd_formssss" action="/user/wallet/wd" method="post">
                 <div class="form-group" align="left">                       
