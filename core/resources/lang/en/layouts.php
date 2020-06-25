@@ -17,15 +17,7 @@ return [
     'My_Profile' => 'My Profile',
     'View_all' => 'View all',
     'Notifications' => 'Notifications',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
+
 
 
 ];

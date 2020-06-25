@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f14d00-1631-401f-9d5d-70e421682db6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/resources/lang/ru/auth.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/lang/en/auth.php" afterPath="$PROJECT_DIR$/core/resources/lang/en/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/views/auth/act_verify.blade.php" afterPath="$PROJECT_DIR$/core/resources/views/auth/act_verify.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/lang/en/layouts.php" afterPath="$PROJECT_DIR$/core/resources/lang/en/layouts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/lang/en/mess.php" afterPath="$PROJECT_DIR$/core/resources/lang/en/mess.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/lang/ru/auth.php" afterPath="$PROJECT_DIR$/core/resources/lang/ru/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/lang/ru/layouts.php" afterPath="$PROJECT_DIR$/core/resources/lang/ru/layouts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/lang/ru/mess.php" afterPath="$PROJECT_DIR$/core/resources/lang/ru/mess.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/core/resources/views/auth/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/views/auth/passwords/email.blade.php" afterPath="$PROJECT_DIR$/core/resources/views/auth/passwords/email.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/views/auth/passwords/reset.blade.php" afterPath="$PROJECT_DIR$/core/resources/views/auth/passwords/reset.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/core/resources/views/auth/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/resources/views/auth/verify.blade.php" afterPath="$PROJECT_DIR$/core/resources/views/auth/verify.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/storage/framework/views/fe7dbf4a86e97b5c64950c0a467ac9d1c52fdc0d.php" afterPath="$PROJECT_DIR$/core/storage/framework/views/fe7dbf4a86e97b5c64950c0a467ac9d1c52fdc0d.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,21 +22,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mail.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/mail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reset.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/resources/views/auth/passwords/reset.blade.php">
+      <file leaf-file-name="mail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/resources/lang/en/mail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1376">
-              <caret line="83" column="102" lean-forward="false" selection-start-line="83" selection-start-column="89" selection-end-line="83" selection-end-column="102" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="23" selection-end-column="127" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mess.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/resources/lang/en/mess.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="543">
+              <caret line="184" column="25" lean-forward="false" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -45,18 +55,58 @@
       <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/resources/lang/en/auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layouts.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/layouts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/resources/views/auth/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="106" column="62" lean-forward="true" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_investment.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/resources/views/user/my_investment.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mess.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/mess.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="603">
+              <caret line="183" column="5" lean-forward="true" selection-start-line="183" selection-start-column="5" selection-end-line="183" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -65,18 +115,8 @@
       <file leaf-file-name="layouts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/resources/lang/en/layouts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_approve_wd.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/resources/views/mail/admin_approve_wd.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="93" lean-forward="false" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="93" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,7 +132,9 @@
       <find>{{ __('mess.</find>
       <find>{{ __('</find>
       <find />
+      <find>mess.Password</find>
       <find>_</find>
+      <find>Forgot_Your_Password</find>
     </findStrings>
     <replaceStrings>
       <replace>{{ __('mess.</replace>
@@ -139,27 +181,27 @@
         <option value="$PROJECT_DIR$/core/resources/views/user/inc/alert.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/user/atlantis/overview.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/user/atlantis/main_bar.blade.php" />
-        <option value="$PROJECT_DIR$/core/resources/lang/en/mess.php" />
-        <option value="$PROJECT_DIR$/core/resources/lang/ru/mess.php" />
         <option value="$PROJECT_DIR$/core/resources/views/mail/wd_notification.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/mail/regconfirm.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/mail/pwd_req.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/mail/loginnotification.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/mail/admin_approve_wd.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/lang/en/mail.php" />
-        <option value="$PROJECT_DIR$/core/resources/lang/ru/mail.php" />
-        <option value="$PROJECT_DIR$/core/resources/lang/ru/layouts.php" />
         <option value="$PROJECT_DIR$/core/resources/views/layouts/atlantis/settings.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/layouts/atlantis/header.blade.php" />
-        <option value="$PROJECT_DIR$/core/resources/lang/en/layouts.php" />
         <option value="$PROJECT_DIR$/core/resources/views/auth/verify.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/auth/register.blade.php" />
-        <option value="$PROJECT_DIR$/core/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/auth/act_verify.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/auth/passwords/email.blade.php" />
         <option value="$PROJECT_DIR$/core/resources/views/auth/passwords/reset.blade.php" />
-        <option value="$PROJECT_DIR$/core/resources/lang/en/auth.php" />
+        <option value="$PROJECT_DIR$/core/resources/lang/ru/mess.php" />
+        <option value="$PROJECT_DIR$/core/resources/lang/en/mess.php" />
         <option value="$PROJECT_DIR$/core/resources/lang/ru/auth.php" />
+        <option value="$PROJECT_DIR$/core/resources/lang/en/layouts.php" />
+        <option value="$PROJECT_DIR$/core/resources/lang/ru/layouts.php" />
+        <option value="$PROJECT_DIR$/core/resources/lang/en/auth.php" />
+        <option value="$PROJECT_DIR$/core/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/core/resources/lang/ru/mail.php" />
       </list>
     </option>
   </component>
@@ -846,12 +888,12 @@
       <workItem from="1593057143027" duration="7394000" />
       <workItem from="1593085131595" duration="401000" />
       <workItem from="1593081179927" duration="606000" />
-      <workItem from="1593087444125" duration="3939000" />
+      <workItem from="1593087444125" duration="4445000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16398000" />
+    <option name="totallyTimeSpent" value="16904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1616" height="876" extended-state="0" />
@@ -928,13 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="130" lean-forward="false" selection-start-line="23" selection-start-column="118" selection-end-line="23" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/resources/views/user/my_investment.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="89" lean-forward="false" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="89" />
         </state>
       </provider>
     </entry>
@@ -1029,21 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/mess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/resources/lang/en/mess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/resources/views/user/atlantis/main_bar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1100,26 +1120,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/resources/lang/en/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="23" selection-end-column="127" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-287">
           <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/layouts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1190,26 +1194,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/resources/lang/en/layouts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/resources/views/auth/verify.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="109" column="100" lean-forward="false" selection-start-line="109" selection-start-column="79" selection-end-line="109" selection-end-column="100" />
           <folding />
         </state>
       </provider>
@@ -1238,14 +1226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/resources/views/auth/passwords/email.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1262,18 +1242,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/resources/lang/en/auth.php">
+    <entry file="file://$PROJECT_DIR$/core/resources/views/user/my_investment.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/mess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="183" column="5" lean-forward="true" selection-start-line="183" selection-start-column="5" selection-end-line="183" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/resources/lang/en/mess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="184" column="25" lean-forward="false" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/resources/lang/en/layouts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/layouts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/resources/lang/en/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="106" column="62" lean-forward="true" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/resources/lang/en/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="23" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/resources/lang/ru/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
           <folding />
         </state>
       </provider>

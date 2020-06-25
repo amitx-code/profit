@@ -57,7 +57,7 @@
                                                 @endif                                                
                                                 
                                                 <div class="form-group row" > 
-                                                        <label for="email">{{ __('mess.E-Mail_Address') }}</label>
+                                                        <label for="email">{{ __('mess.E_Mail_Address') }}</label>
                                                         <input id="email" type="email" class=" @error('email') is-invalid @enderror regTxtBox" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="E-Mail Address">
 
                                                         @error('email')
@@ -98,7 +98,7 @@
                                                     <div class="" align="center" >                                
                                                         @if (Route::has('password.request'))
                                                             <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                                {{ __('auth.Forgot_Your_Password?') }}
+                                                                {{ __('auth.Forgot_Your_Password') }}?
                                                             </a>
                                                         @endif
                                                     </div>

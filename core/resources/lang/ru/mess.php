@@ -181,6 +181,6 @@ return [
     'Investments'=>'Investments',
     'Overall_statistics'=>'Overall statistics',
     'Deposit'=>'Deposit',
-
+    'E_Mail_Address'=>'E-Mail Address',
 
 ];
