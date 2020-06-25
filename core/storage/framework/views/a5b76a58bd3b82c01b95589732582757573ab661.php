@@ -1,0 +1,43 @@
+<?php
+    // $user = Auth::User();  
+    $msgs = App\msg::orderby('id', 'desc')->paginate(50);
+
+?>
+          
+<table id="" class=" table table-stripped table-hover">
+    <thead>
+        <tr>                
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        
+        <?php $__currentLoopData = $msgs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $msg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <tr>                                                            
+                <td><?php echo e($msg->subject); ?></td>
+                <td><?php echo e($msg->created_at); ?></td>                                                                           
+                <td>
+                    <span>                        
+                        <a id="<?php echo e($msg->id); ?>" href="javascript:void(0)" onclick="load_get_ajax('/admin/message/edit/<?php echo e($msg->id); ?>', this.id, 'admEditMsg')"> 
+                            <i class="fas fa-edit text-warning"></i>                
+                        </a>
+                        <a id="<?php echo e($msg->id); ?>" href="javascript:void(0)" onclick="load_get_ajax('/admin/message/delete/<?php echo e($msg->id); ?>', this.id, 'admDeleteMsg')"> 
+                            <i class="fas fa-times text-danger"></i>                
+                        </a>
+                    </span>
+                    <div id="msg_cnts<?php echo e($msg->id); ?>" style=" display: none;">
+                        <?php echo $msg->message; ?>
+
+                    </div> 
+                </td>                     
+            </tr>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        
+    </tbody>
+</table>
+<br><br>
+
+<?php /**PATH /home/superloc/mcode.me/maxprofit.mcode.me/core/resources/views/admin/temp/oldmsg.blade.php ENDPATH**/ ?>
