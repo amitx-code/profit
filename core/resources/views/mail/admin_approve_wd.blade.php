@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Withdrawal Approval</title>
+	<title> {{ __('mail.Withdrawal_Approval') }}</title>
 	<link rel="stylesheet" href="https://wallet.diamondhubplus.com/css/bootstrap.min.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
 </head>
@@ -15,15 +15,15 @@
             <div align="">
         		<img src="https://{{env('MAIL_SENDER')}}/img/{{$st->site_logo}}" style="height:100px; width:100px;" align="center">
         	</div>
-        	<h3 align="">Withdrawal Approval</h3>
+        	<h3 align="">{{ __('mail.Withdrawal_Approval') }}</h3>
         	<p>
-        	   Hi, this is to notify you that your withdrawal request with ID: <b>{{$md['wd_id']}} on {{env('APP_URL')}} </b> has been approved. <br> 
-        	   Kindly wait patiently for deposit into your account.<br>
-        	   <b>Account: {{$md['act']}}</b><br>
-        	   <b>Amount: {{$md['currency']}}{{$md['amt']}}</b>
+				{{ __('mail.Hi') }}, {{ __('mail.this_is_to_notify_you_that_your_withdrawal_request_with_ID') }}: <b>{{$md['wd_id']}} on {{env('APP_URL')}} </b> {{ __('mail.has_been_approved') }}. <br>
+				{{ __('mail.Kindly_wait_patiently_for_deposit_into_your_account') }}.<br>
+        	   <b>{{ __('mail.Account') }}: {{$md['act']}}</b><br>
+        	   <b>{{ __('mail.Amount') }}: {{$md['currency']}}{{$md['amt']}}</b>
         	</p>
         	<p>
-        		<i class="fa fa-certificate">{{$st->site_title}} Investment.
+				<i class="fa fa-certificate">{{$st->site_title}}  {{ __('mail.Investment') }}.</i>
         	</p>
         </div>
     </div>

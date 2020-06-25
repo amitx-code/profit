@@ -13,16 +13,16 @@
 	<div align="">
 		<img src="http://{{env('MAIL_SENDER')}}/img/{{$st->site_logo}}" style="height:100px; width:100px;" align="center">
 	</div>
-	<h3 align=""> Hi {{$md['username']}}</h3>
+	<h3 align=""> {{ __('mail.Hi') }} {{$md['username']}}</h3>
 	<p>
-		You receive this mail because you requested for password reset for your account a moment ago.<br>
-		If you were not the one please contact support now for a quick action.<br>
+		{{ __('mail.You_receive_this_mail_because_you_requested_for_password_reset_for_your_account_a_momen_ago') }}.<br>
+		{{ __('mail.If_you_were_not_the_one_please_contact_support_now_for_a_quick_action') }}.<br>
 		<br>
-		<a  href="https://{{env('MAIL_SENDER')}}/reset/password/{{$md['username']}}/{{$md['token']}}">Reset Password</a><br><br>
-		Contact support now: support@diamondhubplus.com.
+		<a  href="https://{{env('MAIL_SENDER')}}/reset/password/{{$md['username']}}/{{$md['token']}}">{{ __('mail.Reset_Password') }}</a><br><br>
+		{{ __('mail.Contact_support_now') }}: {{'@'.env('MAIL_SENDER')}}
 	</p>
 	<p>
-		<i class="fa fa-certificate"></i> Thanks for using {{$st->site_title}}.
+		<i class="fa fa-certificate"></i> {{ __('mail.Thanks_for_using') }} {{$st->site_title}}.
 	</p>
 </body>
 </html>

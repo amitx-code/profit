@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Withdrawal Notification</title>
+	<title>{{ __('mail.Withdrawal_Notification') }}</title>
 </head>
 <body>
     <div class="row">
@@ -13,14 +13,14 @@
             <div align="">
         		<img src="http://{{env('MAIL_SENDER')}}/img/{{$st->site_logo}}" style="height:100px; width:100px;" align="center">
         	</div>
-        	<h3 align="">Withdrawal Notification</h3>
+        	<h3 align="">{{ __('mail.Withdrawal_Notification') }}</h3>
         	<p>
-        	   Hi, this is to notify you that <b>{{$md['username']}}</b> has made a withdrawal request on {{env('APP_URL')}}
+				{{ __('mail.Hi_this_is_to_notify_you_that') }}<b>{{$md['username']}}</b>{{ __('mail.has_made_a_withdrawal_request_on') }} {{env('APP_URL')}}
         	   <br>
-        	   Kindly attend to this withdrawal request.
+				{{ __('mail.Kindly_attend_to_this_withdrawal_request') }}.
         	</p>
         	<p>
-        		<i class="fa fa-certificate">{{$st->site_title}} Investment.
+				<i class="fa fa-certificate">{{$st->site_title}} {{ __('mail.Investment') }}.</i>
         	</p>
         </div>
     </div>
