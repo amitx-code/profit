@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-7 col-stats">
                         <div class="numbers">
-                            <p class="card-category">Users</p>
+                            <p class="card-category">{{ __('mess.Users') }}</p>
                             <h4 id="uCount" class="card-title">{{count($musers)}}</h4>                            
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                     </div>
                     <div class="col-9 col-stats">
                         <div class="numbers">
-                            <p class="card-category">Investment</p>
+                            <p class="card-category">{{ __('mess.Investment') }}</p>
                             <h4 id="iCount" class="card-title">{{$settings->currency}} {{ $dep }}</h4>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                     </div>
                     <div class="col-9 col-stats">
                         <div class="numbers">
-                            <p class="card-category">Deposits</p>
+                            <p class="card-category">{{ __('mess.Deposits') }}</p>
                             <h4 id="dCount" class="card-title">{{$settings->currency}} {{$dep}}</h4>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                     </div>
                     <div class="col-9 col-stats">
                         <div class="numbers">
-                            <p class="card-category">Withdrawal</p>
+                            <p class="card-category">{{ __('mess.Withdrawal') }}</p>
                             <h4 id="wCount" class="card-title">{{$settings->currency}} {{$dep}}</h4>
                         </div>
                     </div>

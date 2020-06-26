@@ -4,9 +4,9 @@
 <table id="" class=" table table-stripped table-hover">
     <thead>
         <tr>                
-            <th>Subject</th>
-            <th>Date</th>
-            <th>Actions</th>
+            <th>{{ __('mess.Subject') }}</th>
+            <th>{{ __('mess.Date') }}</th>
+            <th>{{ __('mess.Actions') }}</th>
         </tr>
     </thead>
     <tbody>

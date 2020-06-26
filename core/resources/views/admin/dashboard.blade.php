@@ -11,7 +11,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title"> {{ __('Overall Statistics') }} </div>
+                                        <div class="card-title"> {{ __('admin.Overall_Statistics') }} </div>
                                         <div class="card-tools">                                            
                                         </div>
                                     </div>
@@ -27,7 +27,7 @@
                         <div class="col-md-4">
                             <div class="card card-primary @if($adm->role < 2) {{blur_cnt}}@endif">
                                 <div class="card-header">
-                                    <div class="card-title"> {{ __('Withdrawal Stats') }} </div>                                    
+                                    <div class="card-title"> {{ __('admin.Withdrawal_Stats') }} </div>
                                 </div>
                                 <div class="card-body pb-0">                                    
                                     <div class="pull-in">
@@ -39,7 +39,7 @@
                                 <div class="card-body pb-0">
                                     <div class="px-2 pb-2 pb-md-0 text-center">
                                         <div id="circles-logs"></div>
-                                        <h6 class="fw-bold mt-3 mb-0"> {{ __('Activities') }} </h6>
+                                        <h6 class="fw-bold mt-3 mb-0"> {{ __('admin.Activities') }} </h6>
                                         <br>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"> {{ __('Monthly Breakdown') }} </div>
+                                    <div class="card-title"> {{ __('admin.Monthly_Breakdown') }} </div>
                                 </div>
                                 <div class="card-body pb-0">
                                     @include('admin.temp.monthly')
@@ -65,10 +65,10 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row card-tools-still-right">
-                                        <h4 class="card-title"> {{ __('User Activities') }} </h4>                                        
+                                        <h4 class="card-title"> {{ __('admin.User_Activities') }} </h4>
                                     </div>
                                     <p class="card-category">
-                                        {{ __('All actions performed users.') }} 
+                                        {{ __('admin.All_actions_performed_users') }}.
                                     </p>
                                 </div>
                                 <div class="card-body">
@@ -81,16 +81,16 @@
                                                         table-hover" >
                                                             <thead>
                                                                 <tr>
-                                                                    <th> {{ __('Admin') }} </th>
-                                                                    <th> {{ __('Actions') }} </th>
-                                                                    <th> {{ __('Date') }} </th>
+                                                                    <th> {{ __('admin.Admin') }} </th>
+                                                                    <th> {{ __('admin.Actions') }} </th>
+                                                                    <th> {{ __('admin.Date') }} </th>
                                                                 </tr>
                                                             </thead>
                                                             <tfoot>
                                                                 <tr>
-                                                                    <th> {{ __('Admin') }} </th>
-                                                                    <th> {{ __('Actions') }} </th>
-                                                                    <th> {{ __('Date') }} </th>
+                                                                    <th> {{ __('admin.Admin') }} </th>
+                                                                    <th> {{ __('admin.Actions') }} </th>
+                                                                    <th> {{ __('admin.Date') }} </th>
                                                                 </tr>
                                                             </tfoot>
                                                             <tbody>

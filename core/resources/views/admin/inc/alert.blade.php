@@ -8,21 +8,21 @@
           <a id="succ_close" href="javascript:void(0)" class="btn btn-danger">X</a>        
         </span> -->
         <div class="panel-heading" style="">
-          <h3>Message</h3>               
+          <h3>{{ __('admin.Message') }}</h3>
           <hr>
         </div>
         <div id="" style="margin-top: -30px; padding: 15px">
                 
                 <p align="center" style="color:green">
                     <i class="fa fa-check-circle fa-4x"></i><br>
-                    Successful
+                    {{ __('admin.Successful') }}
                     <br>
                 </p>
         </div>
 
         <div>
           <span style="">            
-            <a id="succ_close" href="javascript:void(0)" class="btn btn-success">Okay</a>        
+            <a id="succ_close" href="javascript:void(0)" class="btn btn-success">{{ __('admin.Okay') }}</a>
           </span>
           <br><br><br><br>
         </div>
@@ -49,7 +49,7 @@
           <a id="succ_close" href="javascript:void(0)" class="btn btn-danger">X</a>        
         </span> -->
         <div class="panel-heading" style="">
-          <h3>Message</h3>               
+          <h3>{{ __('admin.Message') }}</h3>
           <hr>
         </div>
         <div id="" style="margin-top: -30px; padding: 15px">
@@ -63,7 +63,7 @@
 
         <div>
           <span style="">            
-            <a id="errr_close" href="javascript:void(0)" class="btn btn-danger">Okay</a>        
+            <a id="errr_close" href="javascript:void(0)" class="btn btn-danger">{{ __('admin.Okay') }}</a>
           </span>
           <br><br><br><br>
         </div>
@@ -95,7 +95,7 @@
           <div class="sparkline8-list shadow-reset mg-tb-30" style="margin: 0px; border-radius: 7px; ">
               <div class="sparkline8-hd" >
                   <div class="main-sparkline8-hd">
-                      <h1>Read Messages</h1>
+                      <h1>{{ __('admin.Read_Messages') }}</h1>
                       <!-- <div class="sparkline8-outline-icon">
                           <span class="sparkline8-collapse-link"><i class="fa fa-chevron-up"></i></span>
                           <span><i class="fa fa-wrench"></i></span>
@@ -121,7 +121,7 @@
         <div>
           <span style=""> 
           <br>           
-            <a id="readmsg_close" href="javascript:void(0)" class="btn btn-danger">Close</a>        
+            <a id="readmsg_close" href="javascript:void(0)" class="btn btn-danger">{{ __('admin.Close') }}</a>
           </span>
           <br><br>
         </div>

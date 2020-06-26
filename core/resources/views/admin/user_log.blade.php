@@ -22,7 +22,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"><i class="fa fa-key"></i> {{ __('User Activities') }} </div>
+                                    <div class="card-title"><i class="fa fa-key"></i> {{ __('admin.User_Activities') }} </div>
                                 </div>
                                 <div class="card-body pb-0 table-responsive">
                                     @include('admin.temp.user_log')

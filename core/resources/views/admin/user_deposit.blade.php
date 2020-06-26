@@ -25,13 +25,13 @@
                             <div class="card">
                                 <div class="card-header card_header_bg_blue" >
                                     <div class="card-head-row card-tools-still-right">
-                                        <h4 class="card-title text-white" > <i class="fas fa-donate"></i> {{ __('Deposit History') }} </h4>
+                                        <h4 class="card-title text-white" > <i class="fas fa-donate"></i> {{ __('admin.Deposit_History') }} </h4>
                                         <div class="card-tools">
                                             <form action="/admin/search/deposit" method="post">
                                                 <div class="input-group">
                                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                                     <div class="input-group-prepend">
-                                                        <span class="input-group-text"> {{ __('Search:') }} </span>
+                                                        <span class="input-group-text"> {{ __('admin.Search') }}: </span>
                                                     </div>
                                                     <input type="text" name="search_val" class="form-control" placeholder="Search by Username, Amount, Bank, Date, Capital or Status">
                                                     <div class="input-group-append">

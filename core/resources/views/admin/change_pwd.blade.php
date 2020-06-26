@@ -23,7 +23,7 @@
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"><i class="fa fa-key"></i> {{ __('Change password') }} </div>
+                                    <div class="card-title"><i class="fa fa-key"></i> {{ __('mess.Change_password') }} </div>
                                 </div>
                                 <div class="card-body pb-0">
                                     <form action="/admin/change/pwd" method="post">
@@ -53,7 +53,7 @@
                                           
                                           <div class="form-group">
                                             <br>
-                                              <button class="collb btn btn-info"> {{ __('Update Password') }} </button>
+                                              <button class="collb btn btn-info"> {{ __('mess.Update_Password') }} </button>
                                               <br>
                                           </div>
                                           

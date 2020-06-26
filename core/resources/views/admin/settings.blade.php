@@ -12,14 +12,14 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"><i class="fa fa-wrench"></i> {{ __('Site Settings') }} </div>
+                                    <div class="card-title"><i class="fa fa-wrench"></i> {{ __('admin.Site_Settings') }} </div>
                                 </div>
                                 <div class="card-body pb-0 table-responsive">
                                     <form id="settings_form" action="/admin/update/site/settings" method="post">
                                         <div class="form-group">                                            
                                             <div class="row">                                                
                                                 <div class="col-md-12" align="">
-                                                    <h3><i class="fas fa-feather-alt"></i> {{ __('Header Color') }} </h3>
+                                                    <h3><i class="fas fa-feather-alt"></i> {{ __('admin.Header_Color') }} </h3>
                                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                                     <input id="input_hcolor" value="{{$settings->header_color}}" class="p-0 color_picker float-left with_50per" type="color"  name="hcolor" required >
                                                 </div>                                                
@@ -27,7 +27,7 @@
                                             <br><br>
                                             <div class="row">                                                
                                                 <div class="col-md-12" align="">
-                                                    <h3><i class="fas fa-feather-alt"></i> {{ __('Footer Color') }} </h3>
+                                                    <h3><i class="fas fa-feather-alt"></i> {{ __('admin.Footer_Color') }} </h3>
                                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                                     <input id="input_fcolor" value="{{$settings->footer_color}}" class="p-0 color_picker float-left with_50per" type="color"  name="fcolor" required >
                                                 </div>                                                
@@ -36,7 +36,7 @@
                                             <hr>
                                             <div class="row margin_top50"> 
                                                 <div   class="col-md-6">
-                                                    <h3><i class="fab fa-centercode"></i> {{ __('Site Logo') }} </h3>
+                                                    <h3><i class="fab fa-centercode"></i> {{ __('admin.Site_Logo') }} </h3>
                                                     <input type="file" name="siteLogo" class=" btn btn-info border_none" >
                                                 </div>                                               
                                                 <div class="col-md-6" align="center"> 
@@ -48,7 +48,7 @@
 
                                             <div class="row margin_top50"> 
                                                 <div class="col-md-6">
-                                                    <h3><i class="fas fa-thumbtack"></i> {{ __('Site Title') }} </h3>
+                                                    <h3><i class="fas fa-thumbtack"></i> {{ __('admin.Site_Title') }} </h3>
                                                     <input type="text" name="siteTitle" value="{{$settings->site_title}}" class="form-control" placeholder="Site Name" required >
                                                 </div>                                      
                                             </div>
@@ -57,20 +57,20 @@
 
                                             <div class="row margin_top50"> 
                                                 <div class="col-md-12">
-                                                    <h3><i class="fas fa-pen"></i> {{ __('Site Description') }} </h3>
+                                                    <h3><i class="fas fa-pen"></i> {{ __('admin.Site_Description') }} </h3>
                                                     <input type="text" name="siteDescr" value="{{$settings->site_descr}}" class="form-control" placeholder="Site Description" required>
                                                 </div>                                      
                                             </div>
                                             <br><br>
                                             <hr>
-                                            <h3><i class="fas fa-hand-holding-usd mt-5"></i> {{ __('Deposit Settings') }} </h3>
+                                            <h3><i class="fas fa-hand-holding-usd mt-5"></i> {{ __('admin.Deposit_Settings') }} </h3>
                                             <div class="row margin_top50"> 
                                                 <div class="col-md-6">
-                                                    <h5> {{ __('Minimum Deposit (').$settings->currency.__(')') }} </h5>
+                                                    <h5> {{ __('admin.Minimum Deposit (').$settings->currency.__(')') }} </h5>
                                                     <input type="number" name="min_dep" value="{{env('MIN_DEPOSIT')}}" class="form-control" placeholder="Minimum deposit" step="0.01" required>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <h5> {{ __('Maximum Deposit (').$settings->currency.__(')') }} </h5>
+                                                    <h5> {{ __('admin.Maximum Deposit (').$settings->currency.__(')') }} </h5>
                                                     <input type="number" name="max_dep" value="{{env('MAX_DEPOSIT')}}" class="form-control" placeholder="Maximum deposit" step="1" required>
                                                 </div> 
                                                 <div class="col-md-12 mt-3" align="right"> 
@@ -83,14 +83,14 @@
                                             </div>
                                             <br><br>
                                             <hr>
-                                            <h3><i class="fas fa-users mt-5"></i> {{ __('Referal Bonus') }} </h3>
+                                            <h3><i class="fas fa-users mt-5"></i> {{ __('admin.Referal_Bonus') }} </h3>
                                             <div class="row margin_top50">
                                                 <div class="col-sm-6">
-                                                    <h5> {{ __('Referral Percentage (Exp. 2 means 2%)') }} </h5>
+                                                    <h5> {{ __('admin.Referral_Percentage') }} </h5>
                                                     <input type="number" name="ref_bonus" value="{{env('REF_BONUS')*100}}" class="form-control" placeholder="Enter percentage value" required>
                                                 </div> 
                                                 <div class="col-sm-6">
-                                                    <h5></i> {{ __('Referral Type') }} </h5>
+                                                    <h5></i> {{ __('admin.Referral_Type') }} </h5>
                                                     <select class="form-control" name="referal_type" >
                                                         <option value="Once">Once (1st investment only)</option>
                                                         <option value="Continous">Continous (for every investment)</option>
@@ -100,7 +100,7 @@
                                             </div>
                                             <div class="row mt-2">                                                 
                                                 <div class="col-sm-6">
-                                                    <h5></i> {{ __('Referral System') }} </h5>
+                                                    <h5></i> {{ __('admin.Referral_System') }} </h5>
                                                     <select class="form-control" name="referal_system" >
                                                         <option value="Single_level">Single Level (Only direct referal)</option>
                                                         <option value="Multi_level">Multi Level (Others in the chain of referal)</option>
@@ -109,7 +109,7 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <h5> {{ __('Referal Level') }} </h5>
+                                                        <h5> {{ __('admin.Referal_Level') }} </h5>
                                                         <input type="number" name="referal_levels" value="{{env('REF_LEVEL_CNT')}}" class="form-control" placeholder="4" >
                                                     </div>
                                                 </div>                                                 
@@ -119,14 +119,14 @@
                                             <div class="row margin_top50"> 
                                                  <!-- ///////////////////// Withdrawal //////////////////////// -->
                                                 <div   class="col-md-12 mb-3">
-                                                    <h2><i class="fas fa-money-bill-alt"></i> {{ __('Withdrawal Settings') }} </h2>
+                                                    <h2><i class="fas fa-money-bill-alt"></i> {{ __('admin.Withdrawal_Settings') }} </h2>
                                                 </div> 
                                                 <div class="col-sm-6">
-                                                    <h5> {{ __('Minimum Withdrawal') }} </h5>
+                                                    <h5> {{ __('admin.Minimum_Withdrawal') }} </h5>
                                                     <input type="number" name="min_wd" value="{{env('MIN_WD')}}" class="form-control" placeholder="Enter  value" >
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <h5> {{ __('Withdrawal Limit') }} </h5>
+                                                    <h5> {{ __('admin.Withdrawal_Limit') }} </h5>
                                                     <input type="number" name="wd_limit" value="{{env('WD_LIMIT')}}" class="form-control" placeholder="Enter value" >
                                                 </div> 
                                                                                       
@@ -149,17 +149,17 @@
                                            
                                             <div class="row margin_top50"> 
                                                 <div class="col-sm-12">
-                                                    <h2 class=""><i class="fas fa-envelope"></i> {{ __('Mail Setup') }}</h2>
+                                                    <h2 class=""><i class="fas fa-envelope"></i> {{ __('admin.Mail_Setup') }}</h2>
                                                 </div>
                                                 <div   class="col-md-6 ">
                                                     <div class="card pad_20">
                                                         <br>
                                                         <div class="form-group">
-                                                            <h5> {{ __('Mail Host') }} </h5>
+                                                            <h5> {{ __('admin.Mail_Host') }} </h5>
                                                             <input type="text" name="m_host" value="{{env('MAIL_HOST')}}" class="form-control" placeholder="Mail Host" >
                                                         </div>
                                                         <div class="form-group">
-                                                            <h5> {{ __('Mail Port') }} </h5>
+                                                            <h5> {{ __('admin.Mail_Port') }} </h5>
                                                             <input type="text" name="m_port" value="{{env('MAIL_PORT')}}" class="form-control" placeholder="Mail Port" >
                                                         </div>
                                                         <div class="form-group">
@@ -172,15 +172,15 @@
                                                     <div class="card pad_20">
                                                         <br>
                                                         <div class="form-group">
-                                                            <h5> {{ __('Mail Username') }} </h5>
+                                                            <h5> {{ __('admin.Mail_Username') }} </h5>
                                                             <input type="text" name="m_user" value="{{env('MAIL_USERNAME')}}" class="form-control" placeholder="Mail Username" >
                                                         </div>
                                                         <div class="form-group">
-                                                            <h5> {{ __('Mail Password') }} </h5>
+                                                            <h5> {{ __('admin.Mail_Password') }} </h5>
                                                             <input type="password" name="m_pwd" value="{{env('MAIL_PASSWORD')}}" class="form-control" placeholder="Mail Password" >
                                                         </div>
                                                         <div class="form-group">
-                                                            <h5> {{ __('Mail Encryption') }} </h5>
+                                                            <h5> {{ __('admin.Mail_Encryption') }} </h5>
                                                             <input type="text" name="m_enc" value="{{env('MAIL_ENCRYPTION')}}" class="form-control" placeholder="Mail Encryption" >
                                                         </div>
                                                     </div>
@@ -190,7 +190,7 @@
                                             <hr>
                                             <div class="row margin_top50"> 
                                                 <div class="col-md-12 pad_btm_40">
-                                                    <h3><i class="fa fa-credit-card"></i> {{ __('Payment Gateway Setup') }} </h3>
+                                                    <h3><i class="fa fa-credit-card"></i> {{ __('admin.Payment_Gateway_Setup') }} </h3>
                                                 </div>
                                                 <div   class="col-md-6 ">
                                                     <div class="card pad_20">
@@ -206,7 +206,7 @@
                                                             <input type="text" name="paypal_secret" value="{{$settings->paypal_secret}}" class="form-control" placeholder="Site Name" >
                                                         </div>
                                                         <div class="form-group">
-                                                            <h5> {{ __('Mode') }} </h5>
+                                                            <h5> {{ __('admin.Mode') }} </h5>
                                                             <select class="form-control" name="paypal_mode" >
                                                                 <option value="sandbox">Sandbox</option>
                                                                 <option value="live">Live</option>
@@ -228,11 +228,11 @@
                                                         <h2 class="text-center">Stripe Setup</h2>
                                                         <hr>
                                                         <div class="form-group">
-                                                            <h5> {{ __('Stripe Key') }} </h5>
+                                                            <h5> {{ __('admin.Stripe_Key') }} </h5>
                                                             <input type="text" name="stripe_key" value="{{$settings->stripe_key}}" class="form-control" placeholder="Site Name"  >
                                                         </div>
                                                         <div class="form-group">
-                                                            <h5> {{ __('Stripe Secret') }} </h5>
+                                                            <h5> {{ __('admin.Stripe_Secret') }} </h5>
                                                             <input type="text" name="stripe_secret" value="{{$settings->stripe_secret}}" class="form-control" placeholder="Stripe Secrete" >
                                                         </div>   
                                                         <div class="" align="right"> 
@@ -251,19 +251,19 @@
                                                         <h2 class="text-center">Bank Deposit Setup</h2>
                                                         <hr>
                                                         <div class="form-group">
-                                                            <h5> {{ __('Bank Name') }} </h5>
+                                                            <h5> {{ __('admin.Bank_Name') }} </h5>
                                                             <input type="text" name="bank_name" value="{{env('BANK_NAME')}}" class="form-control" placeholder=""  >
                                                         </div>
                                                         <div class="form-group">
-                                                            <h5> {{ __('Account Name') }} </h5>
+                                                            <h5> {{ __('admin.Account_Name') }} </h5>
                                                             <input type="text" name="act_name" value="{{env('ACCOUNT_NAME')}}" class="form-control" placeholder="" >
                                                         </div>  
                                                         <div class="form-group">
-                                                            <h5> {{ __('Account Number') }} </h5>
+                                                            <h5> {{ __('admin.Account_Number') }} </h5>
                                                             <input type="number" name="act_no" value="{{env('ACCOUNT_NUMBER')}}" class="form-control" placeholder="" >
                                                         </div> 
                                                         <div class="form-group">
-                                                            <h5> {{ __('Response Email') }} </h5>
+                                                            <h5> {{ __('admin.Response_Email') }} </h5>
                                                             <input type="email" name="dep_email" value="{{env('BANK_DEPOSIT_EMAIL')}}" class="form-control" placeholder="" >
                                                         </div>  
                                                         <div class="" align="right"> 
@@ -341,7 +341,7 @@
                                             <hr>
                                             <div class="row margin_top50"> 
                                                 <div class="col-md-4">
-                                                    <h3><i class="fas fa-hand-holding-usd"></i> {{ __('Manage Investment') }}  </h3>
+                                                    <h3><i class="fas fa-hand-holding-usd"></i> {{ __('admin.Manage_Investment') }}  </h3>
                                                 </div>                                               
                                                 <div class="col-md-8" align="right">
                                                     <b>On/Off</b><br>               
@@ -356,7 +356,7 @@
                                             
                                             <div class="row margin_top50"> 
                                                 <div   class="col-md-4">
-                                                    <h3> <i class="fas fa-user"></i> {{ __('Enable User Registration') }} </h3>
+                                                    <h3> <i class="fas fa-user"></i> {{ __('admin.Enable_User_Registration') }} </h3>
                                                 </div>                                               
                                                 <div class="col-md-8" align="right">
                                                     <b>On/Off</b><br>               
@@ -370,17 +370,17 @@
                                             <hr>
                                             <div class="row margin_top50">                                                                                               
                                                 <div class="col-md-12" >
-                                                    <h3><i class="fa fa-coggs"></i> {{ __('Currency Settings') }} </h3>
+                                                    <h3><i class="fa fa-coggs"></i> {{ __('admin.Currency_Settings') }} </h3>
                                                 </div>
                                                 <div   class="col-md-6 ">
                                                     <div class="card pad_20" >
-                                                        <h5> {{ __('Currency symbol/Code') }} </h5>
+                                                        <h5> {{ __('admin.Currency') }} symbol/Code</h5>
                                                         <input type="text" name="cur" value="{{$settings->currency}}" class="form-control" placeholder="currency symbol or code" required >
                                                     </div>
                                                 </div> 
                                                 <div   class="col-md-6">
                                                     <div class="card form-group pad_20" >
-                                                        <h5> {{ __('Currency Rate to US Dollar') }} </h5>
+                                                        <h5> {{ __('admin.Currency') }} Rate to US Dollar</h5>
                                                         <input type="text" name="cur_conv" value="{{$settings->currency_conversion}}" class="form-control" placeholder="Currency conversion rate to doller" required >
                                                     </div>
                                                 </div>                                            
@@ -390,7 +390,7 @@
                                     </form>
                                     <div class="row margin_top50"> 
                                         <div   class="col-md-12">
-                                            <button class="btn btn-info float-right"  onclick="load_post_ajax('/admin/update/site/settings', 'settings_form', 'admin_settings_form' )"> {{ __('Save Changes') }} </button>
+                                            <button class="btn btn-info float-right"  onclick="load_post_ajax('/admin/update/site/settings', 'settings_form', 'admin_settings_form' )"> {{ __('admin.Save Changes') }} </button>
                                         </div>                                     
                                     </div>
                                     <br><br>

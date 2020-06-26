@@ -42,17 +42,17 @@
 <table class="display table table-stripped table-hover">
     <thead>
         <tr>
-            <th> {{ __('Action') }} </th>
-            <th> {{ __('Username') }} </th>
-            <th> {{ __('Package') }} </th>
-            <th> {{ __('Capital') }} </th>
-            <th> {{ __('Return') }} </th>
-            <th> {{ __('Date Invested') }} </th> 
-            <th> {{ __('Elapse') }} </th>  
-            <th> {{ __('Days Spent') }} </th> 
-            <th> {{ __('Withdrawn') }} </th>  
-            <th> {{ __('Status') }} </th>
-            <th> {{ __('Earning') }} </th>                                  
+            <th> {{ __('admin.Action') }} </th>
+            <th> {{ __('admin.Username') }} </th>
+            <th> {{ __('admin.Package') }} </th>
+            <th> {{ __('admin.Capital') }} </th>
+            <th> {{ __('admin.Return') }} </th>
+            <th> {{ __('admin.Date_Invested') }} </th>
+            <th> {{ __('admin.Elapse') }} </th>
+            <th> {{ __('admin.Days_Spent') }} </th>
+            <th> {{ __('admin.Withdrawn') }} </th>
+            <th> {{ __('admin.Status') }} </th>
+            <th> {{ __('admin.Earning') }} </th>
         </tr>
     </thead>
     <tbody class="web-table">  

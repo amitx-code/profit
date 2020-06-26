@@ -28,7 +28,7 @@
                             <div class="card">
                                 <div class="card-header card_header_bg_blue" >
                                     <div class="card-head-row card-tools-still-right">
-                                        <h4 class="card-title text-white"> {{ __('Search') }} User Activities</h4>
+                                        <h4 class="card-title text-white"> {{ __('admin.User_Activities') }} </h4>
                                         <div class="card-tools">
                                             <a href="/admin/block/user/{{$user->id}}" > 
                                                 <span class=""><i class="fa fa-ban btn btn-warning" ></i></span>
@@ -59,20 +59,20 @@
                                             <div class="card full-height">
                                                 <div class="card-body">
                                                     <div class="card-title">
-                                                        <h2 class="text-success"> {{ __('Account Summary') }} </h2>
+                                                        <h2 class="text-success"> {{ __('admin.Account_Summary') }} </h2>
                                                     </div>
                                                     <hr>
                                                     <div class="row py-3 @if($adm->role < 2) {{blur_cnt}}@endif position_relative">
                                                         <div class="col-md-6 d-flex flex-column justify-content-around">
                                                             <div class="border_btm_1">
-                                                                <h4 class="fw-bold  text-info op-8"> {{ __('Wallet Balance') }} </h4>
+                                                                <h4 class="fw-bold  text-info op-8"> {{ __('admin.Wallet_Balance') }} </h4>
                                                                 $ {{$user->wallet }}
                                                                 <div class="colhd margin_top_n10 font_10">&emsp;</div>
                                                                 <br>                        
                                                             </div>                      
                                                           <div class="clearfix"><br></div>                      
                                                             <div>                           
-                                                                <h4 class="fw-bold text-info op-8"> {{ __('Referral Bonus') }} </h4>
+                                                                <h4 class="fw-bold text-info op-8"> {{ __('admin.Referral_Bonus') }} </h4>
                                                                 <h3 class="fw-bold">$ {{$user->ref_bal}}</h3>
                                                                 <div class="colhd margin_top_n10 font_10 ">&emsp;</div>
                                                                 <br>                                    
@@ -81,14 +81,14 @@
 
                                                         <div class="col-md-6">
                                                             <div class="border_btm_1" >
-                                                                <h4 class="fw-bold text-info op-8"> {{ __('Date Created') }} </h4>
+                                                                <h4 class="fw-bold text-info op-8"> {{ __('admin.Date_Created') }} </h4>
                                                                 {{$user->created_at}}
                                                                 <div class="colhd margin_top_n10 font_10">&emsp;</div> 
                                                                 <br>    
                                                             </div>
                                                             <div class="clearfix"><br></div> 
                                                             <div>
-                                                                <h4 class="fw-bold text-info op-8"> {{ __('Status') }} </h4>       
+                                                                <h4 class="fw-bold text-info op-8"> {{ __('mess.Status') }} </h4>
                                                                 <span class="fa fa-circle" style="color: green;"></span>
                                                                 <span class="">
                                                                 @if($user->status == 1 || $user->status == 'Active') 
@@ -117,13 +117,13 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label> {{ __('First Name') }} </label>
+                                                <label> {{ __('mess.First_Name') }} </label>
                                                 <input id="adr" type="text" value="{{ucfirst($user->firstname)}}" class="form-control" name="fname" readonly>
                                             </div>
                                         </div>  
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label> {{ __('Last Name') }} </label>
+                                                <label> {{ __('mess.Last_Name') }} </label>
                                                 <input id="adr" type="text" value="{{ucfirst($user->lastname)}}" class="form-control" name="lname" readonly>
                                             </div>
                                         </div>                               
@@ -133,7 +133,7 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label> {{ __('Email Address') }} </label>
+                                                <label> {{ __('mess.Email_Address') }} </label>
                                                 <div class="input-group">                                                       
                                                     <input id="email" type="email" value="{{$user->email}}" class="form-control" name="email">
                                                 </div>
@@ -143,7 +143,7 @@
 
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label> {{ __('Username') }} </label>
+                                                <label> {{ __('admin.Username') }} </label>
                                                 <div class="input-group">                                                       
                                                     <input id="usn" type="text" value="{{$user->username}}" class="form-control" name="usn" readonly>
                                                 </div>
@@ -160,7 +160,7 @@
                                                 <div class="form-group">
                                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                                     <input type="hidden" name="uid" value="{{$user->id}}">
-                                                    <label> {{ __('Country') }} </label>
+                                                    <label> {{ __('admin.Country') }} </label>
                                                     <select id="country" class="form-control" name="country" >
                                                         <?php 
                                                             $country = App\country::orderby('name', 'asc')->get();
@@ -178,14 +178,14 @@
                                                             @endif
                                                         @endforeach
                                                         @if(!isset($cs))
-                                                                <option selected disabled>select Country</option>
+                                                                <option selected disabled>{{ __('admin.select_Country') }}</option>
                                                         @endif
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                  <div class="form-group">
-                                                    <label> {{ __('State/Province') }} </label>
+                                                    <label> {{ __('admin.State_Province') }} </label>
                                                     <select  id="states" class="form-control" name="state" required>
                                                         @if(isset($cs))
                                                             <?php 
@@ -194,11 +194,11 @@
                                                             @if(count($st) > 0)
                                                                 <option selected value="{{$st[0]->id}}">{{$st[0]->name}}</option>
                                                             @else
-                                                                <option selected disabled>select state</option>
+                                                                <option selected disabled>{{ __('admin.select_state') }}</option>
                                                             @endif
                                                             
                                                         @else
-                                                           <option selected disabled>select state</option>
+                                                           <option selected disabled>{{ __('admin.select_state') }}</option>
                                                         @endif                                                           
                                                     </select>                                                        
                                                 </div>
@@ -208,14 +208,14 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label> {{ __('Address') }} </label>
+                                                    <label> {{ __('admin.Address') }} </label>
                                                     <input id="adr" type="text" class="form-control" value="{{$user->address}}" name="adr" required>
                                                 </div>
                                             </div>  
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label> {{ __('Phone') }} </label>
+                                                    <label> {{ __('admin.Phone') }} </label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
                                                             <span id="countryCode" class="input-group-text">
@@ -237,7 +237,7 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                       <button class="collb btn btn-info"> {{ __('Save') }} </button>
+                                                       <button class="collb btn btn-info"> {{ __('admin.Save') }} </button>
                                                 </div>
                                             </div>              
                                         </div>
@@ -252,22 +252,22 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"> {{ __('Reset User Password') }} </div>
+                                    <div class="card-title"> {{ __('admin.Reset_User_Password') }} </div>
                                 </div>
                                 <div class="card-body pb-0">
                                     <form class="" method="post" action="/admin/change/user/pwd">
                                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                                         <input type="hidden" name="uid" value="{{$user->id}}">
                                         <div class="form-group">
-                                            <label> {{ __('New Password') }} </label>
+                                            <label> {{ __('admin.New_Password') }} </label>
                                             <input type="password" class="form-control" name="newpwd" placeholder="New Password" required>
                                         </div>
                                         <div class="form-group">
-                                            <label> {{ __('Confirm Password') }} </label>
+                                            <label> {{ __('admin.Confirm_Password') }} </label>
                                             <input type="password" class="form-control" name="cpwd" placeholder="Confirm Password" required>
                                         </div>
                                             <div class="form-group" align="left">
-                                               <button class="collb btn btn-info"> {{ __('Save') }} </button>
+                                               <button class="collb btn btn-info"> {{ __('admin.Save') }} </button>
                                             </div>
                                     </form>
                                 </div>
@@ -279,7 +279,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"> {{ __('User Investment') }} </div>
+                                    <div class="card-title"> {{ __('admin.User_Investment') }} </div>
                                 </div>
                                 <div class="card-body pb-0">
                                     @include('admin.temp.user_inv')
@@ -293,7 +293,7 @@
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"> {{ __('Withdrawal History') }} </div>
+                                    <div class="card-title"> {{ __('admin.Withdrawal_History') }} </div>
                                 </div>
                                 <div class="card-body pb-0 table-responsive">
                                     @include('admin.temp.user_wd_history')
@@ -304,7 +304,7 @@
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"> {{ __('Referrals') }} </div>
+                                    <div class="card-title"> {{ __('admin.Referrals') }} </div>
                                 </div>
                                 <div class="card-body pb-0 table-responsive">
                                     @include('admin.temp.user_ref')
@@ -318,24 +318,24 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title"> {{ __('Bank Accounts') }} </div>
+                                    <div class="card-title"> {{ __('admin.Bank_Accounts') }} </div>
                                 </div>
                                 <div class="card-body pb-0 table-responsive">
                                     <table  id="" class="display table table-stripped table-hover">
                                         <thead>
                                             <tr>
-                                                <th> {{ __('Bank Name') }} </th>
-                                                <th> {{ __('Acount Number') }} </th>
-                                                <th> {{ __('Acount Name') }} </th>
-                                                <th> {{ __('Actions') }} </th>
+                                                <th> {{ __('admin.Bank_Name') }} </th>
+                                                <th> {{ __('admin.Acount_Number') }} </th>
+                                                <th> {{ __('admin.Acount_Name') }} </th>
+                                                <th> {{ __('admin.Actions') }} </th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th> {{ __('Bank Name') }} </th>
-                                                <th> {{ __('Acount Number') }} </th>
-                                                <th> {{ __('Acount Name') }} </th>
-                                                <th> {{ __('Actions') }} </th>
+                                                <th> {{ __('admin.Bank_Name') }} </th>
+                                                <th> {{ __('admin.Acount_Number') }} </th>
+                                                <th> {{ __('admin.Acount_Name') }} </th>
+                                                <th> {{ __('admin.Actions') }} </th>
                                             </tr>
                                         </tfoot>
                                         <tbody>

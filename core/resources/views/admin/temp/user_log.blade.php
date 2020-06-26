@@ -6,9 +6,9 @@
     <thead>
         <tr>            
             <th> {{ __('ID') }} </th>
-            <th> {{ __('Admin') }} </th>
-            <th> {{ __('Action') }} </th>
-            <th> {{ __('Date') }} </th>                                                              
+            <th> {{ __('admin.Admin') }} </th>
+            <th> {{ __('admin.Action') }} </th>
+            <th> {{ __('admin.Date') }} </th>
         </tr>
     </thead>
     <tbody>

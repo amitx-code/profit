@@ -31,10 +31,10 @@
                 </div>
                                     
                   <select name="role" class="form-control" required>
-                      <option selected disabled="">Select role</option>
-                      <option value="1">Support</option>
-                      <option value="2">Manager</option>
-                      <option value="3">Admin</option>
+                      <option selected disabled=""> {{ __('mess.Select_role') }}</option>
+                      <option value="1"> {{ __('mess.Support') }}</option>
+                      <option value="2" >{{ __('mess.Manager') }}</option>
+                      <option value="3"> {{ __('mess.Admin') }}</option>
                   </select>
               </div>
               <br>

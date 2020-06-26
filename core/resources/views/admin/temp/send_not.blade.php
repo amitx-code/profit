@@ -10,7 +10,7 @@
                    <form action="/admin/send/notification" method="post">
                         <div class="form-group">
                           <input id="msg_state" type="hidden" class="form-control" value="0" name="msg_state" required> 
-                          <label>{{ __('Title') }}</label>
+                          <label>{{ __('mess.Title') }}</label>
                           <input id="subject" type="text" class="form-control" name="subject" required>                         
                         </div>
                         <div class="form-group">                          
@@ -19,12 +19,12 @@
                         </div>
                         <div class="form-group">
                            <input type="hidden" name="_token" value="{{csrf_token()}}">
-                           <label>{{ __('Your message') }}</label>
+                           <label>{{ __('mess.Your message') }}</label>
                            <textarea id="textmsg2" name="msg" class="form-control" required rows="15"></textarea>
                         </div>
                        <div class="form-group" align="center">
                           <br>
-                           <button class="btn btn-info fa fa-paper-plane"> {{ __('Send Message') }}</button>
+                           <button class="btn btn-info fa fa-paper-plane"> {{ __('mess.Send Message') }}</button>
                        </div>
                    </form>
                 </div>

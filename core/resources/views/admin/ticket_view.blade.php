@@ -24,7 +24,7 @@
                                 <div class="card-header">
                                     <div class="card-head-row">
                                         <div class="card-title col-sm-12"  >
-                                            {{ __('Opend Tickets') }}                                             
+                                            {{ __('admin.Opend_Tickets') }}
                                         </div>
                                     </div>
                                      
@@ -34,11 +34,11 @@
                                         <table id="basic-datatables" class=" display  table table-striped table-hover" >
                                             <thead>
                                                 <tr> 
-                                                    <th>{{ __('Ticket ID') }}</th>
-                                                    <th>{{ __('User ID') }}</th> 
-                                                    <th>{{ __('Title') }}</th>
-                                                    <th>{{ __('status') }}</th>
-                                                    <th>{{ __('Action') }}</th>  
+                                                    <th>{{ __('admin.Ticket_ID') }}</th>
+                                                    <th>{{ __('admin.User_ID') }}</th>
+                                                    <th>{{ __('admin.Title') }}</th>
+                                                    <th>{{ __('admin.status') }}</th>
+                                                    <th>{{ __('admin.Action') }}</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

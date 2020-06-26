@@ -6,7 +6,7 @@
                     <div class="income-dashone-total shadow-reset nt-mg-b-30">
                         <div class="income-title">
                             <div class="main-income-head">
-                                <h2><b>Total Users</b></h2>
+                                <h2><b>{{ __('admin.Total_Users') }}</b></h2>
                                 <div class="main-income-phara">
                                     <p></p>
                                 </div>
@@ -75,7 +75,7 @@
                     <div class="income-dashone-total shadow-reset nt-mg-b-30">
                         <div class="income-title">
                             <div class="main-income-head">
-                                <h2><b>Deposits</b></h2>
+                                <h2><b>{{ __('admin.Deposits') }}</b></h2>
                                 <div class="main-income-phara low-value-cl">
                                     <p></p>
                                 </div>
@@ -115,7 +115,7 @@
                     <div class="income-dashone-total shadow-reset nt-mg-b-30">
                         <div class="income-title">
                             <div class="main-income-head">
-                                <h2><b>Withdrawals</b></h2>
+                                <h2><b>{{ __('admin.Withdrawals') }}</b></h2>
                                 <?php
                                     $wd = App\withdrawal::orderby('id', 'desc')->get();
                                     $dep = 0;
@@ -166,7 +166,7 @@
                     <div class="income-dashone-total shadow-reset nt-mg-b-30">
                         <div class="income-title">
                             <div class="main-income-head">
-                                <h2><b>Total Users</b></h2>
+                                <h2><b>{{ __('admin.Total_Users') }}</b></h2>
                                 <div class="main-income-phara">
                                     <p></p>
                                 </div>
@@ -182,7 +182,7 @@
                                 </div>
                             </div>
                             <div class="income-range">
-                                <p>Inactive: {{count($users->where('status', '!=', '1'))}}</p>
+                                <p>{{ __('admin.Inactive') }}: {{count($users->where('status', '!=', '1'))}}</p>
                                 <span class="income-percentange"> </span>
                             </div>
                             <div class="clear"></div>
@@ -193,7 +193,7 @@
                     <div class="income-dashone-total shadow-reset nt-mg-b-30">
                         <div class="income-title">
                             <div class="main-income-head">
-                                <h2><b>Investments</b></h2>
+                                <h2><b>{{ __('admin.Investments') }}</b></h2>
                                 <div class="main-income-phara order-cl">
                                     <?php
                                         $inv = App\investment::where('status', 'active')->orderby('id', 'desc')->get();
@@ -235,7 +235,7 @@
                     <div class="income-dashone-total shadow-reset nt-mg-b-30">
                         <div class="income-title">
                             <div class="main-income-head">
-                                <h2><b>Deposits</b></h2>
+                                <h2><b>{{ __('admin.Deposits') }}</b></h2>
                                 <div class="main-income-phara low-value-cl">
                                     <p></p>
                                 </div>

@@ -3,9 +3,9 @@
     <table id="" class=" table table-stripped table-hover">
         <thead>
             <tr>               
-                <th> {{ __('Account') }} </th>
-                <th> {{ __('Amount') }} </th>                
-                <th> {{ __('Date') }} </th>                                                    
+                <th> {{ __('admin.Account') }} </th>
+                <th> {{ __('admin.Amount') }} </th>
+                <th> {{ __('admin.Date') }} </th>
             </tr>
         </thead>
         <tbody>

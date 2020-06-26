@@ -2,14 +2,14 @@
             <table class="display table table-stripped table-hover">
                 <thead>
                     <tr>
-                       <th> {{ __('Name') }} </th>
-                       <th> {{ __('Min') }} </th>
-                       <th> {{ __('Max') }} </th>
-                       <th> {{ __('Interest(%)') }} </th>
-                       <th> {{ __('Period') }} </th>
-                       <th> {{ __('Withdrawal Interval') }} </th>                       
+                       <th> {{ __('mess.Name') }} </th>
+                       <th> {{ __('admin.Min') }} </th>
+                       <th> {{ __('admin.Max') }} </th>
+                       <th> {{ __('admin.Interest') }}(%) </th>
+                       <th> {{ __('admin.Period') }} </th>
+                       <th> {{ __('admin.Withdrawal_Interval') }} </th>
                        <th> {{ __('On/Off') }} </th>
-                       <th> {{ __('Manage') }} </th>                                                                          
+                       <th> {{ __('admin.Manage') }} </th>
                     </tr>
                 </thead>
                 <tbody>

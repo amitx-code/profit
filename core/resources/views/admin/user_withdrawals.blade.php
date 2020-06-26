@@ -24,13 +24,13 @@
                             <div class="card">
                                 <div class="card-header card_header_bg_blue" >
                                     <div class="card-head-row card-tools-still-right">
-                                        <h4 class="card-title text-white"> <i class="fas fa-arrow-alt-circle-down"></i> {{ __('User Withdrawal') }} </h4>
+                                        <h4 class="card-title text-white"> <i class="fas fa-arrow-alt-circle-down"></i> {{ __('admin.User_Withdrawal') }} </h4>
                                         <div class="card-tools">
                                             <form action="/admin/search/Withdrawal" method="post">
                                                 <div class="input-group">
                                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                                     <div class="input-group-prepend">
-                                                        <span class="input-group-text"> {{ __('Search:') }} </span>
+                                                        <span class="input-group-text"> {{ __('admin.Search') }}: </span>
                                                     </div>
                                                     <input type="text" name="search_val" class="form-control" placeholder="Search by username, amount, bank details, date or status">
                                                     <div class="input-group-append">

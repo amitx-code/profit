@@ -1,11 +1,11 @@
 <table class="display table table-stripped table-hover">
     <thead>
         <tr>                       
-            <th> {{ __('Name') }} </th>
-            <th> {{ __('Email') }} </th>
-            <th> {{ __('Role') }} </th>
-            <th> {{ __('Status') }} </th>                        
-            <th> {{ __('Manage') }} </th>                                                                          
+            <th> {{ __('mess.Name') }} </th>
+            <th> {{ __('admin.Email') }} </th>
+            <th> {{ __('admin.Role') }} </th>
+            <th> {{ __('admin.Status') }} </th>
+            <th> {{ __('admin.Manage') }} </th>
         </tr>
     </thead>
     <tbody>        

@@ -8,7 +8,7 @@
                         <div class="col-md-6">
                             <div class="card full-height">
                                 <div class="card-body">
-                                    <div class="card-title"> {{ __('Profile') }} </div>  
+                                    <div class="card-title"> {{ __('admin.Profile') }} </div>
                                     <hr>                                 
                                     <div class="row">
                                         <div class="col-4">
@@ -20,18 +20,18 @@
                                         </div>
                                         <div class="col-8">
                                             <div class="row">
-                                                <div class="col-4"><h5><b> {{ __('Name:') }} </b></h5></div>
+                                                <div class="col-4"><h5><b> {{ __('mess.Name') }}: </b></h5></div>
                                                 <div class="col-8">{{$adm->name}}</div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-4"><h5><b> {{ __('Email:') }} </b></h5></div>
+                                                <div class="col-4"><h5><b> {{ __('mess.Email') }}: </b></h5></div>
                                                 <div class="col-8">{{$adm->email}}</div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-12"><h6><b> {{ __('Level:') }} </b> {{$adm->role}} &emsp;|&emsp; <b> {{ __('status:') }} </b> {{($adm->status == 1) ? 'Active' : 'Paused'}}</h6></div>                                                
+                                                <div class="col-md-12"><h6><b> {{ __('admin.Level') }}: </b> {{$adm->role}} &emsp;|&emsp; <b> {{ __('admin.status') }}: </b> {{($adm->status == 1) ? 'Active' : 'Paused'}}</h6></div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-12"><h6><b> {{ __('Created on:') }} </b> {{$adm->created_at}} </h6></div>                                                
+                                                <div class="col-md-12"><h6><b> {{ __('admin.Created_on') }}: </b> {{$adm->created_at}} </h6></div>
                                             </div>
                                         </div>
                                     </div>
@@ -42,7 +42,7 @@
                             <div class="card full-height">
                                 <div class="card-body" style="">
                                     <div id="circles-admLevel" align="center"></div><br>
-                                    <h5 align="center"> {{ __('Account Level') }} </h5>             
+                                    <h5 align="center"> {{ __('admin.Account_Level') }} </h5>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title"> {{ __('Change Password') }} </div>                                       
+                                        <div class="card-title"> {{ __('mess.Change_Password') }} </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -84,7 +84,7 @@
                                           
                                         <div class="form-group">
                                             <br>
-                                              <button class="collb btn btn-info"> {{ __('Update Password') }} </button>
+                                              <button class="collb btn btn-info"> {{ __('admin.Update_Password') }} </button>
                                               <br>
                                         </div>                                          
                                     </form>

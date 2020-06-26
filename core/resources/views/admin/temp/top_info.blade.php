@@ -10,7 +10,7 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>New Users</p>
+                                            <p>{{ __('admin.New_Users') }}</p>
                                              {{count($new_users)}} 
                                         </div>
                                     </div>
@@ -18,7 +18,7 @@
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-reload"></i> Total user record: 
+                                        <i class="ti-reload"></i> {{ __('admin.Status') }}Total user record:
                                         {{count($total_users)}}
                                     </div>
                                 </div>
@@ -36,7 +36,7 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>New Payment</p>    
+                                            <p>{{ __('admin.New_Payment') }}</p>
                                             {{count($new_payment)}}                                        
                                         </div>
                                     </div>
@@ -44,7 +44,7 @@
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-calendar"></i> Total: {{count($payment)}} &emsp;
+                                        <i class="ti-calendar"></i>{{ __('admin.Total') }}: {{count($payment)}} &emsp;
                                         <i class="ti-money"></i>{{$amt}}
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Questions</p>
+                                            <p>{{ __('admin.Questions') }}</p>
                                             {{count($exam_q)}}
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-timer"></i> Total questions: {{count($exam_q)}}
+                                        <i class="ti-timer"></i> {{ __('admin.Total_questions') }}: {{count($exam_q)}}
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Approved users</p>
+                                            <p>{{ __('admin.Approved_users') }}</p>
                                             {{count($candidates)}}
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-reload"></i> Appoved candidates
+                                        <i class="ti-reload"></i> {{ __('admin.Appoved_candidates') }}
                                     </div>
                                 </div>
                             </div>

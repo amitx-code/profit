@@ -1,24 +1,24 @@
             <table class="display table table-stripped table-hover">
                 <thead>
                     <tr>
-                        <th> {{ __('Actions') }} </th>
-                        <th> {{ __('Username') }} </th>
-                        <th> {{ __('Amount') }} </th>                        
-                        <th> {{ __('Amount Payable') }} </th>
-                        <th> {{ __('Bank Details/Wallet') }} </th>
-                        <th> {{ __('Date') }} </th>
-                        <th> {{ __('Status') }} </th>                                                                              
+                        <th> {{ __('admin.Actions') }} </th>
+                        <th> {{ __('mess.Username') }} </th>
+                        <th> {{ __('admin.Amount') }} </th>
+                        <th> {{ __('admin.Amount_Payable') }} </th>
+                        <th> {{ __('admin.Bank_Details_Wallet') }} </th>
+                        <th> {{ __('admin.Date') }} </th>
+                        <th> {{ __('admin.Status') }} </th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <th> {{ __('Actions') }} </th>
-                        <th> {{ __('Username') }} </th>
-                        <th> {{ __('Amount') }} </th>                        
-                        <th> {{ __('Amount Payable') }} </th>
-                        <th> {{ __('Bank Details/Wallet') }} </th>
-                        <th> {{ __('Date') }} </th>
-                        <th> {{ __('Status') }} </th>                                                                              
+                        <th> {{ __('admin.Actions') }} </th>
+                        <th> {{ __('mess.Username') }} </th>
+                        <th> {{ __('admin.Amount') }} </th>
+                        <th> {{ __('admin.Amount_Payable') }} </th>
+                        <th> {{ __('admin.Bank_Details_Wallet') }} </th>
+                        <th> {{ __('admin.Date') }} </th>
+                        <th> {{ __('admin.Status') }} </th>
                     </tr>
                 </tfoot>
                 <tbody>

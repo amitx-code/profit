@@ -24,10 +24,10 @@
                             <div class="card">
                                 <div class="card-header card_header_bg_blue">
                                     <div class="card-head-row card-tools-still-right">
-                                        <h4 class="card-title text-white">{{ __('Admin Users') }}</h4>                                        
+                                        <h4 class="card-title text-white">{{ __('admin.Admin_Users') }}</h4>
                                     </div>
                                     <p class="card-category text-white pl-2">
-                                        {{ __('All admin users.') }}
+                                        {{ __('admin.All_admin_users') }}.
                                     </p>
                                 </div>
                                 <div class="card-body">                    
@@ -41,10 +41,10 @@
                             <div class="card">
                                 <div class="card-header card_header_bg_blue">
                                     <div class="card-head-row card-tools-still-right">
-                                        <h4 class="card-title pl-2 text-white">{{ __('Add New users') }}</h4>                                        
+                                        <h4 class="card-title pl-2 text-white">{{ __('admin.Add_New_users') }}</h4>
                                     </div>
                                     <p class="card-category text-white pl-2">
-                                        {{ __('Create new admin users.') }}
+                                        {{ __('admin.Create_new_admin_users') }}.
                                     </p>
                                 </div>
                                 <div class="card-body">                    

@@ -2,26 +2,26 @@
             <table class="display table table-stripped table-hover" >
                 <thead>
                     <tr>
-                        <th> {{ __('Actions') }} </th>
-                        <th> {{ __('Username') }} </th>
-                        <th> {{ __('Amount') }} </th>                        
-                        <th> {{ __('Acct Name/TXN ID') }} </th>
-                        <th> {{ __('Acct No/Wallet') }} </th>
-                        <th> {{ __('Method') }} </th>
-                        <th> {{ __('Date') }} </th>                        
-                        <th> {{ __('Status') }} </th>                                                                                
+                        <th> {{ __('admin.Actions') }} </th>
+                        <th> {{ __('admin.Username') }} </th>
+                        <th> {{ __('admin.Amount') }} </th>
+                        <th> {{ __('admin.Acct_Name') }}/TXN ID </th>
+                        <th> {{ __('admin.Acct') }}No/Wallet </th>
+                        <th> {{ __('admin.Method') }} </th>
+                        <th> {{ __('admin.Date') }} </th>
+                        <th> {{ __('admin.Status') }} </th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <th> {{ __('Actions') }} </th>
-                        <th> {{ __('Username') }} </th>
-                        <th> {{ __('Amount') }} </th>                        
-                        <th> {{ __('Acct Name/TXN ID') }} </th>
-                        <th> {{ __('Acct No/Wallet') }} </th>
-                        <th> {{ __('Method') }} </th>
-                        <th> {{ __('Date') }} </th>                        
-                        <th> {{ __('Status') }} </th>                                                                               
+                        <th> {{ __('admin.Actions') }} </th>
+                        <th> {{ __('admin.Username') }} </th>
+                        <th> {{ __('admin.Amount') }} </th>
+                        <th> {{ __('admin.Acct_Name') }}/TXN ID </th>
+                        <th> {{ __('admin.Acct') }}No/Wallet </th>
+                        <th> {{ __('admin.Method') }} </th>
+                        <th> {{ __('admin.Date') }} </th>
+                        <th> {{ __('admin.Status') }} </th>
                     </tr>
                 </tfoot>
                 <tbody>

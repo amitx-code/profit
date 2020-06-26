@@ -2,10 +2,10 @@
 <table id="" class=" table table-stripped table-hover">
     <thead>
         <tr>                
-            <th> {{ __('Name') }} </th>
-            <th> {{ __('Username') }} </th>
-            <th> {{ __('Investment') }} </th>
-            <th> {{ __('Date') }} </th>   
+            <th> {{ __('mess.Name') }} </th>
+            <th> {{ __('admin.Username') }} </th>
+            <th> {{ __('admin.Investment') }} </th>
+            <th> {{ __('admin.Date') }} </th>
         </tr>
     </thead>
     <tbody>

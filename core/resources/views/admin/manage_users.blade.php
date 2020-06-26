@@ -11,13 +11,13 @@
                         <div class="card">
                             <div class="card-header card_header_bg_blue" >
                                 <div class="card-head-row card-tools-still-right">
-                                    <h4 class="card-title text-white" > {{ __('All Users') }} </h4>
+                                    <h4 class="card-title text-white" > {{ __('mess.All_Users') }} </h4>
                                     <div class="card-tools">
                                        <form action="/admin/search/user" method="post">
                                             <div class="input-group">
                                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text"> {{ __('Search') }} </span>
+                                                    <span class="input-group-text"> {{ __('mess.Search') }} </span>
                                                 </div>
                                                 <input type="text" name="search_val" class="form-control" placeholder="Search by Name, Username, email, phone and status">
                                                 <div class="input-group-append" style="padding: 0px;">
@@ -39,7 +39,7 @@
                                         $users_table = App\User::orderby('id', 'desc')->paginate(100);
                                     }
                                 ?>
-                                <p class="card-category text-white" > {{ __('All registered users.') }} </p>
+                                <p class="card-category text-white" > {{ __('admin.All_registered_users') }}. </p>
                             </div>
                             <div class="card-body">
                                 
@@ -48,21 +48,21 @@
                                         <thead>
                                             <tr>
                                                 <th><i class="fa fa-eye"></i></th>
-                                                <th>{{ __('Name') }}</th>
-                                                <th>{{ __('Username') }}</th>
-                                                <th>{{ __('Email') }}</th>
-                                                <th>{{ __('Phone') }}</th>
-                                                <th>{{ __('Status') }}</th>
+                                                <th>{{ __('mess.Name') }}</th>
+                                                <th>{{ __('mess.Username') }}</th>
+                                                <th>{{ __('mess.Email') }}</th>
+                                                <th>{{ __('mess.Phone') }}</th>
+                                                <th>{{ __('mess.Status') }}</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
                                                 <th><i class="fa fa-eye"></i></th>
-                                                <th>{{ __('Name') }}</th>
-                                                <th>{{ __('Username') }}</th>
-                                                <th>{{ __('Email') }}</th>
-                                                <th>{{ __('Phone') }}</th>
-                                                <th>{{ __('Status') }}</th>
+                                                <th>{{ __('mess.Name') }}</th>
+                                                <th>{{ __('mess.Username') }}</th>
+                                                <th>{{ __('mess.Email') }}</th>
+                                                <th>{{ __('mess.Phone') }}</th>
+                                                <th>{{ __('mess.Status') }}</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>

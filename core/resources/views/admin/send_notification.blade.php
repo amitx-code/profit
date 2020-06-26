@@ -24,7 +24,7 @@
                             <div class="card">
                                 <div class="card-header card_header_bg_blue" >
                                     <div class="card-head-row card-tools-still-right">
-                                        <h4 class="card-title text-white" > <i class="fas fa-envelope"></i> {{ __('Send Notification') }} </h4>
+                                        <h4 class="card-title text-white" > <i class="fas fa-envelope"></i> {{ __('admin.Send_Notification') }} </h4>
                                     </div>
                                 </div>
                                 <div class="card-body pb-0 table-responsive">
@@ -39,7 +39,7 @@
                             <div class="card">
                                 <div class="card-header" >
                                     <div class="card-head-row card-tools-still-right">
-                                        <h4 class="card-title" style=""> <i class="fas fa-bells"></i> {{ __('Previous Notification') }} </h4>                      
+                                        <h4 class="card-title" style=""> <i class="fas fa-bells"></i> {{ __('admin.Previous_Notification') }} </h4>
                                     </div>
                                 </div>
                                 <div class="card-body pb-0 table-responsive">

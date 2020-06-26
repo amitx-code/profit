@@ -4,7 +4,7 @@
     <div class="col-md-4" align="Center">
       <div class="card mt50">      
         <div class="card-header card_header_bg_blue">
-          <h2 class="text-white">Update Package</h2>           
+          <h2 class="text-white">{{ __('admin.Update_Package') }}</h2>
         </div>
         <div id="" class="edit_pack_pad_n30_5 card-body">
           <form action="/admin/edit/packages" method="post">
@@ -14,7 +14,7 @@
               </div>
               <div class="input-group">
                 <div class="input-group-prepend " >
-                  <span class="input-group-text " ><i class=""></i>Min</span>
+                  <span class="input-group-text " ><i class=""></i>{{ __('admin.Min') }}</span>
                 </div>                      
                 <input id="min" type="text" class="form-control" name="min" placeholder="Enter Min amount to invest" required>
                 <div class="input-group-append " >
@@ -24,7 +24,7 @@
               <br>
               <div class="input-group">
                 <div class="input-group-prepend " >
-                  <span class="input-group-text "><i class=""></i>Max</span>
+                  <span class="input-group-text "><i class=""></i>{{ __('admin.Max') }}</span>
                 </div>
                 <input id="max" type="text" class="form-control" name="max" placeholder="Enter Max amount to invest" required>
                 <div class="input-group-append " >
@@ -34,7 +34,7 @@
               <br>
               <div class="input-group">
                 <div class="input-group-prepend " >
-                  <span class="input-group-text "><i class=""></i>Interest</span>
+                  <span class="input-group-text "><i class=""></i>{{ __('admin.Interest') }}</span>
                 </div>
                   <input id="interest" type="text" class="form-control" name="interest" placeholder="Interest for the period of investment" required>
                 <div class="input-group-append " >
@@ -44,9 +44,9 @@
               <br>
               <div class="form-group">
                 <br>
-                  <button class="collb btn btn-info">Update</button>
+                  <button class="collb btn btn-info">{{ __('admin.Update') }}</button>
                   <span style="">            
-                    <a id="pack_edit_close" href="javascript:void(0)" class="btn btn-danger">Cancel</a>        
+                    <a id="pack_edit_close" href="javascript:void(0)" class="btn btn-danger">{{ __('admin.Cancel') }}</a>
                   </span>
                   <br>
               </div>            

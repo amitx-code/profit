@@ -70,15 +70,15 @@
     <table id="basic-datatables" class="display table table-striped table-hover">
         <thead class="web-table">
             <tr>                
-               <th> {{ __('Package') }} </th>
-               <th> {{ __('Capital') }} </th>
-               <th> {{ __('Return') }} </th>
-               <th> {{ __('Date Invested') }} </th> 
-               <th> {{ __('Elapse') }} </th>  
-               <th> {{ __('Days Spent') }} </th> 
-               <th> {{ __('Withdrawn') }} </th>  
-               <th> {{ __('Status') }} </th>
-               <th> {{ __('Earning') }} </th>                                   
+               <th> {{ __('admin.Package') }} </th>
+               <th> {{ __('admin.Capital') }} </th>
+               <th> {{ __('admin.Return') }} </th>
+               <th> {{ __('admin.Date_Invested') }} </th>
+               <th> {{ __('admin.Elapse') }} </th>
+               <th> {{ __('admin.Days_Spent') }} </th>
+               <th> {{ __('admin.Withdrawn') }} </th>
+               <th> {{ __('admin.Status') }} </th>
+               <th> {{ __('admin.Earning') }} </th>
             </tr>
         </thead>
         
@@ -190,13 +190,13 @@
                     <div class="alert alert-info margin_top_10 pad_top_0 font_14" >
                         <div class="row admin_usr_inv_row" >
                             <div class="col-xs-12 pad_top_5" align="center" >
-                                <h4 class="u_case"> {{ __('Pakage:') }}  {{$in->package}}</h4>
+                                <h4 class="u_case"> {{ __('admin.Pakage') }}:  {{$in->package}}</h4>
                                
                             </div>
                         </div> 
                         <div class="row color_blue_9">
                             <div class="col-xs-6">
-                                {{ __('Capital:') }} 
+                                {{ __('admin.Capital') }}:
                             </div>
                             <div class="col-xs-6">
                                 {{$in->capital}}
@@ -204,7 +204,7 @@
                         </div> 
                         <div class="row" style="">
                             <div class="col-xs-6">
-                                {{ __('Return:') }} 
+                                {{ __('admin.Return') }}:
                             </div>
                             <div class="col-xs-6">
                                 {{$in->i_return}}
@@ -212,7 +212,7 @@
                         </div>  
                         <div class="row" style="">
                             <div class="col-xs-6">
-                                {{ __('Started:') }} 
+                                {{ __('admin.Started') }}:
                             </div>
                             <div class="col-xs-6">
                                 {{$in->date_invested}}
@@ -220,7 +220,7 @@
                         </div> 
                         <div class="row" style="">
                             <div class="col-xs-6">
-                                {{ __('Ending:') }} 
+                                {{ __('admin.Ending') }}:
                             </div>
                             <div class="col-xs-6">
                                 {{$in->end_date}}
@@ -228,7 +228,7 @@
                         </div>
                         <div class="row" style="">
                             <div class="col-xs-6">
-                                {{ __('Days:') }} 
+                                {{ __('admin.Days') }}:
                             </div>
                             <div class="col-xs-6">
                                 {{$totalDays}}
@@ -236,7 +236,7 @@
                         </div>
                         <div class="row" style="">
                             <div class="col-xs-6">
-                                {{ __('Withdrawn:') }} 
+                                {{ __('admin.Withdrawn') }}:
                             </div>
                             <div class="col-xs-6">
                                 {{$in->w_amt}}
@@ -244,7 +244,7 @@
                         </div> 
                         <div class="row" style="">
                             <div class="col-xs-6">
-                                {{ __('Status:') }} 
+                                {{ __('admin.Status') }}:
                             </div>
                             <div class="col-xs-6">
                                 {{$in->status}}
