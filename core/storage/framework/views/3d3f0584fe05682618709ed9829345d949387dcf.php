@@ -43,20 +43,20 @@
 	<div class="col-md-6">
 		<div class="card full-height">
 			<div class="card-body">
-				<div class="card-title"><?php echo e(__('Overall statistics')); ?></div>
+				<div class="card-title"> <?php echo e(__('mess.Overall_statistics')); ?></div>
 				<div class="card-category"></div>
 				<div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
 					<div class="px-2 pb-2 pb-md-0 text-center">
 						<div id="circles-1"></div>
-						<h6 class="fw-bold mt-3 mb-0"><?php echo e(__('Investments')); ?></h6>
+						<h6 class="fw-bold mt-3 mb-0"> <?php echo e(__('mess.Investments')); ?></h6>
 					</div>
 					<div class="px-2 pb-2 pb-md-0 text-center">
 						<div id="circles-2"></div>
-						<h6 class="fw-bold mt-3 mb-0"><?php echo e(__('Withdrawals')); ?></h6>
+						<h6 class="fw-bold mt-3 mb-0"> <?php echo e(__('mess.Withdrawals')); ?></h6>
 					</div>
 					<div class="px-2 pb-2 pb-md-0 text-center">
 						<div id="circles-3"></div>
-						<h6 class="fw-bold mt-3 mb-0"><?php echo e(__('Downlines')); ?></h6>
+						<h6 class="fw-bold mt-3 mb-0"> <?php echo e(__('mess.Downlines')); ?></h6>
 					</div>
 				</div>
 			</div>
@@ -66,23 +66,23 @@
 	<div class="col-md-6">
 		<div class="card full-height">
 			<div class="card-body">
-				<div class="card-title"><h2><?php echo e(__('Balances')); ?></h2></div>
+				<div class="card-title"><h2> <?php echo e(__('mess.Balances')); ?></h2></div>
 				<div class="row py-3">
 					<div class="col-md-6 d-flex flex-column justify-content-around">
 						<a id="wd_bal" title="Click to withdraw" href="javascript:void(0)" >
 							<div class="border_btm">							
-								<h4 class="fw-bold text-uppercase text-success op-8"><?php echo e(__('Wallet')); ?></h4>
+								<h4 class="fw-bold text-uppercase text-success op-8"> <?php echo e(__('mess.Wallet')); ?></h4>
 								<h3 class="fw-bold"><?php echo e($settings->currency); ?> <?php echo e(round($user->wallet, 4)); ?></h3>
-								<div class="colhd margin_n10"><?php echo e(__('Click to Withdraw Fund')); ?></div>	
+								<div class="colhd margin_n10"> <?php echo e(__('mess.Click_to_Withdraw_Fund')); ?></div>
 								<br>						
 							</div>
 						</a>
 						<div class="clearfix"><br></div>
 						<a id="wd_ref_bal" title="Click to withdraw" href="javascript:void(0)">
 							<div>							
-								<h4 class="fw-bold text-uppercase text-success op-8"><?php echo e(__('Referral Bonus')); ?></h4>
+								<h4 class="fw-bold text-uppercase text-success op-8"> <?php echo e(__('mess.Referral_Bonus')); ?></h4>
 								<h3 class="fw-bold"><?php echo e($settings->currency); ?> <?php echo e(round($user->ref_bal, 4)); ?></h3>
-								<div class="colhd margin_n10" ><?php echo e(__('Click to Withdraw Fund')); ?></div>	
+								<div class="colhd margin_n10" > <?php echo e(__('mess.Click_to_Withdraw_Fund')); ?></div>
 								<br>									
 							</div>
 						</a>
@@ -91,7 +91,7 @@
 					<div class="col-md-6">
             <a href="#">
   						<div class="border_btm">
-  							<h4 class="fw-bold text-uppercase text-success op-8"><?php echo e(__('Earning')); ?></h4>
+  							<h4 class="fw-bold text-uppercase text-success op-8"> <?php echo e(__('mess.Earning')); ?></h4>
   							<h3 class="fw-bold"><?php echo e($settings->currency); ?> <?php echo e($currentEarning); ?></h3>
   							<div class="colhd margin_n10" >&emsp;</div>	
   							<br>	
@@ -110,12 +110,12 @@
       <div class="col-md-4 popmsg-mobile card" align="Center">        
         <div class="card-title">
           <br>
-          <h3><b><?php echo e(__('Wallet Withdrawal')); ?></b></h3>
-          <h5 class="text-danger"><b><?php echo e(__('Available Balance:')); ?></b> <?php echo e($settings->currency.' '.$user->wallet); ?></h5>         
+          <h3><b> <?php echo e(__('mess.Wallet_Withdrawal')); ?></b></h3>
+          <h5 class="text-danger"><b> <?php echo e(__('mess.Available_Balance')); ?>:</b> <?php echo e($settings->currency.' '.$user->wallet); ?></h5>
           <hr>
         </div>
         <div class="card-body">
-            <?php echo e(__('Enter amount and select bank/wallet below')); ?>
+             <?php echo e(__('mess.Enter_amount_and_select_bank/wallet_below')); ?>
 
             <form id="wd_formssss" action="/user/wallet/wd" method="post">
                 <div class="form-group" align="left">                       
@@ -149,9 +149,9 @@
                 </div>
                 <div class="form-group">
                   <br><br>
-                    <button class="collb btn btn-info"><?php echo e(__('Withdraw')); ?></button>
+                    <button class="collb btn btn-info"> <?php echo e(__('mess.Withdraw')); ?></button>
                     <span style="">            
-                      <a id="wallet_wd_close" href="javascript:void(0)" class="collcc btn btn-danger"><?php echo e(__('Cancel')); ?></a>        
+                      <a id="wallet_wd_close" href="javascript:void(0)" class="collcc btn btn-danger"> <?php echo e(__('mess.Cancel')); ?></a>
                     </span>
                     <br>
                 </div>
@@ -175,12 +175,12 @@
       <div class="col-md-4 popmsg-mobile card" align="Center">        
         <div class="panel-heading" style="">
           <br>
-          <h3><b><?php echo e(__('Referral Withdrawal')); ?></b></h3>
-          <h5 class="text-danger"><b><?php echo e(__('Total Earning:')); ?></b> <?php echo e($settings->currency.' '.$user->ref_bal); ?></h5>         
+          <h3><b> <?php echo e(__('mess.Referral_Withdrawal')); ?></b></h3>
+          <h5 class="text-danger"><b> <?php echo e(__('mess.Total_Earning')); ?>:</b> <?php echo e($settings->currency.' '.$user->ref_bal); ?></h5>
           <hr>
         </div>
         <div id="" >
-              <?php echo e(__('Enter amount to withdraw and select bank below')); ?>
+               <?php echo e(__('mess.Enter_amount_to_withdraw_and_select_bank_below')); ?>
 
              <form id="wd_formssss" action="/user/ref/wd" method="post">
                 <div class="form-group" align="left">                       
@@ -214,9 +214,9 @@
                 </div>
                 <div class="form-group">
                   <br><br>
-                    <button class="collb btn btn-info"><?php echo e(__('Withdraw')); ?></button>
+                    <button class="collb btn btn-info"> <?php echo e(__('mess.Withdraw')); ?></button>
                     <span style="">            
-                      <a id="ref_wd_close" href="javascript:void(0)" class="collcc btn btn-danger"><?php echo e(__('Cancel')); ?></a>        
+                      <a id="ref_wd_close" href="javascript:void(0)" class="collcc btn btn-danger"> <?php echo e(__('mess.Cancel')); ?></a>
                     </span>
                     <br>
                 </div>

@@ -48,7 +48,7 @@
                                             <form method="POST" action="/dhadmin/login">                        
                                                 <input id="csrf" type="hidden"  name="_token" value="<?php echo e(csrf_token()); ?>" >
                                                 <div class="form-group row">
-                                                    <label for="email" class=" col-form-label text-md-right"><?php echo e(__('E-Mail Address')); ?></label>
+                                                    <label for="email" class=" col-form-label text-md-right"><?php echo e(__('mess.E_Mail_Address')); ?></label>
 
                                                     <div class="input-group">
                                                         <input id="" type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>" class="form-control">

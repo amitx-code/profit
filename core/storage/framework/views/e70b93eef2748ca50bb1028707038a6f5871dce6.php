@@ -13,7 +13,7 @@
 							<div class="card">
 								<div class="card-header">
 									<div class="card-head-row">
-										<div class="card-title"><?php echo e(__('Investment Statistics')); ?></div>
+										<div class="card-title"><?php echo e(__('mess.Investment_Statistics')); ?></div>
 										<div class="card-tools">											
 										</div>
 									</div>
@@ -29,7 +29,7 @@
 						<div class="col-md-4">
 							<div class="card card-primary">
 								<div class="card-header">
-									<div class="card-title"><?php echo e(__('Withdrawal Stats')); ?> </div>
+									<div class="card-title"><?php echo e(__('mess.Withdrawal_Stats')); ?> </div>
 									<div class="card-category">
 									    <?php
 									        $total_wd = 0;
@@ -51,7 +51,7 @@
 								<div class="card-body pb-0">
 									<div class="px-2 pb-2 pb-md-0 text-center">
 										<div id="circles-logs"></div>
-										<h6 class="fw-bold mt-3 mb-0"><?php echo e(__('My Total Actions')); ?></h6>
+										<h6 class="fw-bold mt-3 mb-0"><?php echo e(__('mess.My_Total_Actions')); ?></h6>
 										<br>
 									</div>									
 								</div>
@@ -63,7 +63,7 @@
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<div class="card-title"><?php echo e(__('Available Packages')); ?> </div>
+									<div class="card-title"><?php echo e(__('mess.Available_Packages')); ?> </div>
 								</div>
 								<div class="card-body pb-0">
 									<?php echo $__env->make('user.inc.packages', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
@@ -77,14 +77,14 @@
 							<div class="card">
 								<div class="card-header">
 									<div class="card-head-row card-tools-still-right">
-										<h4 class="card-title"><?php echo e(__('User Activities')); ?></h4>
+										<h4 class="card-title"><?php echo e(__('mess.User_Activities')); ?></h4>
 										<div class="card-tools">
 											<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
 											<button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span class="fa fa-sync-alt"></span></button>
 											<button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-times"></span></button>
 										</div>
 									</div>
-									<p class="card-category"><?php echo e(__('All actions performed by you.')); ?></p>
+									<p class="card-category"><?php echo e(__('mess.All_actions_performed_by_you')); ?>.</p>
 								</div>
 								<div class="card-body">
 									<div class="row">
@@ -96,17 +96,17 @@
 														table-hover" >
 															<thead>
 																<tr>
-																	<th><?php echo e(__('Actions')); ?></th>
-																	<th><?php echo e(__('Date')); ?>Date</th>
+																	<th><?php echo e(__('mess.Actions')); ?></th>
+																	<th><?php echo e(__('mess.Date')); ?>Date</th>
 																</tr>
 															</thead>
 															<tfoot>
 																<tr>
-																	<th><?php echo e(__('Actions')); ?></th>
-																	<th><?php echo e(__('Date')); ?></th>
+																	<th><?php echo e(__('mess.Actions')); ?></th>
+																	<th><?php echo e(__('mess.Date')); ?></th>
 																</tr>
 															</tfoot>
-															<tbody>
+															<tbody>																
 																<?php $__currentLoopData = $logs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 																	<tr>
 																		<td>
@@ -117,8 +117,9 @@
 																	</tr>
 																<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>																
 															</tbody>
-														</table>
+														</table>														
 													</div>
+													
 												</div>
 											</div>
 										</div>

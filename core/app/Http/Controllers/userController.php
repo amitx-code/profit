@@ -26,6 +26,7 @@ use App\xpack_packages;
 use App\site_settings;
 use App\ticket;
 use App\comments;
+use Illuminate\Support\Facades\Lang;
 
 class userController extends Controller
 {
@@ -76,13 +77,13 @@ class userController extends Controller
           $act->user_id = $user->id;
           $act->save();
 
-          Session::put('status', "Successful");
+          Session::put('status', Lang::get('cont.Successful'));
           Session::put('msgType', "suc");
           return back();
       	}
       	catch(\Exception $e)
       	{
-    		  Session::put('status', "Error uploading image or invalid image file");
+    		  Session::put('status',Lang::get('cont.Error_uploading_image_or_invalid_image_file'));
           Session::put('msgType', "err");
         	return back();;
       	}
@@ -107,7 +108,7 @@ class userController extends Controller
       	    {
       	        if($usr[0]->act_code == 0000000000)
       	        {
-      	            Session::put('status', "Account already activated once");
+      	            Session::put('status', Lang::get('cont.Account_already_activated_once'));
                       Session::put('msgType', "err");
       	        }
       	        elseif($usr[0]->act_code == $code)
@@ -116,19 +117,19 @@ class userController extends Controller
           	        $usr[0]->act_code = 0000000000;
                       $usr[0]->save();
                       
-                      Session::put('status', "Account activation successful");
+                      Session::put('status', Lang::get('cont.Account_activation_successful'));
                       Session::put('msgType', "suc");
       	        }
       	        else
       	        {
-      	            Session::put('status', "Invalid activation code passed!");
+      	            Session::put('status', Lang::get('cont.Invalid_activation_code_passed'));
                       Session::put('msgType', "err");
       	        }
       	    }
       	    else
       	    {
       	        
-                  Session::put('status', "Account Activation Error");
+                  Session::put('status',Lang::get('cont.Account_Activation_Error') );
                   Session::put('msgType', "err");
                   
       	    }
@@ -137,7 +138,7 @@ class userController extends Controller
       	}
       	catch(\Exception $e)
       	{
-      		Session::put('status', $e->getMessage()."Error Updating your account. Please contact support");
+      		Session::put('status', $e->getMessage().Lang::get('cont.Error_Updating_your_account_Please_contact_support'));
               Session::put('msgType', "err");
           	return view('auth.act_verify');
       	}
@@ -154,7 +155,7 @@ class userController extends Controller
           {
           	if($req->input('newpwd') == $req->input('oldpwd'))
           	{            			                
-                Session::put('status', "You cannot use same old password! Please use a different password.");
+                Session::put('status', Lang::get('cont.You_cannot_use_same_old_password_Please_use_a_different_password'));
                 Session::put('msgType', "err");
                 return back();
           	}
@@ -171,13 +172,13 @@ class userController extends Controller
                       $act->user_id = $user->id;
                       $act->save();
   		                
-  		            Session::put('status', "Password Successfully Changed");
+  		            Session::put('status', Lang::get('cont.Password_Successfully_Changed'));
                       Session::put('msgType', "suc");
   		            return back();
                 }
                 else
                 {
-                	Session::put('status', "Old Password invalid! Try again");
+                	Session::put('status', Lang::get('cont.Old_Password_invalid_Try_again'));
                       Session::put('msgType', "err");
                       return back();
             		// return back();
@@ -185,14 +186,14 @@ class userController extends Controller
         	}
         	catch(\Exception $e)
         	{
-        		Session::put('status', "Error saving password! Try again");
+        		Session::put('status',Lang::get('cont.Error_saving_password_Try_again') );
                   Session::put('msgType', "err");
   	            return back();
         	}
           }
           else
           {
-          	Session::put('status', "Password do not macth");
+          	Session::put('status', Lang::get('cont.Password_do_not_macth'));
             Session::put('msgType', "err");
             return back();;
           }	        	
@@ -231,14 +232,14 @@ class userController extends Controller
             $act->save();
 
 
-            Session::put('status', "Profile Update Successfully");
+            Session::put('status',  Lang::get('cont.Profile_Update_Successfully'));
             Session::put('msgType', "suc");
             return back();
               	                
       	}
       	catch(\Exception $e)
       	{
-      		Session::put('status', "Error saving your data! Please make sure your number is valid");
+      		Session::put('status',  Lang::get('cont.Error_saving_your_data_Please_make_sure_your_number_is_valid'));
           Session::put('msgType', "err");
           return back();
       	}                	
@@ -275,7 +276,7 @@ class userController extends Controller
 
 
           
-          Session::put('status', "Your Bank Has Been Added Successfully");
+          Session::put('status', Lang::get('cont.Your_Bank_Has_Been_Added_Successfully'));
           Session::put('msgType', "suc");
               
           return back();
@@ -283,7 +284,7 @@ class userController extends Controller
       	}
       	catch(\Exception $e)
       	{
-      		  Session::put('status', "Error saving details! Account may exist. Please Try again");
+      		  Session::put('status', Lang::get('cont.Error_saving_details_Account_may_exist_Please_Try_again'));
             Session::put('msgType', "err");
           	return back();
       	}                	
@@ -311,14 +312,14 @@ class userController extends Controller
               $act->user_id = $user->id;
               $act->save();
 
-              Session::put('status', "Bank Deleted Successfully");
+              Session::put('status', Lang::get('cont.Bank_Deleted_Successfully'));
               Session::put('msgType', "suc");
               return back();
               	                
       	}
       	catch(\Exception $e)
       	{
-          Session::put('status', 'Error saving details! Account may exist. Please Try again');
+          Session::put('status', Lang::get('cont.Error_saving_details_Account_may_exist_Please_Try_again'));
           Session::put('msgType', "err");        		  
           return back();
       	}                	
@@ -340,21 +341,21 @@ class userController extends Controller
       if($this->st->investment != 1 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Investment disabled! You will be notified when it is available.');
+        Session::put('status', Lang::get('cont.Investment_disabled_You_will_be_notified_when_it_is_available'));
         return back();
       }
 
       if($user->status == 'Blocked' || $user->status == 2 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Account Blocked! Please contact support.');
+        Session::put('status', Lang::get('cont.Account_Blocked_Please_contact_support'));
         return redirect('/login');
       }
 
       if($user->status == 'pending' || $user->status == 0 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Account not activated! Please contact support.');
+        Session::put('status', Lang::get('cont.Account_not_activated_Please_contact_support'));
         return redirect('/login');
       }
 
@@ -370,28 +371,28 @@ class userController extends Controller
 
           if($user->wallet < $capital)
           {
-            Session::put('status', 'Your wallet balance is lower than capital.');
+            Session::put('status', Lang::get('cont.Your_wallet_balance_is_lower_than_capital'));
             Session::put('msgType', "err");
             return back();
           }
           
           if($user->wallet < $pack->min)
           {
-            Session::put('status', 'Wallet balance is lower than minimum investment.');
+            Session::put('status', Lang::get('cont.Wallet_balance_is_lower_than_minimum_investment'));
             Session::put('msgType', "err");
             return back();
           }
           
           if($capital > $pack->max)
           {
-            Session::put('status', 'Input Capital is greater than maximum investment.');
+            Session::put('status', Lang::get('cont.Input_Capital_is_greater_than_maximum_investment'));
             Session::put('msgType', "err");
             return back();
           }
           
           if($capital < $pack->min)
           {
-            Session::put('status', 'Input Capital is less than minimum investment.');
+            Session::put('status', Lang::get('cont.Input_Capital_is_less_than_minimum_investment'));
             Session::put('msgType', "err");
             return back();
           }
@@ -498,13 +499,13 @@ class userController extends Controller
             $act->user_id = $user->id;
             $act->save();
 
-            Session::put('status', "Investment Successful");
+            Session::put('status', Lang::get('cont.Investment_Successful'));
             Session::put('msgType', "suc");
             return back() ;
           }
           else
           {
-            Session::put('status', "Invalid amount! Try again.");
+            Session::put('status', Lang::get('cont.Invalid_amount_Try_again'));
             Session::put('msgType', "err");
             return back();
           }            
@@ -512,7 +513,7 @@ class userController extends Controller
         }
         catch(\Exception $e)
         {
-            Session::put('status', "Error creating investment! Please Try again.".$e->getMessage());
+            Session::put('status', Lang::get('cont.Error_creating_investment_Please_Try_again').$e->getMessage());
             Session::put('msgType', "err");
             return back();
         }                 
@@ -533,14 +534,14 @@ class userController extends Controller
       if($user->status == 'pending' || $user->status == 0 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Account not activated! Please contact support.');
+        Session::put('status', Lang::get('cont.Account_not_activated_Please_contact_support'));
         return redirect('/login');
       }
 
       if($user->status == 'Blocked' || $user->status == 2 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Account Blocked! Please contact support.');
+        Session::put('status', Lang::get('cont.Account_Blocked_Please_contact_support'));
         return redirect('/login');
       }
 
@@ -566,7 +567,7 @@ class userController extends Controller
           if($amt <= 0)
           {
             Session::put('msgType', "err");              
-            Session::put('status', 'Invalid amount/Package Expired');
+            Session::put('status', Lang::get('cont.Invalid_amount_Package_Expired'));
             return back();
           }
 
@@ -611,14 +612,14 @@ class userController extends Controller
           $act->user_id = $user->id;
           $act->save();
 
-          Session::put('status', 'Package Withdrawal Successful, Amount Withdrawn Has Been Added to your Wallet');
+          Session::put('status', Lang::get('cont.Package_Withdrawal_Successful_Amount_Withdrawn_Has_Been_Added_to_your_Wallet'));
           Session::put('msgType', "suc");
           return back();
 
         }
         catch(\Exception $e)
         {
-          Session::put('status', 'Error submitting your withdrawal');
+          Session::put('status', Lang::get('cont.Error_submitting_your_withdrawal'));
           Session::put('msgType', "err");
           return back();
         }
@@ -639,35 +640,35 @@ class userController extends Controller
       if($this->st->withdrawal != 1 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Withdrawal disabled! Please contact support.');
+        Session::put('status', Lang::get('cont.Withdrawal_disabled_Please_contact_support'));
         return back();
       }
 
       if($user->status == 'Blocked' || $user->status == 2 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Account Blocked! Please contact support.');
+        Session::put('status', Lang::get('cont.Account_Blocked_Please_contact_support'));
         return back();
       }
 
       if($user->status == 'pending' || $user->status == 0 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Account not activated! Please contact support.');
+        Session::put('status', Lang::get('cont.Account_not_activated_Please_contact_support'));
         return back();
       }
 
       if(intval($req->input('amt')) > intval($user->wallet) || intval($req->input('amt')) == 0 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Invalid withdrawal amount. Amount must be greater than zero(0) and not more than wallet balance');
+        Session::put('status', Lang::get('cont.Invalid_withdrawal_amount_Amount_must_be_greater_than_zero_and_not_more_than_wallet_balance'));
         return back();
       }  
 
       if(intval($req->input('amt')) > env('WD_LIMIT'))
       {
         Session::put('msgType', "err");              
-        Session::put('status', env('WD_LIMIT').' Withdrawal limit exceeded!');
+        Session::put('status', env('WD_LIMIT').Lang::get('cont.Withdrawal_limit_exceeded'));
         return back();
       }
 
@@ -707,7 +708,7 @@ class userController extends Controller
           });
           $wd_fee = env("WD_FEE")*100;
 
-          Session::put('status', 'Wallet Withdrawal Successful! Please Allow up to 5 to 10 Business Days for Payment Processing. Note: Withdrawal attracts processing '.$wd_fee.'% fee');
+          Session::put('status', Lang::get('cont.Wallet_Withdrawal_Successful').$wd_fee.'% fee');
           Session::put('msgType', "suc");
           return back();
         }
@@ -733,42 +734,42 @@ class userController extends Controller
       if(env('WITHDRAWAL') != 1  )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Withdrawal disabled! Please contact support.');
+        Session::put('status', Lang::get('cont.Withdrawal_disabled_Please_contact_support'));
         return back();
       }
 
       if($user->status == 'Blocked' || $user->status == 2 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Account Blocked! Please contact support.');
+        Session::put('status', Lang::get('cont.Account_Blocked_Please_contact_support'));
         return back();
       }
 
       if($user->status == 'pending' || $user->status == 0 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Account not activated! Please contact support.');
+        Session::put('status', Lang::get('cont.Account_not_activated_Please_contact_support'));
         return back();
       }
 
       if(intval($req->input('amt')) < env('MIN_WD'))
         {
           Session::put('msgType', "err");              
-          Session::put('status', 'Amount is lower than minimum withdrawal of '.env('MIN_WD'));
+          Session::put('status', Lang::get('cont.Amount_is_lower_than_minimum_withdrawal_of').env('MIN_WD'));
           return back();
         }
 
       if(intval($req->input('amt')) > env('WD_LIMIT'))
       {
         Session::put('msgType', "err");              
-        Session::put('status', env('WD_LIMIT').' Withdrawal limit exceeded!');
+        Session::put('status', env('WD_LIMIT').Lang::get('cont.Withdrawal_limit_exceeded'));
         return back();
       } 
 
       if(intval($req->input('amt')) > intval($user->ref_bal) || intval($req->input('amt')) == 0)
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Invalid withdrawal amount. Amount must be greater than zero(0) and not more than referral balance');
+        Session::put('status', Lang::get('cont.Invalid_withdrawal_amount'));
         return back();
       }
 
@@ -779,7 +780,7 @@ class userController extends Controller
         if(count($iv) < 1)
         {
           Session::put('msgType', "err");              
-          Session::put('status', 'Sorry you have to invest at least once before you can withdraw your referral bonus.');
+          Session::put('status', Lang::get('cont.Sorry_you_have_to_invest_at_least_once_before_you_can_withdraw_your_referral_bonus'));
           return back();
         }
                   
@@ -812,17 +813,17 @@ class userController extends Controller
           Mail::send('mail.wd_notification', ['md' => $maildata], function($msg) use ($maildata){
               $msg->from(env('MAIL_USERNAME'), env('APP_NAME'));
               $msg->to($maildata['email']);
-              $msg->subject('User Withdrawal Notification');
+              $msg->subject(Lang::get('cont.User_Withdrawal_Notification'));
           });
          
-          Session::put('status', 'Referral Withdrawal Successful, Please Allow up to 10 Business Days for Payment Processing');
+          Session::put('status', Lang::get('cont.Referral_Withdrawal_Successful_Please_Allow_up_to_Business_Days_for_Payment_Processing'));
           Session::put('msgType', "suc");
           return back();
 
         }
         catch(\Exception $e)
         {
-          Session::put('status', $e->getMessage().' Error submitting your withdrawal');
+          Session::put('status', $e->getMessage().Lang::get('cont.Error_submitting_your_withdrawal'));
           Session::put('msgType', "err");
           return back();
         }
@@ -881,14 +882,14 @@ class userController extends Controller
       if($user->status == 'Blocked' || $user->status == 2 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Account Blocked! Please contact support.');
+        Session::put('status', Lang::get('cont.Account_Blocked_Please_contact_support'));
         return back();
       }
 
       if($user->status == 'pending' || $user->status == 0 )
       {
         Session::put('msgType', "err");              
-        Session::put('status', 'Account not activated! Please contact support.');
+        Session::put('status', Lang::get('cont.Account_not_activated_Please_contact_support'));
         return back();
       }
 
@@ -934,14 +935,14 @@ class userController extends Controller
           $act->user_id = $user->id;
           $act->save();
 
-          Session::put('status', 'Your Deposit Details Has Been Received, Admin Will Confirm and Approve Payment');
+          Session::put('status', Lang::get('cont.Your_Deposit_Details_Has_Been_Received_Admin_Will_Confirm_and_Approve_Payment'));
           Session::put('msgType', "suc");
           return back();
 
         }
         catch(\Exception $e)
         {
-          Session::put('status', $e->getMessage().' Error submitting your withdrawal');
+          Session::put('status', $e->getMessage().Lang::get('cont.Error_submitting_your_withdrawal'));
           Session::put('msgType', "err");
           return back();
         }
@@ -991,7 +992,7 @@ class userController extends Controller
           }
           catch(\Eception $e)
           {
-              Session::put('status', 'Error updating wallet.');      
+              Session::put('status', Lang::get('cont.Error_updating_wallet'));
               Session::put('msgType', "err");
               Session::put('payment_complete', "yes");
               return redirect('/'.$user->username.'/wallet');
@@ -1000,7 +1001,7 @@ class userController extends Controller
       }
       else
       {
-        Session::put('status', 'Invalid Payment credentials');      
+        Session::put('status', Lang::get('cont.Invalid_Payment_credentials'));
         Session::put('msgType', "err");
         Session::put('payment_complete', "yes");
         return redirect('/'.$user->username.'/wallet');
@@ -1014,7 +1015,7 @@ class userController extends Controller
       // $user = Auth::User();        
       if($req->input('password') != $req->input('c_pwd'))
       {
-          Session::put('status', 'Password not match!');      
+          Session::put('status', Lang::get('cont.Password_not_match'));
           Session::put('msgType', "err");
           return back();
       }
@@ -1044,7 +1045,7 @@ class userController extends Controller
                   // Session::forget('reset_pwd_token');
                   Session::forget('reset_pwd_usn');
                   
-                  Session::put('status', 'Password reset Successful. You can now login.');      
+                  Session::put('status', Lang::get('cont.Password_reset_Successful_You_can_now_login'));
                   Session::put('msgType', "suc");
                   Session::put('pwd_rst_suc', "successful");
                   return back();
@@ -1056,14 +1057,14 @@ class userController extends Controller
           }
           else
           {
-            Session::put('status', 'User with this email not found or token expired!');      
+            Session::put('status', Lang::get('cont.User_with_this_email_not_found_or_token_expired'));
             Session::put('msgType', "err");
             return back();
           }
       }
       catch(\Exception $e)
       {
-          Session::put('status', 'Error Updating your password!');      
+          Session::put('status', Lang::get('cont.Error_Updating_your_password'));
           Session::put('msgType', "err");
           return back();
       }
@@ -1103,21 +1104,21 @@ class userController extends Controller
               });
               
               Session::forget('pwd_rst_suc');
-              Session::put('status', 'Password reset link sent to email. Try again after some times if not received.');      
+              Session::put('status', Lang::get('cont.Password_reset_link_sent_to_email_Try_again_after_some_times_if_not_received'));
               Session::put('msgType', "suc");
               return back();
     
           }
           else
           {
-            Session::put('status', 'User with this email not found!');      
+            Session::put('status', Lang::get('cont.User_with_this_email_not_found'));
             Session::put('msgType', "err");
             return back();
           }
       }
       catch(\Exception $e)
       {
-          Session::put('status', 'Error sending password reset mail. Please try again later or contact support.');      
+          Session::put('status', Lang::get('cont.Error_sending_password_reset_mail_Please_try_again_later_or_contact_support'));
           Session::put('msgType', "err");
           return back();
       }
@@ -1137,7 +1138,7 @@ class userController extends Controller
       }
       else
       {
-          Session::put('pwd_reset_err', 'Password reset username or token is invalid. Link may have expired.');
+          Session::put('pwd_reset_err', Lang::get('cont.Password_reset_username_or_token_is_invalid_Link_may_have_expired'));
           return view('auth.passwords.reset');
       }
 
@@ -1167,16 +1168,16 @@ class userController extends Controller
       
       if($user->username == $req->input('usn'))
       {
-          Session::put('err_send', "You cannot send fund to yourself");
-          Session::put('status', 'You cannot send fund to yourself');      
+          Session::put('err_send', Lang::get('cont.You_cannot_send_fund_to_yourself'));
+          Session::put('status', Lang::get('cont.You_cannot_send_fund_to_yourself'));
           Session::put('msgType', "err");
           return back();
       }        
      
       if($user->wallet < 10)
       {
-          Session::put('err_send', "Wallet balance is less than minimum!");
-          Session::put('status', 'Wallet balance is less than minimum!');      
+          Session::put('err_send', Lang::get('cont.Wallet_balance_is_less_than_minimum'));
+          Session::put('status', Lang::get('cont.Wallet_balance_is_less_than_minimum'));
           Session::put('msgType', "err");
           return back();
       }
@@ -1184,8 +1185,8 @@ class userController extends Controller
               
       if($user->wallet < intval($req->input('s_amt')) )
       {
-          Session::put('err_send', "Wallet balance is lower than input amount!");
-          Session::put('status', 'Wallet balance is lower than input amount!');      
+          Session::put('err_send', Lang::get('cont.Wallet_balance_is_lower_than_input_amount'));
+          Session::put('status', Lang::get('cont.Wallet_balance_is_lower_than_input_amount'));
           Session::put('msgType', "err");
           return back();
       }
@@ -1195,8 +1196,8 @@ class userController extends Controller
           $rec = User::where('username', trim($req->input('usn')))->get();
           if(count($rec) < 1)
           {
-              Session::put('err_send', "Username record not found!");
-              Session::put('status', 'User record not found!');      
+              Session::put('err_send', Lang::get('cont.Username_record_not_found'));
+              Session::put('status', Lang::get('cont.User_record_not_found'));
               Session::put('msgType', "err");
               return back();
           }
@@ -1222,14 +1223,14 @@ class userController extends Controller
           $act->user_id = $user->id;
           $act->save();
           
-          Session::put('status', 'Your transaction was successful');      
+          Session::put('status', Lang::get('cont.Your_transaction_was_successful'));
           Session::put('msgType', "suc");
           return back();
       }
       catch(\Exception $e)
       {
-          Session::put('err_send', "Error sending fund to another user!");
-          Session::put('status', 'Error sending fund to another user!');      
+          Session::put('err_send', Lang::get('cont.Error_sending_fund_to_another_user'));
+          Session::put('status', Lang::get('cont.Error_sending_fund_to_another_user'));
           Session::put('msgType', "err");
           return back();
       }
@@ -1276,14 +1277,14 @@ class userController extends Controller
         $act->save();
         
         return back()->With([
-          'toast_msg' => 'Wallet Saved Successful',
+          'toast_msg' => Lang::get('cont.Wallet_Saved_Successful'),
           'toast_type' => 'suc'
         ]);
     	}
     	catch(\Exception $e)
     	{
         return back()->With([
-          'toast_msg' => 'Error saving wallet address '.$e->getMessage(),
+          'toast_msg' => Lang::get('cont.Error_saving_wallet_address').' '.$e->getMessage(),
           'toast_type' => 'err'
         ]);
     	}
@@ -1339,7 +1340,7 @@ class userController extends Controller
     $user = Auth::User();
     if($req->input('amount') < env('MIN_DEPOSIT'))
     {
-      return back()->With(['toast_msg' => 'Amount must be greater or equal to '.env('MIN_DEPOSIT').' '.$this->st->currency, 'toast_type' => 'err']);
+      return back()->With(['toast_msg' => Lang::get('cont.Amount_must_be_greater_or_equal_to').' '.env('MIN_DEPOSIT').' '.$this->st->currency, 'toast_type' => 'err']);
     }
 
     if(!empty($user))
@@ -1409,7 +1410,7 @@ class userController extends Controller
     {
       if($req->input('amt') < env('MIN_DEPOSIT'))
       {
-        return back()->With(['toast_msg' => 'Amount must be greater or equal to '.env('MIN_DEPOSIT').' '.$this->st->currency, 'toast_type' => 'err']);
+        return back()->With(['toast_msg' => Lang::get('cont.Amount_must_be_greater_or_equal_to').' '.env('MIN_DEPOSIT').' '.$this->st->currency, 'toast_type' => 'err']);
       }
       try{
         $st = site_settings::find(1);
@@ -1428,11 +1429,11 @@ class userController extends Controller
 
         $paymt->save();
 
-        return back()->With(['toast_msg' => 'Deposit saved! Please also submit details of deposit transaction to moderators to speed up funding your wallet via '.env('BANK_DEPOSIT_EMAIL'), 'toast_type' => 'suc']);
+        return back()->With(['toast_msg' => Lang::get('cont.Deposit_saved_Please_also_submit_details_of_deposit_transaction_to_moderators_to_speed_up_funding_your_wallet_via').env('BANK_DEPOSIT_EMAIL'), 'toast_type' => 'suc']);
       }
       catch(\Exception $e)
       {
-        return back()->With(['toast_msg' => 'Error saving your record. Please try again', 'toast_type' => 'err']);
+        return back()->With(['toast_msg' => Lang::get('cont.Error_saving_your_record_Please_try_again'), 'toast_type' => 'err']);
       }
     }
     else
@@ -1468,7 +1469,7 @@ class userController extends Controller
       if($validator->fails())
       {
         return back()->With([
-          'toast_msg' => 'Ticket not created! Error'.$validator->errors()->first(),
+          'toast_msg' => Lang::get('cont.Ticket_submitted_successfully_Admin_will_attend_to_you_shortly').$validator->errors()->first(),
           'toast_type' => 'err'
         ]);
       }
@@ -1484,7 +1485,7 @@ class userController extends Controller
 
         // $tickets = ticket::find($user->id);
         return back()->With([
-          'toast_msg' => 'Ticket submitted successfully! Admin will attend to you shortly',
+          'toast_msg' => Lang::get('cont.Ticket_submitted_successfully_Admin_will_attend_to_you_shortly'),
           'toast_type' => 'suc',
           // 'tickets' => $tickets
         ]);
@@ -1492,7 +1493,7 @@ class userController extends Controller
       catch(\Exception $e)
       {
         return back()->With([
-          'toast_msg' => 'Ticket not created! Error'.$e->getMessage(),
+          'toast_msg' => Lang::get('cont.Ticket_not_created_Error').$e->getMessage(),
           'toast_type' => 'err'
         ]);
       }
@@ -1544,14 +1545,14 @@ class userController extends Controller
       {
         ticket::where('id', $id)->update(['status' => 0]);
         return back()->with([
-          'toast_msg' => 'Ticket closed successfully!',
+          'toast_msg' =>  Lang::get('cont.Ticket_closed_successfully'),
           'toast_type' => 'suc'
         ]);
       } 
       catch (\Exception $e) 
       {
         return back()->with([
-          'toast_msg' => 'Error occured!',
+          'toast_msg' => Lang::get('cont.Error_occured'),
           'toast_type' => 'suc'
         ]);
       } 
@@ -1584,7 +1585,7 @@ class userController extends Controller
       if($validator->fails())
       {
         return json_encode([
-          'toast_msg' => 'Message not sent! Error'.$validator->errors()->first(),
+          'toast_msg' => Lang::get('cont.Message_not_sent_Error').$validator->errors()->first(),
           'toast_type' => 'err'
         ]);
       }
